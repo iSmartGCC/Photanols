@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photanols Energy - Advanced Energy Solutions</title>
+    <style>
+        :root {
+            --color-primary: #1d7680;
+            --color-secondary: #32b8c6;
+            --color-dark: #133a3d;
+            --color-light: #f0f8f9;
+            --color-accent: #ff9500;
+            --color-text: #1f2121;
+            --color-text-light: #666;
+            --color-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--color-bg);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--color-secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-secondary);
+        }
+
+        .cta-button {
+            background: var(--color-secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--color-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: var(--color-secondary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #28a0ae;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--color-primary);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background: var(--color-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--color-primary);
+        }
+
+        .section-title span {
+            color: var(--color-secondary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(29, 118, 128, 0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--color-primary);
+        }
+
+        .service-card p {
+            color: var(--color-text-light);
+            font-size: 15px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--color-primary);
+        }
+
+        .about-text p {
+            color: var(--color-text-light);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .about-features li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--color-text-light);
+        }
+
+        .about-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-secondary);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, var(--color-light), rgba(50, 184, 198, 0.1));
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .about-image-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .about-image p {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 80px 20px;
+            background: var(--color-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-number {
+            font-size: 36px;
+            color: var(--color-secondary);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .feature h3 {
+            color: var(--color-primary);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .feature p {
+            color: var(--color-text-light);
+            font-size: 14px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .contact-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            opacity: 0.9;
+            font-size: 15px;
+        }
+
+        .contact-item a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--color-secondary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">⚡ Photanols <span>Energy</span></a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="cta-button">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Next-Generation Energy Solutions for Oman</h1>
+            <p>Cutting-edge renewable energy and ICT integration for sustainable business growth. Leading the energy transformation with innovation and reliability.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Explore Solutions</a>
+                <a href="#services" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our <span>Services</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Renewable Energy Solutions</h3>
+                    <p>Design, deployment, and maintenance of solar, wind, and hybrid energy systems tailored to your operational needs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔋</div>
+                    <h3>Energy Storage Systems</h3>
+                    <p>Advanced lithium battery storage and battery recycling solutions for maritime, industrial, and residential applications.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>ICT Integration</h3>
+                    <p>IoT-enabled energy management systems with real-time monitoring, analytics, and AI-driven optimization for maximum efficiency.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Cybersecurity & PKI</h3>
+                    <p>Enterprise-grade security infrastructure and PKI solutions protecting your critical energy management systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>Training & Support</h3>
+                    <p>Comprehensive training programs and 24/7 technical support for all systems, ensuring smooth operations and staff competency.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Maintenance & Services</h3>
+                    <p>Preventive and corrective maintenance, system upgrades, and performance optimization services for long-term reliability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Photanols Energy</h2>
+                    <p>Photanols Energy is a forward-thinking energy solutions company based in Muscat, Oman, specializing in renewable energy technologies and intelligent ICT systems integration.</p>
+                    <p>We combine decades of industry expertise with cutting-edge innovation to deliver sustainable energy solutions that reduce operational costs, minimize environmental impact, and drive business growth.</p>
+                    <p>Our multidisciplinary team excels in solar and wind energy systems, battery storage technology, IoT infrastructure, and cybersecurity—delivering comprehensive solutions that address today&rsquo;s complex energy challenges.</p>
+                    <ul class="about-features">
+                        <li>ISO-certified quality and safety standards</li>
+                        <li>Advanced technical laboratory capabilities</li>
+                        <li>Expert team with 15+ years experience</li>
+                        <li>Proven track record across MENA region</li>
+                        <li>Customer-centric service philosophy</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-icon">🌍</div>
+                    <p>Sustainable Energy for a Better Tomorrow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why" class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose <span>Photanols</span></h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-number">100%</div>
+                    <h3>Custom Solutions</h3>
+                    <p>Every project is tailored to your unique requirements, environment, and objectives.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">24/7</div>
+                    <h3>Expert Support</h3>
+                    <p>Dedicated support team available around the clock for any technical assistance.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">500+</div>
+                    <h3>Installations</h3>
+                    <p>Successfully deployed across industrial, commercial, and residential sectors.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">30%</div>
+                    <h3>Cost Savings</h3>
+                    <p>Average operational cost reduction through optimized energy management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch with Photanols Energy</h2>
+            <p style="opacity: 0.9; margin-top: 10px;">Ready to transform your energy strategy? Contact our team today.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:mostafa@photanols.com">mostafa@photanols.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>📱 Phone</h3>
+                    <p><a href="tel:+96898060818">+968 98060818</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>📍 Location</h3>
+                    <p>Muscat, Oman<br>MENA Region Operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Photanols Energy</h4>
+                <p style="font-size: 13px; line-height: 1.6;">Advanced renewable energy and ICT solutions for sustainable business growth in the MENA region.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Renewable Energy</a></li>
+                    <li><a href="#services">Energy Storage</a></li>
+                    <li><a href="#services">ICT Integration</a></li>
+                    <li><a href="#services">Cybersecurity</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Photanols Energy. All rights reserved. Based in Muscat, Oman.</p>
+        </div>
+    </footer>
+</body>
+</html>
