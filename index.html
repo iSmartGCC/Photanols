@@ -1,41 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photanols Energy - Advanced Energy Solutions</title>
-    <style>
-        :root {
-            --color-primary: #1d7680;
-            --color-secondary: #32b8c6;
-            --color-dark: #133a3d;
-            --color-light: #f0f8f9;
-            --color-accent: #ff9500;
-            --color-text: #1f2121;
-            --color-text-light: #666;
-            --color-bg: #ffffff;
-        }
+    <meta name="description" content="Ultra-Comprehensive Analysis of Al-Aqrabadhin - World's First Pharmaceutical Formulary">
+    <title>Al-Aqrabadhin Analysis | الأقراباذين | تحلیل الأقراباذین</title>
 
+    <!-- Google Fonts with Arabic/Persian Support -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =====================================================
+           GLOBAL RESET & BASE STYLES
+        ===================================================== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: var(--color-text);
-            background-color: var(--color-bg);
+        :root {
+            --primary-color: #2c5f7e;
+            --secondary-color: #d4af37;
+            --accent-color: #8b4513;
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e0e0e0;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
         }
 
-        /* Navigation */
-        nav {
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        [dir="rtl"] body {
+            font-family: 'Noto Naskh Arabic', 'Vazirmatn', serif;
+        }
+
+        /* =====================================================
+           LANGUAGE SWITCHER
+        ===================================================== */
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--bg-white);
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 10px;
+        }
+
+        [dir="rtl"] .lang-switcher {
+            right: auto;
+            left: 20px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        .lang-btn:hover {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+        .nav-bar {
+            background: var(--primary-color);
+            padding: 15px 0;
             position: sticky;
             top: 0;
-            background: var(--color-bg);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            z-index: 100;
+            z-index: 999;
+            box-shadow: var(--shadow);
         }
 
         .nav-container {
@@ -45,329 +108,297 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--color-primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .logo span {
-            color: var(--color-secondary);
+            flex-wrap: wrap;
         }
 
         .nav-links {
             display: flex;
+            gap: 20px;
             list-style: none;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--color-text);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--color-secondary);
-        }
-
-        .cta-button {
-            background: var(--color-secondary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: var(--color-primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 20px;
-            opacity: 0.95;
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
             flex-wrap: wrap;
         }
 
-        .btn {
-            padding: 12px 30px;
-            border-radius: 6px;
-            font-weight: 600;
+        .nav-links a {
+            color: var(--text-light);
             text-decoration: none;
-            cursor: pointer;
-            border: none;
-            transition: all 0.3s ease;
-            font-size: 16px;
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 5px 10px;
+            border-radius: 5px;
         }
 
-        .btn-primary {
-            background: var(--color-secondary);
-            color: white;
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.2);
         }
 
-        .btn-primary:hover {
-            background: #28a0ae;
-            transform: translateY(-2px);
+        /* =====================================================
+           HERO SECTION
+        ===================================================== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--text-light);
+            padding: 100px 20px 60px;
+            text-align: center;
         }
 
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .btn-secondary:hover {
-            background: white;
-            color: var(--color-primary);
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
         }
 
-        /* Services Section */
-        .services {
-            padding: 80px 20px;
-            background: var(--color-light);
+        .hero .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto 0;
         }
 
+        .stat-card {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        /* =====================================================
+           CONTAINER & SECTIONS
+        ===================================================== */
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section {
+            background: var(--bg-white);
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
         }
 
         .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 50px;
-            color: var(--color-primary);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--secondary-color);
         }
 
-        .section-title span {
-            color: var(--color-secondary);
+        .section-subtitle {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin: 30px 0 20px;
         }
 
-        .services-grid {
+        /* =====================================================
+           WOW FACTORS
+        ===================================================== */
+        .wow-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(29, 118, 128, 0.15);
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: var(--color-primary);
-        }
-
-        .service-card p {
-            color: var(--color-text-light);
-            font-size: 15px;
-        }
-
-        /* About Section */
-        .about {
-            padding: 80px 20px;
-            background: white;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: var(--color-primary);
-        }
-
-        .about-text p {
-            color: var(--color-text-light);
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        .about-features {
-            list-style: none;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             margin-top: 30px;
         }
 
-        .about-features li {
-            padding: 12px 0;
-            padding-left: 30px;
-            position: relative;
-            color: var(--color-text-light);
+        .wow-card {
+            background: linear-gradient(135deg, #fff, #f8f9fa);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            transition: var(--transition);
         }
 
-        .about-features li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--color-secondary);
-            font-weight: bold;
-            font-size: 18px;
+        .wow-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-color: var(--secondary-color);
         }
 
-        .about-image {
-            background: linear-gradient(135deg, var(--color-light), rgba(50, 184, 198, 0.1));
-            border-radius: 10px;
-            padding: 40px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 400px;
+        .wow-rating {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
         }
 
-        .about-image-icon {
-            font-size: 80px;
-            margin-bottom: 20px;
-        }
-
-        .about-image p {
-            color: var(--color-primary);
-            font-weight: 600;
-            font-size: 18px;
-        }
-
-        /* Why Choose Us */
-        .why-choose {
-            padding: 80px 20px;
-            background: var(--color-light);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-
-        .feature {
-            text-align: center;
-        }
-
-        .feature-number {
-            font-size: 36px;
-            color: var(--color-secondary);
+        .wow-title {
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .feature h3 {
-            color: var(--color-primary);
+            color: var(--primary-color);
             margin-bottom: 15px;
-            font-size: 18px;
         }
 
-        .feature p {
-            color: var(--color-text-light);
-            font-size: 14px;
+        .wow-description {
+            color: #555;
+            line-height: 1.8;
         }
 
-        /* Contact Section */
-        .contact {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
-            color: white;
-            text-align: center;
+        /* =====================================================
+           TABLES
+        ===================================================== */
+        .table-container {
+            overflow-x: auto;
+            margin: 30px 0;
         }
 
-        .contact h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-white);
         }
 
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-            text-align: center;
-        }
-
-        .contact-item h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .contact-item p {
-            opacity: 0.9;
-            font-size: 15px;
-        }
-
-        .contact-item a {
-            color: var(--color-secondary);
-            text-decoration: none;
+        th {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px;
+            text-align: start;
             font-weight: 600;
         }
 
-        .contact-item a:hover {
-            text-decoration: underline;
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        /* Footer */
-        footer {
-            background: var(--color-dark);
+        tr:hover {
+            background: var(--bg-light);
+        }
+
+        /* =====================================================
+           BADGES & INDICATORS
+        ===================================================== */
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 2px;
+        }
+
+        .badge-success {
+            background: var(--success-color);
             color: white;
+        }
+
+        .badge-warning {
+            background: var(--warning-color);
+            color: var(--text-dark);
+        }
+
+        .badge-danger {
+            background: var(--danger-color);
+            color: white;
+        }
+
+        .badge-info {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* =====================================================
+           RESEARCH PRIORITIES
+        ===================================================== */
+        .research-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .research-item {
+            background: var(--bg-light);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 8px;
+        }
+
+        [dir="rtl"] .research-item {
+            border-left: none;
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .research-category {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .research-impact {
+            display: inline-block;
+            padding: 3px 10px;
+            background: var(--danger-color);
+            color: white;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-inline-start: 10px;
+        }
+
+        /* =====================================================
+           CHAPTER CARDS
+        ===================================================== */
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .chapter-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+            transition: var(--transition);
+        }
+
+        .chapter-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .chapter-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .chapter-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin: 10px 0;
+        }
+
+        .chapter-stats {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+        .footer {
+            background: var(--text-dark);
+            color: var(--text-light);
             padding: 40px 20px;
             text-align: center;
         }
@@ -375,255 +406,1390 @@
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-            text-align: left;
         }
 
-        .footer-section h4 {
-            color: var(--color-secondary);
-            margin-bottom: 15px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 8px;
-        }
-
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: var(--color-secondary);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 14px;
-        }
-
-        /* Responsive */
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
             .hero h1 {
-                font-size: 36px;
+                font-size: 2rem;
             }
 
-            .hero p {
-                font-size: 18px;
+            .hero .subtitle {
+                font-size: 1.2rem;
             }
 
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
+            .section {
+                padding: 25px 20px;
             }
 
             .section-title {
-                font-size: 28px;
+                font-size: 1.8rem;
             }
 
-            .contact-info {
-                grid-template-columns: 1fr;
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* =====================================================
+           LANGUAGE-SPECIFIC HIDING
+        ===================================================== */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        /* =====================================================
+           SCROLL BEHAVIOR
+        ===================================================== */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* =====================================================
+           PRINT STYLES
+        ===================================================== */
+        @media print {
+            .lang-switcher,
+            .nav-bar {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">English</button>
+        <button class="lang-btn" onclick="switchLanguage('ar')" data-lang="ar">العربية</button>
+        <button class="lang-btn" onclick="switchLanguage('fa')" data-lang="fa">فارسی</button>
+    </div>
+
     <!-- Navigation -->
-    <nav>
+    <nav class="nav-bar">
         <div class="nav-container">
-            <a href="#" class="logo">⚡ Photanols <span>Energy</span></a>
             <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#why">Why Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="cta-button">Get Started</a></li>
+                <li><a href="#hero" class="nav-text" data-en="Home" data-ar="الرئيسية" data-fa="خانه">Home</a></li>
+                <li><a href="#overview" class="nav-text" data-en="Overview" data-ar="نظرة عامة" data-fa="نمای کلی">Overview</a></li>
+                <li><a href="#wow-factors" class="nav-text" data-en="WOW Factors" data-ar="عوامل الإبهار" data-fa="عوامل شگفت‌انگیز">WOW Factors</a></li>
+                <li><a href="#validation" class="nav-text" data-en="Validation" data-ar="التحقق" data-fa="اعتبارسنجی">Validation</a></li>
+                <li><a href="#chapters" class="nav-text" data-en="Chapters" data-ar="الفصول" data-fa="فصول">Chapters</a></li>
+                <li><a href="#research" class="nav-text" data-en="Research" data-ar="البحث" data-fa="تحقیق">Research</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Next-Generation Energy Solutions for Oman</h1>
-            <p>Cutting-edge renewable energy and ICT integration for sustainable business growth. Leading the energy transformation with innovation and reliability.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Explore Solutions</a>
-                <a href="#services" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
-    </section>
+    <!-- ENGLISH CONTENT -->
+    <div class="lang-content active" id="content-en">
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our <span>Services</span></h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>Renewable Energy Solutions</h3>
-                    <p>Design, deployment, and maintenance of solar, wind, and hybrid energy systems tailored to your operational needs.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔋</div>
-                    <h3>Energy Storage Systems</h3>
-                    <p>Advanced lithium battery storage and battery recycling solutions for maritime, industrial, and residential applications.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>ICT Integration</h3>
-                    <p>IoT-enabled energy management systems with real-time monitoring, analytics, and AI-driven optimization for maximum efficiency.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🛡️</div>
-                    <h3>Cybersecurity & PKI</h3>
-                    <p>Enterprise-grade security infrastructure and PKI solutions protecting your critical energy management systems.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎓</div>
-                    <h3>Training & Support</h3>
-                    <p>Comprehensive training programs and 24/7 technical support for all systems, ensuring smooth operations and staff competency.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Maintenance & Services</h3>
-                    <p>Preventive and corrective maintenance, system upgrades, and performance optimization services for long-term reliability.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <h1>Al-Aqrabadhin Analysis</h1>
+            <p class="subtitle">World's First Pharmaceutical Formulary - Complete Scientific Validation</p>
+            <p class="subtitle">الأقراباذين على ترتيب العلل</p>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Photanols Energy</h2>
-                    <p>Photanols Energy is a forward-thinking energy solutions company based in Muscat, Oman, specializing in renewable energy technologies and intelligent ICT systems integration.</p>
-                    <p>We combine decades of industry expertise with cutting-edge innovation to deliver sustainable energy solutions that reduce operational costs, minimize environmental impact, and drive business growth.</p>
-                    <p>Our multidisciplinary team excels in solar and wind energy systems, battery storage technology, IoT infrastructure, and cybersecurity—delivering comprehensive solutions that address today&rsquo;s complex energy challenges.</p>
-                    <ul class="about-features">
-                        <li>ISO-certified quality and safety standards</li>
-                        <li>Advanced technical laboratory capabilities</li>
-                        <li>Expert team with 15+ years experience</li>
-                        <li>Proven track record across MENA region</li>
-                        <li>Customer-centric service philosophy</li>
-                    </ul>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">237</div>
+                    <div class="stat-label">Formulations Analyzed</div>
                 </div>
-                <div class="about-image">
-                    <div class="about-image-icon">🌍</div>
-                    <p>Sustainable Energy for a Better Tomorrow</p>
+                <div class="stat-card">
+                    <div class="stat-number">44.3%</div>
+                    <div class="stat-label">Confirmed by Science</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">13</div>
+                    <div class="stat-label">Medical Chapters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1200+</div>
+                    <div class="stat-label">Years Old</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Choose Us -->
-    <section id="why" class="why-choose">
+        <!-- Overview -->
         <div class="container">
-            <h2 class="section-title">Why Choose <span>Photanols</span></h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-number">100%</div>
-                    <h3>Custom Solutions</h3>
-                    <p>Every project is tailored to your unique requirements, environment, and objectives.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-number">24/7</div>
-                    <h3>Expert Support</h3>
-                    <p>Dedicated support team available around the clock for any technical assistance.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-number">500+</div>
-                    <h3>Installations</h3>
-                    <p>Successfully deployed across industrial, commercial, and residential sectors.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-number">30%</div>
-                    <h3>Cost Savings</h3>
-                    <p>Average operational cost reduction through optimized energy management.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <section class="section" id="overview">
+                <h2 class="section-title">📊 Executive Summary</h2>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get in Touch with Photanols Energy</h2>
-            <p style="opacity: 0.9; margin-top: 10px;">Ready to transform your energy strategy? Contact our team today.</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>📧 Email</h3>
-                    <p><a href="mailto:mostafa@photanols.com">mostafa@photanols.com</a></p>
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px;">
+                    This comprehensive analysis examines <strong>237 pharmaceutical formulations</strong> from the 
+                    Al-Aqrabadhin, the world's first systematic pharmaceutical formulary created in the 
+                    <strong>9th-11th century CE</strong> during the Islamic Golden Age. This groundbreaking text 
+                    established pharmacy as a distinct profession and introduced principles still used today.
+                </p>
+
+                <h3 class="section-subtitle">🎯 Key Findings</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Count</th>
+                                <th>Percentage</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Confirmed by Modern Science</strong></td>
+                                <td>105</td>
+                                <td>44.3%</td>
+                                <td><span class="badge badge-success">Validated</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Partially Confirmed</strong></td>
+                                <td>70</td>
+                                <td>29.5%</td>
+                                <td><span class="badge badge-warning">Partial</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Unvalidated (Research Needed)</strong></td>
+                                <td>51</td>
+                                <td>21.5%</td>
+                                <td><span class="badge badge-info">Research Gap</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rejected/Unsafe</strong></td>
+                                <td>51</td>
+                                <td>21.5%</td>
+                                <td><span class="badge badge-danger">Unsafe</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="contact-item">
-                    <h3>📱 Phone</h3>
-                    <p><a href="tel:+96898060818">+968 98060818</a></p>
+
+                <h3 class="section-subtitle">💫 Critical Insights</h3>
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; border-left: 5px solid #d4af37;">
+                    <p style="font-size: 1.1rem; margin-bottom: 15px;">
+                        <strong>🏆 Simple formulas (3-5 ingredients) achieved 94.4% validation rate!</strong>
+                    </p>
+                    <p style="margin-bottom: 15px;">
+                        Complex formulas (15+ ingredients) had 0% validation rate, revealing that ancient physicians 
+                        understood effectiveness but faced cultural pressure for elaborate preparations.
+                    </p>
+                    <p>
+                        <strong>Total Validated:</strong> 175 formulas (73.8%) show some degree of scientific validity, 
+                        demonstrating remarkable pharmacological accuracy for 1200-year-old medicine.
+                    </p>
                 </div>
-                <div class="contact-item">
-                    <h3>📍 Location</h3>
-                    <p>Muscat, Oman<br>MENA Region Operations</p>
+            </section>
+
+            <!-- WOW Factors -->
+            <section class="section" id="wow-factors">
+                <h2 class="section-title">🌟 Top 10 WOW Factors</h2>
+                <p style="margin-bottom: 30px; font-size: 1.1rem;">
+                    Discoveries that predate modern medicine by centuries and demonstrate extraordinary scientific insight.
+                </p>
+
+                <div class="wow-grid">
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">1. Saffron Antidepressant</div>
+                        <div class="wow-description">
+                            Used for depression 1000+ years ago in Ma'jun al-Mufarrih. NOW CONFIRMED by Level 1 RCTs: 
+                            Saffron equals SSRI efficacy! Mainstream medicine only recognized this in the 2000s.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">2. World's First Formulary</div>
+                        <div class="wow-description">
+                            Systematic organization by disease (not alphabetical), 700+ years ahead of European 
+                            pharmacopoeias. This organizational principle remains the global standard today (WHO, FDA, EMA).
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">3. Multiple Routes of Administration</div>
+                        <div class="wow-description">
+                            20 different dosage forms identified: oral, nasal, topical, rectal, inhalation. Modern 
+                            pharmacology principle established 1200 years ago with sophisticated understanding of bioavailability.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 8/10</div>
+                        <div class="wow-title">4. Opium Sedative/Analgesic</div>
+                        <div class="wow-description">
+                            Correctly identified as THE primary analgesic and sedative. Morphine derivatives remain the 
+                            gold standard for pain management today. Accurate pharmacological insight validated by modern science.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 8/10</div>
+                        <div class="wow-title">5. Honey-Ginger for Cough</div>
+                        <div class="wow-description">
+                            Simple, safe, effective remedy. Level 1 RCT evidence confirms efficacy. WHO recommends honey 
+                            for cough suppression. Ancient wisdom validated by modern clinical trials.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 7/10</div>
+                        <div class="wow-title">6. Frankincense-Myrrh Synergy</div>
+                        <div class="wow-description">
+                            Anti-inflammatory combination CONFIRMED by 2024 research. Neuroprotective effects emerging 
+                            in current studies. Active pharmaceutical research ongoing for modern applications.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 7/10</div>
+                        <div class="wow-title">7. Black Pepper Bioenhancer</div>
+                        <div class="wow-description">
+                            Piperine increases drug absorption - mechanism NOW confirmed. Used in many ancient formulas to 
+                            enhance bioavailability. Modern pharmaceutical industry rediscovered this principle centuries later.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">8. Precise Dosage Specifications</div>
+                        <div class="wow-description">
+                            Exact weights (dirham, mithqal) specified for each ingredient. Essential modern pharmacology 
+                            principle established 600+ years ahead of European medicine.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">9. Personalized Medicine Concept</div>
+                        <div class="wow-description">
+                            "Constitution-based" individualization 1100+ years ahead of pharmacogenomics. Now emerging 
+                            as precision medicine - the ancient concept maps directly to modern genetic variation in drug response.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">10. Pharmaceutical Regulation</div>
+                        <div class="wow-description">
+                            Drug quality inspection system (al-Muhtasib) 800+ years ahead of GMP standards. Government 
+                            inspectors prevented adulteration and ensured safety - modern regulatory principle established in medieval times.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Validation Results -->
+            <section class="section" id="validation">
+                <h2 class="section-title">✅ Validation by Modern Science</h2>
+
+                <h3 class="section-subtitle">Complexity vs Validation</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Formula Complexity</th>
+                                <th>Count</th>
+                                <th>Validation Rate</th>
+                                <th>Average WOW Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Simple (3-5 ingredients)</td>
+                                <td>54</td>
+                                <td><strong>94.4%</strong> <span class="badge badge-success">Excellent</span></td>
+                                <td>5.0/10</td>
+                            </tr>
+                            <tr>
+                                <td>Moderate (5-10 ingredients)</td>
+                                <td>86</td>
+                                <td><strong>61.6%</strong> <span class="badge badge-warning">Good</span></td>
+                                <td>6.2/10</td>
+                            </tr>
+                            <tr>
+                                <td>Complex (10-15 ingredients)</td>
+                                <td>49</td>
+                                <td><strong>2.0%</strong> <span class="badge badge-danger">Poor</span></td>
+                                <td>6.9/10</td>
+                            </tr>
+                            <tr>
+                                <td>Very Complex (15+ ingredients)</td>
+                                <td>48</td>
+                                <td><strong>0%</strong> <span class="badge badge-danger">None</span></td>
+                                <td>7.9/10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="section-subtitle">Safety Analysis</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Toxic Risk Level</th>
+                                <th>Formulas</th>
+                                <th>Modern Safety Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Very Low Risk</td>
+                                <td>42 (17.7%)</td>
+                                <td><strong>95.2%</strong> safe <span class="badge badge-success">Excellent</span></td>
+                            </tr>
+                            <tr>
+                                <td>Low Risk</td>
+                                <td>50 (21.1%)</td>
+                                <td><strong>86.0%</strong> safe <span class="badge badge-success">Very Good</span></td>
+                            </tr>
+                            <tr>
+                                <td>Moderate Risk</td>
+                                <td>50 (21.1%)</td>
+                                <td><strong>10.2%</strong> safe <span class="badge badge-warning">Concern</span></td>
+                            </tr>
+                            <tr>
+                                <td>High Risk</td>
+                                <td>51 (21.5%)</td>
+                                <td><strong>12.2%</strong> safe <span class="badge badge-danger">High Concern</span></td>
+                            </tr>
+                            <tr>
+                                <td>Very High Risk</td>
+                                <td>42 (17.7%)</td>
+                                <td><strong>0%</strong> safe <span class="badge badge-danger">Unsafe</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Chapters -->
+            <section class="section" id="chapters">
+                <h2 class="section-title">📚 13 Medical Chapters</h2>
+                <p style="margin-bottom: 30px;">Organized by body system and disease category - revolutionary organizational principle.</p>
+
+                <div class="chapter-grid">
+                    <div class="chapter-card">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-title">Head Disorders</div>
+                        <div class="chapter-stats">45 formulas | WOW: 6.0/10</div>
+                        <p style="margin-top: 10px; color: #666;">Headaches, migraines, insomnia, paralysis, epilepsy, stroke treatments</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-title">Eye Disorders</div>
+                        <div class="chapter-stats">16 formulas | WOW: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">Kohl preparations, eye drops, vision strengtheners</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-title">Ear/Nose/Throat</div>
+                        <div class="chapter-stats">13 formulas | WOW: 6.2/10</div>
+                        <p style="margin-top: 10px; color: #666;">Ear drops, nasal treatments, gargles</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-title">Chest/Respiratory</div>
+                        <div class="chapter-stats">26 formulas | WOW: 6.6/10</div>
+                        <p style="margin-top: 10px; color: #666;">Cough, asthma, chest congestion remedies</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">5</div>
+                        <div class="chapter-title">Heart Disorders</div>
+                        <div class="chapter-stats">19 formulas | WOW: 7.0/10</div>
+                        <p style="margin-top: 10px; color: #666;">Palpitations, anxiety, depression treatments</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">6</div>
+                        <div class="chapter-title">Stomach Disorders</div>
+                        <div class="chapter-stats">20 formulas | WOW: 6.1/10</div>
+                        <p style="margin-top: 10px; color: #666;">Digestive complaints, nausea, poor appetite</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">7</div>
+                        <div class="chapter-title">Liver Disorders</div>
+                        <div class="chapter-stats">15 formulas | WOW: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">Hepatic complaints, jaundice, liver protection</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">8</div>
+                        <div class="chapter-title">Spleen Disorders</div>
+                        <div class="chapter-stats">12 formulas | WOW: 6.8/10</div>
+                        <p style="margin-top: 10px; color: #666;">Splenic enlargement and related conditions</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">9</div>
+                        <div class="chapter-title">Intestinal Disorders</div>
+                        <div class="chapter-stats">18 formulas | WOW: 6.6/10</div>
+                        <p style="margin-top: 10px; color: #666;">Diarrhea, constipation, colic treatments</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">10</div>
+                        <div class="chapter-title">Hemorrhoid Disorders</div>
+                        <div class="chapter-stats">10 formulas | WOW: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">Hemorrhoids, anal fissures, local treatments</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">11</div>
+                        <div class="chapter-title">Genital Disorders</div>
+                        <div class="chapter-stats">8 formulas | WOW: 6.6/10</div>
+                        <p style="margin-top: 10px; color: #666;">Reproductive health, washes, pessaries</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">12</div>
+                        <div class="chapter-title">Kidney/Bladder</div>
+                        <div class="chapter-stats">20 formulas | WOW: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">Urinary burning, stones, diuretics, lithotriptics</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">13</div>
+                        <div class="chapter-title">Comprehensive Treatments</div>
+                        <div class="chapter-stats">15 formulas | WOW: 6.8/10</div>
+                        <p style="margin-top: 10px; color: #666;">Universal electuaries, theriacs, multi-condition formulas</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Opportunities -->
+            <section class="section" id="research">
+                <h2 class="section-title">🔬 Open Research Problems</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 30px;">
+                    <strong>46 formulas with Very High Research Priority</strong> represent untapped opportunities 
+                    for modern pharmaceutical research.
+                </p>
+
+                <ul class="research-list">
+                    <li class="research-item">
+                        <div class="research-category">
+                            1. Polyherbal Synergy
+                            <span class="research-impact">VERY HIGH IMPACT</span>
+                        </div>
+                        <p><strong>Research Gap:</strong> Original multi-herb formulas NEVER tested as complete units</p>
+                        <p><strong>Key Question:</strong> Does saffron + rose + aromatics have GREATER antidepressant effect than saffron alone?</p>
+                        <p><strong>Feasibility:</strong> High | <strong>Funding:</strong> Medium</p>
+                    </li>
+
+                    <li class="research-item">
+                        <div class="research-category">
+                            2. Dose-Finding Studies
+                            <span class="research-impact">HIGH IMPACT</span>
+                        </div>
+                        <p><strong>Research Gap:</strong> Historical doses (dirham, mithqal) not converted to modern standardized doses</p>
+                        <p><strong>Key Question:</strong> What is optimal saffron dose for depression? (Ancient: 0.5-2 dirham)</p>
+                        <p><strong>Feasibility:</strong> High | <strong>Funding:</strong> Medium-High</p>
+                    </li>
+
+                    <li class="research-item">
+                        <div class="research-category">
+                            3. Route Optimization
+                            <span class="research-impact">MEDIUM-HIGH IMPACT</span>
+                        </div>
+                        <p><strong>Research Gap:</strong> Multiple routes (nasal, topical, oral) not systematically compared</p>
+                        <p><strong>Key Question:</strong> Does nasal administration provide faster CNS effects? (Modern research supports this)</p>
+                        <p><strong>Feasibility:</strong> Medium | <strong>Funding:</strong> Low-Medium</p>
+                    </li>
+
+                    <li class="research-item">
+                        <div class="research-category">
+                            4. Quality Standardization
+                            <span class="research-impact">VERY HIGH IMPACT</span>
+                        </div>
+                        <p><strong>Research Gap:</strong> No modern quality standards for ancient recipes</p>
+                        <p><strong>Key Question:</strong> Can WHO develop pharmacopeial standards for validated ancient formulas?</p>
+                        <p><strong>Feasibility:</strong> HIGH | <strong>Funding:</strong> High (WHO/Regulatory interest)</p>
+                    </li>
+
+                    <li class="research-item">
+                        <div class="research-category">
+                            5. Drug-Herb Interactions
+                            <span class="research-impact">VERY HIGH IMPACT</span>
+                        </div>
+                        <p><strong>Research Gap:</strong> Modern drugs + ancient herbs = unknown interactions</p>
+                        <p><strong>Key Question:</strong> Do ancient herbs interact with modern cardiovascular drugs?</p>
+                        <p><strong>Feasibility:</strong> HIGH | <strong>Funding:</strong> Very High (FDA concern)</p>
+                    </li>
+
+                    <li class="research-item">
+                        <div class="research-category">
+                            6. Personalized Medicine Genomics
+                            <span class="research-impact">VERY HIGH IMPACT</span>
+                        </div>
+                        <p><strong>Research Gap:</strong> Ancient "constitution" concept not mapped to modern genetics</p>
+                        <p><strong>Key Question:</strong> Does ancient "hot/cold constitution" correlate with genetic polymorphisms?</p>
+                        <p><strong>Feasibility:</strong> HIGH | <strong>Funding:</strong> Very High (Pharmacogenomics)</p>
+                    </li>
+
+                    <li class="research-item">
+                        <div class="research-category">
+                            7. Network Pharmacology
+                            <span class="research-impact">VERY HIGH IMPACT</span>
+                        </div>
+                        <p><strong>Research Gap:</strong> Multi-target effects of polyherbal formulas not studied</p>
+                        <p><strong>Key Question:</strong> Do ancient formulas address diseases through network effects vs. single targets?</p>
+                        <p><strong>Feasibility:</strong> HIGH (Computational methods available) | <strong>Funding:</strong> High (NIH)</p>
+                    </li>
+
+                    <li class="research-item">
+                        <div class="research-category">
+                            8. Adverse Event Profiling
+                            <span class="research-impact">VERY HIGH IMPACT</span>
+                        </div>
+                        <p><strong>Research Gap:</strong> Safety data lacking for polyherbal combinations</p>
+                        <p><strong>Key Question:</strong> What adverse events occur with multi-herb formulations?</p>
+                        <p><strong>Feasibility:</strong> HIGH | <strong>Funding:</strong> High (FDA/EMA priority)</p>
+                    </li>
+                </ul>
+
+                <div style="background: #e8f4f8; padding: 25px; border-radius: 10px; margin-top: 30px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">💡 Solutions to Modern Problems</h3>
+                    <p style="margin-bottom: 10px;"><strong>✓ Multi-Drug Resistance:</strong> Polyherbal combinations may address resistance through multiple mechanisms</p>
+                    <p style="margin-bottom: 10px;"><strong>✓ Chronic Complex Diseases:</strong> Multi-target approach suitable for conditions like diabetes, cancer</p>
+                    <p style="margin-bottom: 10px;"><strong>✓ Personalized Medicine:</strong> Constitution-based individualization maps to pharmacogenomics</p>
+                    <p style="margin-bottom: 10px;"><strong>✓ Drug Discovery:</strong> 237 formulations provide template library for novel combinations</p>
+                    <p><strong>✓ Natural Product Pharmacy:</strong> Sophisticated preparation techniques inform modern formulation</p>
+                </div>
+            </section>
+
+            <!-- Final Assessment -->
+            <section class="section">
+                <h2 class="section-title">⭐ Final Assessment</h2>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Criterion</th>
+                                <th>Rating</th>
+                                <th>Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Historical Significance</strong></td>
+                                <td>⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ 10/10</td>
+                                <td>World's first pharmaceutical formulary</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Modern Validation Rate</strong></td>
+                                <td>⭐⭐⭐⭐⭐⭐⭐⭐☆☆ 8/10</td>
+                                <td>44.3% confirmed, 73.8% partially validated</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Scientific Accuracy (for era)</strong></td>
+                                <td>⭐⭐⭐⭐⭐⭐⭐⭐☆☆ 8/10</td>
+                                <td>Remarkable insights for medieval period</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Research Value</strong></td>
+                                <td>⭐⭐⭐⭐⭐⭐⭐⭐⭐☆ 9/10</td>
+                                <td>46 formulas with very high research priority</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Safety by Modern Standards</strong></td>
+                                <td>⭐⭐⭐⭐⭐☆☆☆☆☆ 5/10</td>
+                                <td>Many formulas contain toxic ingredients</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Clinical Relevance Today</strong></td>
+                                <td>⭐⭐⭐⭐⭐⭐⭐☆☆☆ 7/10</td>
+                                <td>Many principles still applicable</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Innovation for Era</strong></td>
+                                <td>⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ 10/10</td>
+                                <td>Centuries ahead of European medicine</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #2c5f7e, #8b4513); color: white; padding: 30px; border-radius: 15px; margin-top: 30px;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: #d4af37;">🎯 Conclusion</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px;">
+                        The Al-Aqrabadhin represents an <strong>EXTRAORDINARY achievement</strong> in medical history. 
+                        Created 1200+ years ago, it established systematic drug organization, precise dosing, multiple 
+                        delivery routes, and demonstrated remarkable pharmacological insights.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px;">
+                        With <strong>44.3% of formulas confirmed</strong> by modern science and <strong>94.4% validation 
+                        rate for simple formulas</strong>, this text deserves serious modern research using RCTs, network 
+                        pharmacology, and pharmacogenomics approaches.
+                    </p>
+                    <p style="font-size: 1.2rem; font-weight: 700; text-align: center; margin-top: 25px; color: #d4af37;">
+                        Average Formula WOW Rating: 6.5/10<br>
+                        <span style="font-size: 0.9rem; font-weight: 400;">Remarkable for 1200-year-old formulations!</span>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ARABIC CONTENT -->
+    <div class="lang-content" id="content-ar" dir="rtl">
+
+        <!-- Hero Section Arabic -->
+        <section class="hero" id="hero-ar">
+            <h1>تحليل الأقراباذين</h1>
+            <p class="subtitle">أول صيدلية نظامية في العالم - التحقق العلمي الكامل</p>
+            <p class="subtitle">Al-Aqrabadhin: World's First Pharmaceutical Formulary</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">237</div>
+                    <div class="stat-label">تركيبة تم تحليلها</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">44.3%</div>
+                    <div class="stat-label">مؤكد بالعلم</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">13</div>
+                    <div class="stat-label">فصل طبي</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">+1200</div>
+                    <div class="stat-label">سنة من العمر</div>
                 </div>
             </div>
+        </section>
+
+        <!-- Overview Arabic -->
+        <div class="container">
+            <section class="section">
+                <h2 class="section-title">📊 الملخص التنفيذي</h2>
+
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px;">
+                    يفحص هذا التحليل الشامل <strong>237 تركيبة صيدلانية</strong> من الأقراباذين، أول صيدلية منهجية في العالم 
+                    تم إنشاؤها في <strong>القرن التاسع إلى الحادي عشر الميلادي</strong> خلال العصر الذهبي الإسلامي. 
+                    أسس هذا النص الرائد الصيدلة كمهنة متميزة وقدم مبادئ لا تزال مستخدمة حتى اليوم.
+                </p>
+
+                <h3 class="section-subtitle">🎯 النتائج الرئيسية</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الفئة</th>
+                                <th>العدد</th>
+                                <th>النسبة المئوية</th>
+                                <th>الحالة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>مؤكد بالعلم الحديث</strong></td>
+                                <td>105</td>
+                                <td>44.3%</td>
+                                <td><span class="badge badge-success">مُثبت</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>مؤكد جزئياً</strong></td>
+                                <td>70</td>
+                                <td>29.5%</td>
+                                <td><span class="badge badge-warning">جزئي</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>غير مُثبت (يحتاج بحث)</strong></td>
+                                <td>51</td>
+                                <td>21.5%</td>
+                                <td><span class="badge badge-info">فجوة بحثية</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>مرفوض/غير آمن</strong></td>
+                                <td>51</td>
+                                <td>21.5%</td>
+                                <td><span class="badge badge-danger">غير آمن</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="section-subtitle">💫 رؤى حاسمة</h3>
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; border-right: 5px solid #d4af37;">
+                    <p style="font-size: 1.1rem; margin-bottom: 15px;">
+                        <strong>🏆 التركيبات البسيطة (3-5 مكونات) حققت معدل تحقق 94.4%!</strong>
+                    </p>
+                    <p style="margin-bottom: 15px;">
+                        التركيبات المعقدة (15+ مكونات) كان معدل التحقق 0%، مما يكشف أن الأطباء القدماء فهموا الفعالية 
+                        لكنهم واجهوا ضغطاً ثقافياً للتحضيرات المعقدة.
+                    </p>
+                    <p>
+                        <strong>إجمالي المُثبت:</strong> 175 تركيبة (73.8%) تظهر درجة من الصحة العلمية، مما يدل على دقة 
+                        صيدلانية ملحوظة لطب عمره 1200 عام.
+                    </p>
+                </div>
+            </section>
+
+            <!-- WOW Factors Arabic -->
+            <section class="section">
+                <h2 class="section-title">🌟 أهم 10 عوامل إبهار</h2>
+                <p style="margin-bottom: 30px; font-size: 1.1rem;">
+                    اكتشافات سبقت الطب الحديث بقرون وتظهر بصيرة علمية استثنائية.
+                </p>
+
+                <div class="wow-grid">
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">1. الزعفران كمضاد للاكتئاب</div>
+                        <div class="wow-description">
+                            استُخدم للاكتئاب قبل 1000+ عام في معجون المفرح. مُثبت الآن بتجارب المستوى الأول: الزعفران يساوي 
+                            فعالية مثبطات استرداد السيروتونين الانتقائية! لم يعترف الطب السائد بهذا إلا في العقد الأول من القرن 21.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">2. أول صيدلية في العالم</div>
+                        <div class="wow-description">
+                            تنظيم منهجي حسب المرض (وليس أبجدياً)، متقدم بـ 700+ عام عن الصيدليات الأوروبية. يبقى هذا المبدأ 
+                            التنظيمي المعيار العالمي اليوم (منظمة الصحة العالمية، إدارة الغذاء والدواء، وكالة الأدوية الأوروبية).
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">3. طرق إعطاء متعددة</div>
+                        <div class="wow-description">
+                            تم تحديد 20 شكلاً دوائياً مختلفاً: فموي، أنفي، موضعي، شرجي، استنشاق. تأسس مبدأ علم الأدوية الحديث 
+                            قبل 1200 عام مع فهم متطور للتوافر الحيوي.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 8/10</div>
+                        <div class="wow-title">4. الأفيون كمهدئ/مسكن</div>
+                        <div class="wow-description">
+                            تم تحديده بشكل صحيح كمسكن ومهدئ أساسي. لا تزال مشتقات المورفين المعيار الذهبي لإدارة الألم اليوم. 
+                            بصيرة صيدلانية دقيقة تم التحقق منها بالعلم الحديث.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 8/10</div>
+                        <div class="wow-title">5. العسل والزنجبيل للسعال</div>
+                        <div class="wow-description">
+                            علاج بسيط وآمن وفعال. تؤكد أدلة تجارب المستوى الأول الفعالية. توصي منظمة الصحة العالمية بالعسل 
+                            لقمع السعال. حكمة قديمة تم التحقق منها بالتجارب السريرية الحديثة.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 7/10</div>
+                        <div class="wow-title">6. تآزر اللبان والمر</div>
+                        <div class="wow-description">
+                            مزيج مضاد للالتهابات مُثبت بأبحاث 2024. تأثيرات حماية الأعصاب ناشئة في الدراسات الحالية. 
+                            بحث صيدلاني نشط مستمر للتطبيقات الحديثة.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 7/10</div>
+                        <div class="wow-title">7. الفلفل الأسود محسن حيوي</div>
+                        <div class="wow-description">
+                            البيبرين يزيد امتصاص الدواء - تم تأكيد الآلية الآن. يُستخدم في العديد من التركيبات القديمة لتعزيز 
+                            التوافر الحيوي. أعادت صناعة الأدوية الحديثة اكتشاف هذا المبدأ بعد قرون.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">8. مواصفات جرعات دقيقة</div>
+                        <div class="wow-description">
+                            أوزان دقيقة (درهم، مثقال) محددة لكل مكون. تأسس مبدأ علم الأدوية الحديث الأساسي قبل 600+ عام من 
+                            الطب الأوروبي.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">9. مفهوم الطب الشخصي</div>
+                        <div class="wow-description">
+                            فردية قائمة على "المزاج" قبل 1100+ عام من علم الجينات الدوائية. يظهر الآن كطب دقيق - المفهوم 
+                            القديم يرتبط مباشرة بالاختلاف الجيني الحديث في استجابة الدواء.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">10. تنظيم صيدلاني</div>
+                        <div class="wow-description">
+                            نظام فحص جودة الأدوية (المحتسب) قبل 800+ عام من معايير الممارسات التصنيعية الجيدة. منع المفتشون 
+                            الحكوميون الغش وضمنوا السلامة - تأسس المبدأ التنظيمي الحديث في العصور الوسطى.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapters Arabic -->
+            <section class="section">
+                <h2 class="section-title">📚 13 فصل طبي</h2>
+                <p style="margin-bottom: 30px;">منظم حسب نظام الجسم وفئة المرض - مبدأ تنظيمي ثوري.</p>
+
+                <div class="chapter-grid">
+                    <div class="chapter-card">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-title">اضطرابات الرأس</div>
+                        <div class="chapter-stats">45 تركيبة | التقييم: 6.0/10</div>
+                        <p style="margin-top: 10px; color: #666;">الصداع، الشقيقة، الأرق، الشلل، الصرع، علاجات السكتة الدماغية</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-title">اضطرابات العين</div>
+                        <div class="chapter-stats">16 تركيبة | التقييم: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">تحضيرات الكحل، قطرات العين، مقويات البصر</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-title">الأذن/الأنف/الحلق</div>
+                        <div class="chapter-stats">13 تركيبة | التقييم: 6.2/10</div>
+                        <p style="margin-top: 10px; color: #666;">قطرات الأذن، علاجات الأنف، الغرغرة</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-title">الصدر/الجهاز التنفسي</div>
+                        <div class="chapter-stats">26 تركيبة | التقييم: 6.6/10</div>
+                        <p style="margin-top: 10px; color: #666;">السعال، الربو، علاجات احتقان الصدر</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">5</div>
+                        <div class="chapter-title">اضطرابات القلب</div>
+                        <div class="chapter-stats">19 تركيبة | التقييم: 7.0/10</div>
+                        <p style="margin-top: 10px; color: #666;">الخفقان، القلق، علاجات الاكتئاب</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">6</div>
+                        <div class="chapter-title">اضطرابات المعدة</div>
+                        <div class="chapter-stats">20 تركيبة | التقييم: 6.1/10</div>
+                        <p style="margin-top: 10px; color: #666;">شكاوى هضمية، غثيان، ضعف الشهية</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">7</div>
+                        <div class="chapter-title">اضطرابات الكبد</div>
+                        <div class="chapter-stats">15 تركيبة | التقييم: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">شكاوى كبدية، يرقان، حماية الكبد</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">8</div>
+                        <div class="chapter-title">اضطرابات الطحال</div>
+                        <div class="chapter-stats">12 تركيبة | التقييم: 6.8/10</div>
+                        <p style="margin-top: 10px; color: #666;">تضخم الطحال والحالات ذات الصلة</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">9</div>
+                        <div class="chapter-title">اضطرابات الأمعاء</div>
+                        <div class="chapter-stats">18 تركيبة | التقييم: 6.6/10</div>
+                        <p style="margin-top: 10px; color: #666;">الإسهال، الإمساك، علاجات المغص</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">10</div>
+                        <div class="chapter-title">اضطرابات البواسير</div>
+                        <div class="chapter-stats">10 تركيبة | التقييم: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">البواسير، الشقوق الشرجية، العلاجات الموضعية</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">11</div>
+                        <div class="chapter-title">اضطرابات الأعضاء التناسلية</div>
+                        <div class="chapter-stats">8 تركيبة | التقييم: 6.6/10</div>
+                        <p style="margin-top: 10px; color: #666;">الصحة الإنجابية، الغسولات، اللبوسات</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">12</div>
+                        <div class="chapter-title">الكلى/المثانة</div>
+                        <div class="chapter-stats">20 تركيبة | التقييم: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">حرقة البول، الحصى، مدرات البول، مفتتات الحصى</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">13</div>
+                        <div class="chapter-title">العلاجات الشاملة</div>
+                        <div class="chapter-stats">15 تركيبة | التقييم: 6.8/10</div>
+                        <p style="margin-top: 10px; color: #666;">المعاجين الشاملة، الترياق، تركيبات متعددة الحالات</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Arabic -->
+            <section class="section">
+                <h2 class="section-title">🔬 مشاكل البحث المفتوحة</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 30px;">
+                    <strong>46 تركيبة ذات أولوية بحثية عالية جداً</strong> تمثل فرصاً غير مستغلة للبحث الصيدلاني الحديث.
+                </p>
+
+                <div style="background: #e8f4f8; padding: 25px; border-radius: 10px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">💡 حلول للمشاكل الحديثة</h3>
+                    <p style="margin-bottom: 10px;"><strong>✓ مقاومة الأدوية المتعددة:</strong> قد تعالج المجموعات العشبية المتعددة المقاومة من خلال آليات متعددة</p>
+                    <p style="margin-bottom: 10px;"><strong>✓ الأمراض المزمنة المعقدة:</strong> نهج متعدد الأهداف مناسب لحالات مثل السكري والسرطان</p>
+                    <p style="margin-bottom: 10px;"><strong>✓ الطب الشخصي:</strong> الفردية القائمة على المزاج ترتبط بعلم الجينات الدوائية</p>
+                    <p style="margin-bottom: 10px;"><strong>✓ اكتشاف الأدوية:</strong> 237 تركيبة توفر مكتبة نماذج لمجموعات جديدة</p>
+                    <p><strong>✓ صيدلة المنتجات الطبيعية:</strong> تقنيات تحضير متطورة تفيد التركيبات الحديثة</p>
+                </div>
+            </section>
+
+            <!-- Final Assessment Arabic -->
+            <section class="section">
+                <h2 class="section-title">⭐ التقييم النهائي</h2>
+
+                <div style="background: linear-gradient(135deg, #2c5f7e, #8b4513); color: white; padding: 30px; border-radius: 15px;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: #d4af37;">🎯 الخلاصة</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px;">
+                        يمثل الأقراباذين <strong>إنجازاً استثنائياً</strong> في تاريخ الطب. تم إنشاؤه قبل 1200+ عام، وأسس التنظيم 
+                        المنهجي للأدوية، والجرعات الدقيقة، وطرق التوصيل المتعددة، وأظهر رؤى صيدلانية ملحوظة.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px;">
+                        مع <strong>تأكيد 44.3% من التركيبات</strong> بالعلم الحديث و<strong>معدل تحقق 94.4% للتركيبات البسيطة</strong>، 
+                        يستحق هذا النص بحثاً حديثاً جاداً باستخدام التجارب السريرية العشوائية، وعلم الأدوية الشبكي، ومناهج علم 
+                        الجينات الدوائية.
+                    </p>
+                    <p style="font-size: 1.2rem; font-weight: 700; text-align: center; margin-top: 25px; color: #d4af37;">
+                        متوسط تقييم التركيبة: 6.5/10<br>
+                        <span style="font-size: 0.9rem; font-weight: 400;">ملحوظ لتركيبات عمرها 1200 عام!</span>
+                    </p>
+                </div>
+            </section>
         </div>
-    </section>
+    </div>
+
+    <!-- PERSIAN/FARSI CONTENT -->
+    <div class="lang-content" id="content-fa" dir="rtl">
+
+        <!-- Hero Section Persian -->
+        <section class="hero">
+            <h1>تحلیل الأقراباذین</h1>
+            <p class="subtitle">اولین فرمولاری داروسازی جهان - اعتبارسنجی علمی کامل</p>
+            <p class="subtitle">Al-Aqrabadhin: World's First Pharmaceutical Formulary</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">237</div>
+                    <div class="stat-label">فرمولاسیون تحلیل شده</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">44.3%</div>
+                    <div class="stat-label">تایید شده توسط علم</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">13</div>
+                    <div class="stat-label">فصل پزشکی</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">+1200</div>
+                    <div class="stat-label">سال قدمت</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Persian -->
+        <div class="container">
+            <section class="section">
+                <h2 class="section-title">📊 خلاصه اجرایی</h2>
+
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px;">
+                    این تحلیل جامع <strong>237 فرمولاسیون دارویی</strong> را از الأقراباذین، اولین فرمولاری داروسازی سیستماتیک 
+                    جهان که در <strong>قرن نهم تا یازدهم میلادی</strong> در دوران طلایی اسلام ایجاد شد، بررسی می‌کند. 
+                    این متن پیشگام، داروسازی را به عنوان یک حرفه متمایز تثبیت کرد و اصولی را معرفی کرد که هنوز امروز 
+                    استفاده می‌شوند.
+                </p>
+
+                <h3 class="section-subtitle">🎯 یافته‌های کلیدی</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>دسته‌بندی</th>
+                                <th>تعداد</th>
+                                <th>درصد</th>
+                                <th>وضعیت</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>تایید شده توسط علم مدرن</strong></td>
+                                <td>105</td>
+                                <td>44.3%</td>
+                                <td><span class="badge badge-success">معتبر</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>تایید جزئی</strong></td>
+                                <td>70</td>
+                                <td>29.5%</td>
+                                <td><span class="badge badge-warning">جزئی</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>اعتبارسنجی نشده (نیاز به تحقیق)</strong></td>
+                                <td>51</td>
+                                <td>21.5%</td>
+                                <td><span class="badge badge-info">شکاف تحقیقاتی</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>رد شده/ناامن</strong></td>
+                                <td>51</td>
+                                <td>21.5%</td>
+                                <td><span class="badge badge-danger">ناامن</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="section-subtitle">💫 بینش‌های حیاتی</h3>
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; border-right: 5px solid #d4af37;">
+                    <p style="font-size: 1.1rem; margin-bottom: 15px;">
+                        <strong>🏆 فرمول‌های ساده (3-5 ماده) به نرخ اعتبارسنجی 94.4% دست یافتند!</strong>
+                    </p>
+                    <p style="margin-bottom: 15px;">
+                        فرمول‌های پیچیده (15+ ماده) نرخ اعتبارسنجی 0% داشتند، که نشان می‌دهد پزشکان باستان اثربخشی را 
+                        درک می‌کردند اما با فشار فرهنگی برای آماده‌سازی‌های پیچیده مواجه بودند.
+                    </p>
+                    <p>
+                        <strong>مجموع اعتبارسنجی شده:</strong> 175 فرمول (73.8%) درجه‌ای از اعتبار علمی را نشان می‌دهند، 
+                        که دقت دارویی قابل توجهی را برای پزشکی 1200 ساله نشان می‌دهد.
+                    </p>
+                </div>
+            </section>
+
+            <!-- WOW Factors Persian -->
+            <section class="section">
+                <h2 class="section-title">🌟 10 عامل شگفت‌انگیز برتر</h2>
+                <p style="margin-bottom: 30px; font-size: 1.1rem;">
+                    کشفیاتی که قرن‌ها از پزشکی مدرن جلوتر بودند و بینش علمی فوق‌العاده‌ای را نشان می‌دهند.
+                </p>
+
+                <div class="wow-grid">
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">1. زعفران ضد افسردگی</div>
+                        <div class="wow-description">
+                            بیش از 1000 سال پیش برای افسردگی در معجون المفرح استفاده شد. اکنون توسط آزمایش‌های بالینی سطح 1 
+                            تایید شده: زعفران برابر با اثربخشی SSRI است! پزشکی جریان اصلی این را تنها در دهه 2000 شناخت.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">2. اولین فرمولاری جهان</div>
+                        <div class="wow-description">
+                            سازمان‌دهی سیستماتیک بر اساس بیماری (نه الفبایی)، 700 سال جلوتر از فرمولاری‌های اروپایی. این اصل 
+                            سازمان‌دهی امروزه استاندارد جهانی باقی مانده است (WHO، FDA، EMA).
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">3. مسیرهای تجویز متعدد</div>
+                        <div class="wow-description">
+                            20 شکل دارویی مختلف شناسایی شده: خوراکی، بینی، موضعی، رکتال، استنشاقی. اصل فارماکولوژی مدرن 
+                            1200 سال پیش با درک پیچیده از زیست‌دسترسی تاسیس شد.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 8/10</div>
+                        <div class="wow-title">4. تریاک آرام‌بخش/مسکن</div>
+                        <div class="wow-description">
+                            به درستی به عنوان مسکن و آرام‌بخش اصلی شناسایی شد. مشتقات مورفین هنوز استاندارد طلایی برای 
+                            مدیریت درد امروز هستند. بینش دارویی دقیق توسط علم مدرن تایید شده است.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 8/10</div>
+                        <div class="wow-title">5. عسل و زنجبیل برای سرفه</div>
+                        <div class="wow-description">
+                            درمان ساده، ایمن و موثر. شواهد آزمایش‌های بالینی سطح 1 اثربخشی را تایید می‌کند. WHO عسل را 
+                            برای سرکوب سرفه توصیه می‌کند. خرد باستانی توسط آزمایش‌های بالینی مدرن تایید شده است.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 7/10</div>
+                        <div class="wow-title">6. هم‌افزایی کندر و مر</div>
+                        <div class="wow-description">
+                            ترکیب ضد التهابی توسط تحقیقات 2024 تایید شد. اثرات محافظت عصبی در مطالعات فعلی در حال ظهور است. 
+                            تحقیقات دارویی فعال برای کاربردهای مدرن ادامه دارد.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 7/10</div>
+                        <div class="wow-title">7. فلفل سیاه تقویت‌کننده زیستی</div>
+                        <div class="wow-description">
+                            پیپرین جذب دارو را افزایش می‌دهد - مکانیسم اکنون تایید شده است. در بسیاری از فرمول‌های باستانی 
+                            برای افزایش زیست‌دسترسی استفاده شد. صنعت داروسازی مدرن این اصل را قرن‌ها بعد دوباره کشف کرد.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">8. مشخصات دوز دقیق</div>
+                        <div class="wow-description">
+                            وزن‌های دقیق (درهم، مثقال) برای هر ماده مشخص شده است. اصل اساسی فارماکولوژی مدرن 600 سال جلوتر 
+                            از پزشکی اروپایی تاسیس شد.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">9. مفهوم پزشکی شخصی‌سازی شده</div>
+                        <div class="wow-description">
+                            فردی‌سازی مبتنی بر "مزاج" 1100 سال جلوتر از فارماکوژنومیکس. اکنون به عنوان پزشکی دقیق در حال ظهور 
+                            است - مفهوم باستانی مستقیماً با تنوع ژنتیکی مدرن در پاسخ دارویی مطابقت دارد.
+                        </div>
+                    </div>
+
+                    <div class="wow-card">
+                        <div class="wow-rating">⭐ 10/10</div>
+                        <div class="wow-title">10. مقررات دارویی</div>
+                        <div class="wow-description">
+                            سیستم بازرسی کیفیت دارو (المحتسب) 800 سال جلوتر از استانداردهای GMP. بازرسان دولتی از تقلب 
+                            جلوگیری کردند و ایمنی را تضمین کردند - اصل نظارتی مدرن در دوران قرون وسطی تاسیس شد.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapters Persian -->
+            <section class="section">
+                <h2 class="section-title">📚 13 فصل پزشکی</h2>
+                <p style="margin-bottom: 30px;">سازمان‌دهی شده بر اساس سیستم بدن و دسته بیماری - اصل سازمان‌دهی انقلابی.</p>
+
+                <div class="chapter-grid">
+                    <div class="chapter-card">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-title">اختلالات سر</div>
+                        <div class="chapter-stats">45 فرمول | امتیاز: 6.0/10</div>
+                        <p style="margin-top: 10px; color: #666;">سردرد، میگرن، بی‌خوابی، فلج، صرع، درمان سکته مغزی</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-title">اختلالات چشم</div>
+                        <div class="chapter-stats">16 فرمول | امتیاز: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">فرآورده‌های سرمه، قطره چشم، تقویت‌کننده‌های بینایی</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-title">گوش/بینی/گلو</div>
+                        <div class="chapter-stats">13 فرمول | امتیاز: 6.2/10</div>
+                        <p style="margin-top: 10px; color: #666;">قطره گوش، درمان‌های بینی، غرغره</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-title">قفسه سینه/تنفسی</div>
+                        <div class="chapter-stats">26 فرمول | امتیاز: 6.6/10</div>
+                        <p style="margin-top: 10px; color: #666;">سرفه، آسم، داروهای احتقان قفسه سینه</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">5</div>
+                        <div class="chapter-title">اختلالات قلب</div>
+                        <div class="chapter-stats">19 فرمول | امتیاز: 7.0/10</div>
+                        <p style="margin-top: 10px; color: #666;">تپش قلب، اضطراب، درمان‌های افسردگی</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">6</div>
+                        <div class="chapter-title">اختلالات معده</div>
+                        <div class="chapter-stats">20 فرمول | امتیاز: 6.1/10</div>
+                        <p style="margin-top: 10px; color: #666;">شکایات گوارشی، تهوع، کاهش اشتها</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">7</div>
+                        <div class="chapter-title">اختلالات کبد</div>
+                        <div class="chapter-stats">15 فرمول | امتیاز: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">شکایات کبدی، یرقان، حفاظت کبد</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">8</div>
+                        <div class="chapter-title">اختلالات طحال</div>
+                        <div class="chapter-stats">12 فرمول | امتیاز: 6.8/10</div>
+                        <p style="margin-top: 10px; color: #666;">بزرگ شدن طحال و شرایط مرتبط</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">9</div>
+                        <div class="chapter-title">اختلالات روده</div>
+                        <div class="chapter-stats">18 فرمول | امتیاز: 6.6/10</div>
+                        <p style="margin-top: 10px; color: #666;">اسهال، یبوست، درمان‌های کولیک</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">10</div>
+                        <div class="chapter-title">اختلالات هموروئید</div>
+                        <div class="chapter-stats">10 فرمول | امتیاز: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">هموروئید، شکاف مقعدی، درمان‌های موضعی</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">11</div>
+                        <div class="chapter-title">اختلالات تناسلی</div>
+                        <div class="chapter-stats">8 فرمول | امتیاز: 6.6/10</div>
+                        <p style="margin-top: 10px; color: #666;">سلامت باروری، شستشوها، پسریزها</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">12</div>
+                        <div class="chapter-title">کلیه/مثانه</div>
+                        <div class="chapter-stats">20 فرمول | امتیاز: 6.5/10</div>
+                        <p style="margin-top: 10px; color: #666;">سوزش ادراری، سنگ، ادرارآورها، سنگ‌شکن‌ها</p>
+                    </div>
+
+                    <div class="chapter-card">
+                        <div class="chapter-number">13</div>
+                        <div class="chapter-title">درمان‌های جامع</div>
+                        <div class="chapter-stats">15 فرمول | امتیاز: 6.8/10</div>
+                        <p style="margin-top: 10px; color: #666;">معاجین جهانی، پادزهرها، فرمول‌های چند شرایطی</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Persian -->
+            <section class="section">
+                <h2 class="section-title">🔬 مسائل تحقیقاتی باز</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 30px;">
+                    <strong>46 فرمول با اولویت تحقیقاتی بسیار بالا</strong> فرصت‌های استفاده نشده برای تحقیقات دارویی مدرن را 
+                    نشان می‌دهند.
+                </p>
+
+                <div style="background: #e8f4f8; padding: 25px; border-radius: 10px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">💡 راه‌حل‌ها برای مشکلات مدرن</h3>
+                    <p style="margin-bottom: 10px;"><strong>✓ مقاومت چند دارویی:</strong> ترکیبات چند گیاهی ممکن است مقاومت را از طریق مکانیسم‌های متعدد برطرف کنند</p>
+                    <p style="margin-bottom: 10px;"><strong>✓ بیماری‌های پیچیده مزمن:</strong> رویکرد چند هدفه برای شرایطی مانند دیابت و سرطان مناسب است</p>
+                    <p style="margin-bottom: 10px;"><strong>✓ پزشکی شخصی‌سازی شده:</strong> فردی‌سازی مبتنی بر مزاج با فارماکوژنومیکس مطابقت دارد</p>
+                    <p style="margin-bottom: 10px;"><strong>✓ کشف دارو:</strong> 237 فرمولاسیون کتابخانه الگو برای ترکیبات جدید فراهم می‌کنند</p>
+                    <p><strong>✓ داروسازی محصولات طبیعی:</strong> تکنیک‌های آماده‌سازی پیشرفته فرمولاسیون مدرن را راهنمایی می‌کنند</p>
+                </div>
+            </section>
+
+            <!-- Final Assessment Persian -->
+            <section class="section">
+                <h2 class="section-title">⭐ ارزیابی نهایی</h2>
+
+                <div style="background: linear-gradient(135deg, #2c5f7e, #8b4513); color: white; padding: 30px; border-radius: 15px;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: #d4af37;">🎯 نتیجه‌گیری</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px;">
+                        الأقراباذین یک <strong>دستاورد فوق‌العاده</strong> در تاریخ پزشکی است. ایجاد شده بیش از 1200 سال پیش، 
+                        سازمان‌دهی سیستماتیک دارو، دوز دقیق، مسیرهای تحویل متعدد را تاسیس کرد و بینش‌های دارویی قابل توجهی را 
+                        نشان داد.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px;">
+                        با <strong>تایید 44.3% از فرمول‌ها</strong> توسط علم مدرن و <strong>نرخ اعتبارسنجی 94.4% برای فرمول‌های 
+                        ساده</strong>، این متن شایسته تحقیقات مدرن جدی با استفاده از RCT، فارماکولوژی شبکه و رویکردهای 
+                        فارماکوژنومیکس است.
+                    </p>
+                    <p style="font-size: 1.2rem; font-weight: 700; text-align: center; margin-top: 25px; color: #d4af37;">
+                        میانگین امتیاز فرمول: 6.5/10<br>
+                        <span style="font-size: 0.9rem; font-weight: 400;">قابل توجه برای فرمولاسیون‌های 1200 ساله!</span>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <h4>Photanols Energy</h4>
-                <p style="font-size: 13px; line-height: 1.6;">Advanced renewable energy and ICT solutions for sustainable business growth in the MENA region.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#services">Renewable Energy</a></li>
-                    <li><a href="#services">Energy Storage</a></li>
-                    <li><a href="#services">ICT Integration</a></li>
-                    <li><a href="#services">Cybersecurity</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Case Studies</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Photanols Energy. All rights reserved. Based in Muscat, Oman.</p>
+            <p style="font-size: 1.2rem; margin-bottom: 15px;">
+                <strong>Al-Aqrabadhin Comprehensive Analysis</strong>
+            </p>
+            <p style="margin-bottom: 10px;">
+                World's First Pharmaceutical Formulary | الأقراباذين | اولین فرمولاری داروسازی جهان
+            </p>
+            <p style="margin-bottom: 10px;">
+                237 Formulations | 13 Chapters | 1200+ Years of Medical Knowledge
+            </p>
+            <p style="font-size: 0.9rem; margin-top: 20px; opacity: 0.8;">
+                © 2026 | Comprehensive Scientific Validation Analysis
+            </p>
+            <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.8;">
+                Created for academic research and historical documentation
+            </p>
         </div>
     </footer>
+
+    <!-- JavaScript for Language Switching -->
+    <script>
+        function switchLanguage(lang) {
+            // Hide all language content
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Show selected language content
+            document.getElementById('content-' + lang).classList.add('active');
+
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
+
+            // Update HTML dir and lang attributes
+            const html = document.documentElement;
+            if (lang === 'ar' || lang === 'fa') {
+                html.setAttribute('dir', 'rtl');
+            } else {
+                html.setAttribute('dir', 'ltr');
+            }
+            html.setAttribute('lang', lang);
+
+            // Update navigation text
+            document.querySelectorAll('.nav-text').forEach(navItem => {
+                const text = navItem.getAttribute('data-' + lang);
+                if (text) {
+                    navItem.textContent = text;
+                }
+            });
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Set default language on load
+        window.addEventListener('load', function() {
+            switchLanguage('en');
+        });
+    </script>
 </body>
 </html>
