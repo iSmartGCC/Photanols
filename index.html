@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اعتبارسنجی علمی طب اسلامی | Scientific Validation of Islamic Medicine | التحقق العلمي من الطب الإسلامي</title>
+    <title>🕌 اعتبارسنجی علمی طب اسلامی | Scientific Validation of Islamic Medicine</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;900&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
     <style>
-        /* ============================================
-           RESET & BASE STYLES
-        ============================================ */
+        /* ===================================== */
+        /* RESET & BASE STYLES */
+        /* ===================================== */
         * {
             margin: 0;
             padding: 0;
@@ -71,27 +71,28 @@
             text-align: left;
         }
 
-        /* ============================================
-           TYPOGRAPHY
-        ============================================ */
+        /* Typography */
         h1, h2, h3, h4, h5, h6 {
             font-weight: 900;
             line-height: 1.2;
             color: var(--primary);
         }
 
-        /* ============================================
-           LAYOUT
-        ============================================ */
+        /* Layout */
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* ============================================
-           LANGUAGE SWITCHER (Fixed top-right)
-        ============================================ */
+        /* Utilities */
+        .hidden {
+            display: none !important;
+        }
+
+        /* ===================================== */
+        /* LANGUAGE SWITCHER */
+        /* ===================================== */
         .language-switcher {
             position: fixed;
             top: 20px;
@@ -123,6 +124,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            font-family: inherit;
         }
 
         .lang-btn:hover {
@@ -136,9 +138,9 @@
             border-color: var(--primary);
         }
 
-        /* ============================================
-           HERO SECTION (Multilingual)
-        ============================================ */
+        /* ===================================== */
+        /* HERO SECTION */
+        /* ===================================== */
         .hero {
             background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #5c6bc0 100%);
             color: white;
@@ -170,6 +172,7 @@
             margin-bottom: 24px;
             color: white;
             text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            font-family: 'Vazirmatn', serif;
         }
 
         .hero .subtitle {
@@ -218,9 +221,9 @@
             opacity: 0.95;
         }
 
-        /* ============================================
-           NAVIGATION TABS
-        ============================================ */
+        /* ===================================== */
+        /* NAVIGATION TABS */
+        /* ===================================== */
         .nav-tabs {
             background: white;
             border-bottom: 3px solid var(--primary);
@@ -266,9 +269,13 @@
             box-shadow: var(--shadow-md);
         }
 
-        /* ============================================
-           SECTION
-        ============================================ */
+        .tab-icon {
+            font-size: 1.2rem;
+        }
+
+        /* ===================================== */
+        /* SECTIONS */
+        /* ===================================== */
         .section {
             display: none;
             padding: 60px 0;
@@ -291,9 +298,31 @@
             }
         }
 
-        /* ============================================
-           BUTTONS & LINKS
-        ============================================ */
+        @keyframes slideDown {
+            from {
+                transform: translate(-50%, -20px);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, 0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translate(-50%, 0);
+                opacity: 1;
+            }
+            to {
+                transform: translate(-50%, -20px);
+                opacity: 0;
+            }
+        }
+
+        /* ===================================== */
+        /* BUTTONS */
+        /* ===================================== */
         .btn {
             padding: 14px 32px;
             border-radius: var(--radius);
@@ -318,28 +347,9 @@
             box-shadow: var(--shadow-lg);
         }
 
-        .reference-link {
-            display: inline-block;
-            padding: 8px 16px;
-            background: var(--bg);
-            border: 2px solid var(--border);
-            border-radius: var(--radius);
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .reference-link:hover {
-            background: white;
-            border-color: var(--primary);
-            transform: translateX(-4px);
-        }
-
-        /* ============================================
-           VALIDATION BADGES
-        ============================================ */
+        /* ===================================== */
+        /* VALIDATION BADGES */
+        /* ===================================== */
         .validation-badge {
             padding: 6px 14px;
             border-radius: 999px;
@@ -367,15 +377,9 @@
             border-color: #64748b;
         }
 
-        .validation-badge.rejected {
-            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
-            color: #991b1b;
-            border-color: #dc2626;
-        }
-
-        /* ============================================
-           RESPONSIVE
-        ============================================ */
+        /* ===================================== */
+        /* RESPONSIVE */
+        /* ===================================== */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -395,1633 +399,945 @@
             }
         }
 
-        /* ============================================
-           UTILITIES
-        ============================================ */
-        .hidden {
-            display: none !important;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .mt-1 { margin-top: 8px; }
-        .mt-2 { margin-top: 16px; }
-        .mt-3 { margin-top: 24px; }
+        /* Additional spacing utilities */
         .mt-4 { margin-top: 32px; }
-
-        .mb-1 { margin-bottom: 8px; }
-        .mb-2 { margin-bottom: 16px; }
-        .mb-3 { margin-bottom: 24px; }
         .mb-4 { margin-bottom: 32px; }
-
+        .text-center { text-align: center; }
     </style>
 </head>
 <body>
 
-    <!-- LANGUAGE SWITCHER (Fixed) -->
+    <!-- LANGUAGE SWITCHER -->
     <div class="language-switcher">
         <button class="lang-btn active" data-lang="fa" onclick="switchLanguage('fa')" title="فارسی">
-            🇮🇷 <span class="lang-text">FA</span>
+            <span class="lang-text">FA</span>
         </button>
         <button class="lang-btn" data-lang="en" onclick="switchLanguage('en')" title="English">
-            🇬🇧 <span class="lang-text">EN</span>
+            <span class="lang-text">EN</span>
         </button>
         <button class="lang-btn" data-lang="ar" onclick="switchLanguage('ar')" title="العربية">
-            🇸🇦 <span class="lang-text">AR</span>
+            <span class="lang-text">AR</span>
         </button>
     </div>
 
-    <!-- MAIN CONTAINER -->
-    <div id="main-container">
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content container">
 
-        <!-- HERO SECTION (Multilingual) -->
-        <section class="hero">
-            <div class="hero-content container">
-                <!-- PERSIAN (Default) -->
-                <div class="lang-content" data-lang="fa">
-                    <h1>🕌 اعتبارسنجی علمی طب اسلامی</h1>
-                    <p class="subtitle">
-                        مطالعه جامع فرمول‌های دارویی از عصر طلایی پزشکی اسلام
-                        <br>با روش‌های علمی مدرن و شواهد بالینی
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-card">
-                            <div class="stat-number">۲۳۷</div>
-                            <div class="stat-label">فرمول دارویی</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">۱۷۵</div>
-                            <div class="stat-label">تأیید شده</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">۷۳٫۸٪</div>
-                            <div class="stat-label">نرخ موفقیت</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">۱۳</div>
-                            <div class="stat-label">فصل (دستگاه بدن)</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">۴۶</div>
-                            <div class="stat-label">مسئله تحقیقاتی</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">۲۰۰+</div>
-                            <div class="stat-label">مرجع علمی</div>
-                        </div>
+            <!-- PERSIAN (Default) -->
+            <div class="lang-content" data-lang="fa">
+                <h1>🕌 اعتبارسنجی علمی طب اسلامی</h1>
+                <p class="subtitle">
+                    مطالعه جامع فرمول‌های دارویی از عصر طلایی پزشکی اسلام<br>
+                    با روش‌های علمی مدرن و شواهد بالینی
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">۲۳۷</div>
+                        <div class="stat-label">فرمول دارویی</div>
                     </div>
-                </div>
-
-                <!-- ENGLISH -->
-                <div class="lang-content hidden" data-lang="en">
-                    <h1>🕌 Scientific Validation of Islamic Medicine</h1>
-                    <p class="subtitle">
-                        Comprehensive study of pharmaceutical formulations from the Islamic Golden Age of Medicine
-                        <br>using modern scientific methods and clinical evidence
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-card">
-                            <div class="stat-number">237</div>
-                            <div class="stat-label">Drug Formulations</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">175</div>
-                            <div class="stat-label">Validated</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">73.8%</div>
-                            <div class="stat-label">Success Rate</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">13</div>
-                            <div class="stat-label">Chapters (Body Systems)</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">46</div>
-                            <div class="stat-label">Research Questions</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">200+</div>
-                            <div class="stat-label">Scientific References</div>
-                        </div>
+                    <div class="stat-card">
+                        <div class="stat-number">۱۷۵</div>
+                        <div class="stat-label">تأیید شده</div>
                     </div>
-                </div>
-
-                <!-- ARABIC -->
-                <div class="lang-content hidden" data-lang="ar">
-                    <h1>🕌 التحقق العلمي من الطب الإسلامي</h1>
-                    <p class="subtitle">
-                        دراسة شاملة للتركيبات الدوائية من العصر الذهبي للطب الإسلامي
-                        <br>باستخدام الأساليب العلمية الحديثة والأدلة السريرية
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-card">
-                            <div class="stat-number">٢٣٧</div>
-                            <div class="stat-label">تركيبة دوائية</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">١٧٥</div>
-                            <div class="stat-label">مُثبَتة</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">٧٣٫٨٪</div>
-                            <div class="stat-label">معدل النجاح</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">١٣</div>
-                            <div class="stat-label">فصل (أجهزة الجسم)</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">٤٦</div>
-                            <div class="stat-label">سؤال بحثي</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">٢٠٠+</div>
-                            <div class="stat-label">مرجع علمي</div>
-                        </div>
+                    <div class="stat-card">
+                        <div class="stat-number">۷۳.۸٪</div>
+                        <div class="stat-label">نرخ موفقیت</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">۱۳</div>
+                        <div class="stat-label">فصل (دستگاه‌های بدن)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">۴۶</div>
+                        <div class="stat-label">سؤال تحقیقاتی</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">۲۰۰+</div>
+                        <div class="stat-label">مرجع علمی</div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- NAVIGATION TABS (Multilingual) -->
-        <nav class="nav-tabs">
-            <div class="container">
-                <div class="nav-tabs-inner">
-                    <!-- Tabs will be populated by JavaScript for multilingual support -->
-                    <button class="nav-tab active" onclick="showSection('overview-section')" data-section="overview">
-                        <span class="tab-icon">📊</span>
-                        <span class="tab-text" data-fa="نمای کلی" data-en="Overview" data-ar="نظرة عامة">نمای کلی</span>
-                    </button>
-                    <button class="nav-tab" onclick="showSection('bodymap-section')" data-section="bodymap">
-                        <span class="tab-icon">🧍</span>
-                        <span class="tab-text" data-fa="نقشه بدن" data-en="Body Map" data-ar="خريطة الجسم">نقشه بدن</span>
-                    </button>
-                    <button class="nav-tab" onclick="showSection('chapters-section')" data-section="chapters">
-                        <span class="tab-icon">📚</span>
-                        <span class="tab-text" data-fa="مرور فصل‌ها" data-en="Browse Chapters" data-ar="تصفح الفصول">مرور فصل‌ها</span>
-                    </button>
-                    <button class="nav-tab" onclick="showSection('database-section')" data-section="database">
-                        <span class="tab-icon">🗄️</span>
-                        <span class="tab-text" data-fa="پایگاه داده" data-en="Database" data-ar="قاعدة البيانات">پایگاه داده</span>
-                    </button>
-                    <button class="nav-tab" onclick="showSection('openproblems-section')" data-section="openproblems">
-                        <span class="tab-icon">❓</span>
-                        <span class="tab-text" data-fa="مسائل باز" data-en="Open Problems" data-ar="مسائل مفتوحة">مسائل باز</span>
-                    </button>
-                    <button class="nav-tab" onclick="showSection('references-section')" data-section="references">
-                        <span class="tab-icon">📚</span>
-                        <span class="tab-text" data-fa="مراجع علمی" data-en="References" data-ar="المراجع">مراجع علمی</span>
-                    </button>
-                    <button class="nav-tab" onclick="showSection('collaboration-section')" data-section="collaboration">
-                        <span class="tab-icon">🤝</span>
-                        <span class="tab-text" data-fa="همکاری" data-en="Collaborate" data-ar="التعاون">همکاری</span>
-                    </button>
-                    <button class="nav-tab" onclick="showSection('about-section')" data-section="about">
-                        <span class="tab-icon">ℹ️</span>
-                        <span class="tab-text" data-fa="درباره" data-en="About" data-ar="حول">درباره</span>
-                    </button>
+            <!-- ENGLISH -->
+            <div class="lang-content hidden" data-lang="en">
+                <h1>🕌 Scientific Validation of Islamic Medicine</h1>
+                <p class="subtitle">
+                    Comprehensive study of pharmaceutical formulations from the Islamic Golden Age of Medicine<br>
+                    using modern scientific methods and clinical evidence
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">237</div>
+                        <div class="stat-label">Drug Formulations</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">175</div>
+                        <div class="stat-label">Validated</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">73.8%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">13</div>
+                        <div class="stat-label">Chapters (Body Systems)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">46</div>
+                        <div class="stat-label">Research Questions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Scientific References</div>
+                    </div>
                 </div>
             </div>
-        </nav>
 
+            <!-- ARABIC -->
+            <div class="lang-content hidden" data-lang="ar">
+                <h1>🕌 التحقق العلمي من الطب الإسلامي</h1>
+                <p class="subtitle">
+                    دراسة شاملة للتركيبات الصيدلانية من العصر الذهبي للطب الإسلامي<br>
+                    باستخدام الأساليب العلمية الحديثة والأدلة السريرية
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">٢٣٧</div>
+                        <div class="stat-label">تركيبة دوائية</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">١٧٥</div>
+                        <div class="stat-label">مثبتة</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">٧٣.٨٪</div>
+                        <div class="stat-label">معدل النجاح</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">١٣</div>
+                        <div class="stat-label">فصل (أجهزة الجسم)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">٤٦</div>
+                        <div class="stat-label">سؤال بحثي</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">٢٠٠+</div>
+                        <div class="stat-label">مرجع علمي</div>
+                    </div>
+                </div>
+            </div>
 
-        <!-- BODY MAP SECTION (Multilingual) -->
-        <section id="bodymap-section" class="section">
-            <div class="container">
+        </div>
+    </section>
+
+    <!-- NAVIGATION TABS -->
+    <nav class="nav-tabs">
+        <div class="container">
+            <div class="nav-tabs-inner">
+                <button class="nav-tab active" onclick="showSection('overview-section')">
+                    <span class="tab-icon">📊</span>
+                    <span class="tab-text" data-fa="نمای کلی" data-en="Overview" data-ar="نظرة عامة">نمای کلی</span>
+                </button>
+                <button class="nav-tab" onclick="showSection('bodymap-section')">
+                    <span class="tab-icon">🧍</span>
+                    <span class="tab-text" data-fa="نقشه بدن" data-en="Body Map" data-ar="خريطة الجسم">نقشه بدن</span>
+                </button>
+                <button class="nav-tab" onclick="showSection('openproblems-section')">
+                    <span class="tab-icon">❓</span>
+                    <span class="tab-text" data-fa="مسائل تحقیقاتی" data-en="Research Problems" data-ar="المسائل البحثية">مسائل تحقیقاتی</span>
+                </button>
+                <button class="nav-tab" onclick="showSection('collaboration-section')">
+                    <span class="tab-icon">🤝</span>
+                    <span class="tab-text" data-fa="همکاری" data-en="Collaboration" data-ar="التعاون">همکاری</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- OVERVIEW SECTION -->
+    <section id="overview-section" class="section active">
+        <div class="container">
+
+            <!-- PERSIAN -->
+            <div class="lang-content" data-lang="fa">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">📊 نمای کلی پروژه</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
+                    این پروژه ۲۳۷ فرمول دارویی از کتاب‌های کلاسیک طب اسلامی را با روش‌های علمی مدرن اعتبارسنجی می‌کند
+                </p>
+            </div>
+
+            <!-- ENGLISH -->
+            <div class="lang-content hidden" data-lang="en">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">📊 Project Overview</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
+                    This project validates 237 pharmaceutical formulations from classical Islamic medicine books using modern scientific methods
+                </p>
+            </div>
+
+            <!-- ARABIC -->
+            <div class="lang-content hidden" data-lang="ar">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">📊 نظرة عامة على المشروع</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
+                    يتحقق هذا المشروع من ٢٣٧ تركيبة صيدلانية من كتب الطب الإسلامي الكلاسيكية باستخدام الأساليب العلمية الحديثة
+                </p>
+            </div>
+
+            <!-- Methodology Cards -->
+            <div style="margin-bottom: 60px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+
+                    <div style="background: white; padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border-top: 5px solid #3b82f6;">
+                        <div style="font-size: 3rem; margin-bottom: 16px; text-align: center;">🔬</div>
+                        <h3 style="font-size: 1.3rem; color: #1e40af; margin-bottom: 16px; text-align: center;" class="method-title" data-fa="مطالعات بالینی" data-en="Clinical Studies" data-ar="الدراسات السريرية">مطالعات بالینی</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8; text-align: center;" class="method-desc" data-fa="کارآزمایی‌های تصادفی‌سازی شده (RCT) برای ارزیابی اثربخشی" data-en="Randomized Controlled Trials (RCT) to evaluate efficacy" data-ar="تجارب عشوائية محكمة (RCT) لتقييم الفعالية">کارآزمایی‌های تصادفی‌سازی شده (RCT) برای ارزیابی اثربخشی</p>
+                    </div>
+
+                    <div style="background: white; padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border-top: 5px solid #10b981;">
+                        <div style="font-size: 3rem; margin-bottom: 16px; text-align: center;">🧪</div>
+                        <h3 style="font-size: 1.3rem; color: #065f46; margin-bottom: 16px; text-align: center;" class="method-title" data-fa="فیتوشیمی" data-en="Phytochemistry" data-ar="الكيمياء النباتية">فیتوشیمی</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8; text-align: center;" class="method-desc" data-fa="شناسایی ترکیبات فعال با HPLC، GC-MS و NMR" data-en="Active compound identification using HPLC, GC-MS, and NMR" data-ar="تحديد المركبات النشطة باستخدام HPLC وGC-MS وNMR">شناسایی ترکیبات فعال با HPLC، GC-MS و NMR</p>
+                    </div>
+
+                    <div style="background: white; padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border-top: 5px solid #f59e0b;">
+                        <div style="font-size: 3rem; margin-bottom: 16px; text-align: center;">⚙️</div>
+                        <h3 style="font-size: 1.3rem; color: #92400e; margin-bottom: 16px; text-align: center;" class="method-title" data-fa="مکانیسم اثر" data-en="Mechanism of Action" data-ar="آلية العمل">مکانیسم اثر</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8; text-align: center;" class="method-desc" data-fa="مطالعات مولکولی برای تعیین مسیرهای بیولوژیک" data-en="Molecular studies to determine biological pathways" data-ar="دراسات جزيئية لتحديد المسارات البيولوجية">مطالعات مولکولی برای تعیین مسیرهای بیولوژیک</p>
+                    </div>
+
+                    <div style="background: white; padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border-top: 5px solid #ef4444;">
+                        <div style="font-size: 3rem; margin-bottom: 16px; text-align: center;">🛡️</div>
+                        <h3 style="font-size: 1.3rem; color: #991b1b; margin-bottom: 16px; text-align: center;" class="method-title" data-fa="ایمنی و سمیت" data-en="Safety & Toxicity" data-ar="السلامة والسمية">ایمنی و سمیت</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.8; text-align: center;" class="method-desc" data-fa="ارزیابی پروفایل ایمنی و تعیین دوز مطمئن" data-en="Safety profile assessment and safe dosage determination" data-ar="تقييم ملف السلامة وتحديد الجرعة الآمنة">ارزیابی پروفایل ایمنی و تعیین دوز مطمئن</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Chapter Summary -->
+            <div style="margin-bottom: 60px;">
 
                 <!-- PERSIAN -->
                 <div class="lang-content" data-lang="fa">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center; font-family: 'Vazirmatn', serif;">
-                        🧍 نقشه تعاملی بدن انسان
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
-                        روی هر قسمت از بدن کلیک کنید تا فرمول‌های مربوط به آن دستگاه را مشاهده نمایید
-                    </p>
+                    <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 32px; text-align: center;">۱۳ فصل بر اساس دستگاه‌های بدن</h3>
                 </div>
 
                 <!-- ENGLISH -->
                 <div class="lang-content hidden" data-lang="en">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                        🧍 Interactive Human Body Map
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
-                        Click on any body part to view formulations for that system
-                    </p>
+                    <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 32px; text-align: center;">13 Chapters Based on Body Systems</h3>
                 </div>
 
                 <!-- ARABIC -->
                 <div class="lang-content hidden" data-lang="ar">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                        🧍 خريطة الجسم البشري التفاعلية
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
-                        انقر على أي جزء من الجسم لعرض التركيبات الخاصة بذلك الجهاز
-                    </p>
+                    <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 32px; text-align: center;">١٣ فصلاً على أساس أجهزة الجسم</h3>
                 </div>
 
-                <!-- SVG Body Map -->
-                <div style="max-width: 1200px; margin: 0 auto; position: relative;">
-                    <svg viewBox="0 0 800 1200" style="width: 100%; height: auto; max-width: 600px; margin: 0 auto; display: block;">
-                        <!-- Human Body Outline -->
-                        <g id="body-outline">
-                            <!-- Head -->
-                            <ellipse cx="400" cy="120" rx="80" ry="100" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
 
-                            <!-- Neck -->
-                            <rect x="370" y="200" width="60" height="60" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
-
-                            <!-- Torso -->
-                            <ellipse cx="400" cy="450" rx="150" ry="250" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
-
-                            <!-- Arms -->
-                            <ellipse cx="250" cy="400" rx="40" ry="180" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
-                            <ellipse cx="550" cy="400" rx="40" ry="180" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
-
-                            <!-- Legs -->
-                            <ellipse cx="350" cy="850" rx="50" ry="200" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
-                            <ellipse cx="450" cy="850" rx="50" ry="200" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
-                        </g>
-
-                        <!-- CLICKABLE HOTSPOTS (13 Chapters) -->
-
-                        <!-- 1. Head/Brain (Chapter 1) -->
-                        <g class="body-hotspot" data-chapter="1" 
-                           onmouseover="showBodyLabel(1)" 
-                           onmouseout="hideBodyLabel(1)" 
-                           onclick="goToChapter(1)"
-                           style="cursor: pointer;">
-                            <circle cx="400" cy="100" r="60" fill="rgba(139, 92, 246, 0.3)" stroke="#8b5cf6" stroke-width="3"/>
-                            <text x="400" y="110" text-anchor="middle" font-size="40" fill="#8b5cf6">🧠</text>
-                        </g>
-
-                        <!-- 2. Eyes (Chapter 2) -->
-                        <g class="body-hotspot" data-chapter="2" 
-                           onmouseover="showBodyLabel(2)" 
-                           onmouseout="hideBodyLabel(2)" 
-                           onclick="goToChapter(2)"
-                           style="cursor: pointer;">
-                            <circle cx="370" cy="100" r="15" fill="rgba(6, 182, 212, 0.4)" stroke="#06b6d4" stroke-width="2"/>
-                            <circle cx="430" cy="100" r="15" fill="rgba(6, 182, 212, 0.4)" stroke="#06b6d4" stroke-width="2"/>
-                            <text x="400" y="85" text-anchor="middle" font-size="24" fill="#06b6d4">👁️</text>
-                        </g>
-
-                        <!-- 3. ENT (Chapter 3) -->
-                        <g class="body-hotspot" data-chapter="3" 
-                           onmouseover="showBodyLabel(3)" 
-                           onmouseout="hideBodyLabel(3)" 
-                           onclick="goToChapter(3)"
-                           style="cursor: pointer;">
-                            <ellipse cx="400" cy="140" rx="50" ry="30" fill="rgba(16, 185, 129, 0.3)" stroke="#10b981" stroke-width="2"/>
-                            <text x="400" y="150" text-anchor="middle" font-size="28" fill="#10b981">👂</text>
-                        </g>
-
-                        <!-- 4. Chest/Lungs (Chapter 4) -->
-                        <g class="body-hotspot" data-chapter="4" 
-                           onmouseover="showBodyLabel(4)" 
-                           onmouseout="hideBodyLabel(4)" 
-                           onclick="goToChapter(4)"
-                           style="cursor: pointer;">
-                            <ellipse cx="400" cy="340" rx="100" ry="80" fill="rgba(59, 130, 246, 0.3)" stroke="#3b82f6" stroke-width="3"/>
-                            <text x="400" y="355" text-anchor="middle" font-size="40" fill="#3b82f6">🫁</text>
-                        </g>
-
-                        <!-- 5. Heart (Chapter 5) -->
-                        <g class="body-hotspot" data-chapter="5" 
-                           onmouseover="showBodyLabel(5)" 
-                           onmouseout="hideBodyLabel(5)" 
-                           onclick="goToChapter(5)"
-                           style="cursor: pointer;">
-                            <circle cx="420" cy="360" r="40" fill="rgba(239, 68, 68, 0.3)" stroke="#ef4444" stroke-width="3"/>
-                            <text x="420" y="375" text-anchor="middle" font-size="36" fill="#ef4444">❤️</text>
-                        </g>
-
-                        <!-- 6. Stomach (Chapter 6) -->
-                        <g class="body-hotspot" data-chapter="6" 
-                           onmouseover="showBodyLabel(6)" 
-                           onmouseout="hideBodyLabel(6)" 
-                           onclick="goToChapter(6)"
-                           style="cursor: pointer;">
-                            <ellipse cx="380" cy="450" rx="70" ry="60" fill="rgba(132, 204, 22, 0.3)" stroke="#84cc16" stroke-width="3"/>
-                            <text x="380" y="465" text-anchor="middle" font-size="36" fill="#84cc16">🥘</text>
-                        </g>
-
-                        <!-- 7. Liver (Chapter 7) -->
-                        <g class="body-hotspot" data-chapter="7" 
-                           onmouseover="showBodyLabel(7)" 
-                           onmouseout="hideBodyLabel(7)" 
-                           onclick="goToChapter(7)"
-                           style="cursor: pointer;">
-                            <path d="M 320 420 Q 340 450 360 480 L 360 500 L 320 490 Z" 
-                                  fill="rgba(245, 158, 11, 0.3)" stroke="#f59e0b" stroke-width="2"/>
-                            <text x="335" y="465" text-anchor="middle" font-size="28" fill="#f59e0b">🫀</text>
-                        </g>
-
-                        <!-- 8. Spleen (Chapter 8) -->
-                        <g class="body-hotspot" data-chapter="8" 
-                           onmouseover="showBodyLabel(8)" 
-                           onmouseout="hideBodyLabel(8)" 
-                           onclick="goToChapter(8)"
-                           style="cursor: pointer;">
-                            <path d="M 480 420 Q 460 450 440 480 L 440 500 L 480 490 Z" 
-                                  fill="rgba(236, 72, 153, 0.3)" stroke="#ec4899" stroke-width="2"/>
-                            <text x="465" y="465" text-anchor="middle" font-size="28" fill="#ec4899">🔴</text>
-                        </g>
-
-                        <!-- 9. Intestines (Chapter 9) -->
-                        <g class="body-hotspot" data-chapter="9" 
-                           onmouseover="showBodyLabel(9)" 
-                           onmouseout="hideBodyLabel(9)" 
-                           onclick="goToChapter(9)"
-                           style="cursor: pointer;">
-                            <ellipse cx="400" cy="550" rx="90" ry="70" fill="rgba(34, 197, 94, 0.3)" stroke="#22c55e" stroke-width="3"/>
-                            <text x="400" y="565" text-anchor="middle" font-size="36" fill="#22c55e">🩺</text>
-                        </g>
-
-                        <!-- 10. Hemorrhoids (Chapter 10) -->
-                        <g class="body-hotspot" data-chapter="10" 
-                           onmouseover="showBodyLabel(10)" 
-                           onmouseout="hideBodyLabel(10)" 
-                           onclick="goToChapter(10)"
-                           style="cursor: pointer;">
-                            <circle cx="400" cy="640" r="30" fill="rgba(249, 115, 22, 0.3)" stroke="#f97316" stroke-width="2"/>
-                            <text x="400" y="650" text-anchor="middle" font-size="28" fill="#f97316">🔻</text>
-                        </g>
-
-                        <!-- 11. Reproductive (Chapter 11) -->
-                        <g class="body-hotspot" data-chapter="11" 
-                           onmouseover="showBodyLabel(11)" 
-                           onmouseout="hideBodyLabel(11)" 
-                           onclick="goToChapter(11)"
-                           style="cursor: pointer;">
-                            <ellipse cx="400" cy="700" rx="60" ry="40" fill="rgba(168, 85, 247, 0.3)" stroke="#a855f7" stroke-width="2"/>
-                            <text x="400" y="710" text-anchor="middle" font-size="28" fill="#a855f7">🌸</text>
-                        </g>
-
-                        <!-- 12. Kidneys/Bladder (Chapter 12) -->
-                        <g class="body-hotspot" data-chapter="12" 
-                           onmouseover="showBodyLabel(12)" 
-                           onmouseout="hideBodyLabel(12)" 
-                           onclick="goToChapter(12)"
-                           style="cursor: pointer;">
-                            <ellipse cx="350" cy="520" rx="30" ry="50" fill="rgba(14, 165, 233, 0.3)" stroke="#0ea5e9" stroke-width="2"/>
-                            <ellipse cx="450" cy="520" rx="30" ry="50" fill="rgba(14, 165, 233, 0.3)" stroke="#0ea5e9" stroke-width="2"/>
-                            <text x="400" cy="530" text-anchor="middle" font-size="28" fill="#0ea5e9">💧</text>
-                        </g>
-
-                        <!-- 13. Universal/General (Chapter 13) - Full body overlay -->
-                        <g class="body-hotspot" data-chapter="13" 
-                           onmouseover="showBodyLabel(13)" 
-                           onmouseout="hideBodyLabel(13)" 
-                           onclick="goToChapter(13)"
-                           style="cursor: pointer;">
-                            <circle cx="400" cy="250" r="25" fill="rgba(99, 102, 241, 0.3)" stroke="#6366f1" stroke-width="2"/>
-                            <text x="400" y="260" text-anchor="middle" font-size="24" fill="#6366f1">⚕️</text>
-                        </g>
-
-                        <!-- HOVER LABELS (Hidden by default, shown on hover) -->
-
-                        <!-- Label 1: Head -->
-                        <g id="label-1" style="display: none; pointer-events: none;">
-                            <rect x="280" y="40" width="240" height="50" rx="10" fill="white" stroke="#8b5cf6" stroke-width="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
-                            <text x="400" y="60" text-anchor="middle" font-size="14" font-weight="700" fill="#8b5cf6">
-                                <tspan class="label-text" data-fa="🧠 سر و اعصاب" data-en="🧠 Head & Neurological" data-ar="🧠 الرأس والأعصاب">🧠 سر و اعصاب</tspan>
-                            </text>
-                            <text x="400" y="78" text-anchor="middle" font-size="12" fill="#8b5cf6">
-                                <tspan class="label-count" data-fa="۳۲ فرمول" data-en="32 formulations" data-ar="٣٢ تركيبة">۳۲ فرمول</tspan>
-                            </text>
-                        </g>
-
-                        <!-- Label 2: Eyes -->
-                        <g id="label-2" style="display: none; pointer-events: none;">
-                            <rect x="300" y="50" width="200" height="50" rx="10" fill="white" stroke="#06b6d4" stroke-width="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
-                            <text x="400" y="70" text-anchor="middle" font-size="14" font-weight="700" fill="#06b6d4">
-                                <tspan class="label-text" data-fa="👁️ چشم" data-en="👁️ Eyes" data-ar="👁️ العيون">👁️ چشم</tspan>
-                            </text>
-                            <text x="400" y="88" text-anchor="middle" font-size="12" fill="#06b6d4">
-                                <tspan class="label-count" data-fa="۱۸ فرمول" data-en="18 formulations" data-ar="١٨ تركيبة">۱۸ فرمول</tspan>
-                            </text>
-                        </g>
-
-                        <!-- Labels 3-13 follow same pattern... -->
-                        <!-- For brevity, showing structure. Full implementation would have all 13 labels -->
-
-                    </svg>
-
-                    <!-- Legend -->
-                    <div style="margin-top: 60px; max-width: 900px; margin-left: auto; margin-right: auto;">
-
-                        <!-- PERSIAN -->
-                        <div class="lang-content" data-lang="fa">
-                            <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                                راهنمای رنگ‌ها
-                            </h3>
+                    <div style="display: flex; align-items: center; gap: 16px; padding: 20px; background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border-left: 4px solid #8b5cf6;">
+                        <span style="font-size: 2.5rem;">🧠</span>
+                        <div style="flex: 1;">
+                            <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name" data-fa="سر و اعصاب" data-en="Head & Neurological" data-ar="الرأس والأعصاب">سر و اعصاب</div>
+                            <div style="color: var(--text-muted); font-size: 0.9rem;" class="chapter-count" data-fa="۳۲ فرمول" data-en="32 formulations" data-ar="٣٢ تركيبة">۳۲ فرمول</div>
                         </div>
+                    </div>
 
-                        <!-- ENGLISH -->
-                        <div class="lang-content hidden" data-lang="en">
-                            <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                                Color Legend
-                            </h3>
+                    <div style="display: flex; align-items: center; gap: 16px; padding: 20px; background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border-left: 4px solid #06b6d4;">
+                        <span style="font-size: 2.5rem;">👁️</span>
+                        <div style="flex: 1;">
+                            <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name" data-fa="چشم و بینایی" data-en="Eyes & Vision" data-ar="العيون والرؤية">چشم و بینایی</div>
+                            <div style="color: var(--text-muted); font-size: 0.9rem;" class="chapter-count" data-fa="۱۸ فرمول" data-en="18 formulations" data-ar="١٨ تركيبة">۱۸ فرمول</div>
                         </div>
+                    </div>
 
-                        <!-- ARABIC -->
-                        <div class="lang-content hidden" data-lang="ar">
-                            <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                                دليل الألوان
-                            </h3>
+                    <div style="display: flex; align-items: center; gap: 16px; padding: 20px; background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border-left: 4px solid #10b981;">
+                        <span style="font-size: 2.5rem;">👂</span>
+                        <div style="flex: 1;">
+                            <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name" data-fa="گوش، بینی و گلو" data-en="ENT" data-ar="الأذن والأنف والحلق">گوش، بینی و گلو</div>
+                            <div style="color: var(--text-muted); font-size: 0.9rem;" class="chapter-count" data-fa="۲۲ فرمول" data-en="22 formulations" data-ar="٢٢ تركيبة">۲۲ فرمول</div>
                         </div>
+                    </div>
 
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
-                            <div style="display: flex; align-items: center; gap: 12px; padding: 16px; background: white; border-radius: var(--radius); border: 2px solid #8b5cf6;">
-                                <span style="font-size: 2rem;">🧠</span>
-                                <div>
-                                    <div style="font-weight: 700; color: #8b5cf6;" class="legend-text" data-fa="سر و اعصاب" data-en="Head & Neurological" data-ar="الرأس والأعصاب">سر و اعصاب</div>
-                                    <div style="font-size: 0.85rem; color: var(--text-muted);" class="legend-count" data-fa="۳۲ فرمول" data-en="32 formulations" data-ar="٣٢ تركيبة">۳۲ فرمول</div>
-                                </div>
-                            </div>
-
-                            <div style="display: flex; align-items: center; gap: 12px; padding: 16px; background: white; border-radius: var(--radius); border: 2px solid #06b6d4;">
-                                <span style="font-size: 2rem;">👁️</span>
-                                <div>
-                                    <div style="font-weight: 700; color: #06b6d4;" class="legend-text" data-fa="چشم" data-en="Eyes" data-ar="العيون">چشم</div>
-                                    <div style="font-size: 0.85rem; color: var(--text-muted);" class="legend-count" data-fa="۱۸ فرمول" data-en="18 formulations" data-ar="١٨ تركيبة">۱۸ فرمول</div>
-                                </div>
-                            </div>
-
-                            <!-- Remaining 11 legend items... -->
-
+                    <div style="display: flex; align-items: center; gap: 16px; padding: 20px; background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border-left: 4px solid #3b82f6;">
+                        <span style="font-size: 2.5rem;">🫁</span>
+                        <div style="flex: 1;">
+                            <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name" data-fa="قفسه سینه و تنفس" data-en="Chest & Respiratory" data-ar="الصدر والجهاز التنفسي">قفسه سینه و تنفس</div>
+                            <div style="color: var(--text-muted); font-size: 0.9rem;" class="chapter-count" data-fa="۲۶ فرمول" data-en="26 formulations" data-ar="٢٦ تركيبة">۲۶ فرمول</div>
                         </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 16px; padding: 20px; background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border-left: 4px solid #ef4444;">
+                        <span style="font-size: 2.5rem;">❤️</span>
+                        <div style="flex: 1;">
+                            <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name" data-fa="قلب و عروق" data-en="Heart & Cardiovascular" data-ar="القلب والأوعية الدموية">قلب و عروق</div>
+                            <div style="color: var(--text-muted); font-size: 0.9rem;" class="chapter-count" data-fa="۱۵ فرمول" data-en="15 formulations" data-ar="١٥ تركيبة">۱۵ فرمول</div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 16px; padding: 20px; background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border-left: 4px solid #84cc16;">
+                        <span style="font-size: 2.5rem;">🫄</span>
+                        <div style="flex: 1;">
+                            <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name" data-fa="معده و گوارش" data-en="Stomach & Digestive" data-ar="المعدة والجهاز الهضمي">معده و گوارش</div>
+                            <div style="color: var(--text-muted); font-size: 0.9rem;" class="chapter-count" data-fa="۲۸ فرمول" data-en="28 formulations" data-ar="٢٨ تركيبة">۲۸ فرمول</div>
+                        </div>
+                    </div>
+
+                    <!-- Add remaining 7 chapters similarly... -->
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BODY MAP SECTION -->
+    <section id="bodymap-section" class="section">
+        <div class="container">
+
+            <!-- PERSIAN -->
+            <div class="lang-content" data-lang="fa">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">🧍 نقشه تعاملی بدن انسان</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
+                    روی هر قسمت از بدن کلیک کنید تا فرمول‌های مربوط به آن دستگاه را مشاهده نمایید
+                </p>
+            </div>
+
+            <!-- ENGLISH -->
+            <div class="lang-content hidden" data-lang="en">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">🧍 Interactive Human Body Map</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
+                    Click on any body part to view formulations for that system
+                </p>
+            </div>
+
+            <!-- ARABIC -->
+            <div class="lang-content hidden" data-lang="ar">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">🧍 خريطة الجسم البشري التفاعلية</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
+                    انقر على أي جزء من الجسم لعرض التركيبات الخاصة بذلك الجهاز
+                </p>
+            </div>
+
+            <!-- Simplified Body Map Grid -->
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+
+                    <div onclick="selectBodyPart(1)" style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 24px; border-radius: var(--radius-lg); border: 3px solid #8b5cf6; cursor: pointer; transition: var(--transition); text-align: center;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-xl)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                        <div style="font-size: 3rem; margin-bottom: 12px;">🧠</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; color: #6b21a8; margin-bottom: 8px;" class="body-part-name" data-fa="سر و اعصاب" data-en="Head & Neurological" data-ar="الرأس والأعصاب">سر و اعصاب</div>
+                        <div style="color: #7c3aed; font-size: 0.9rem;" class="body-part-count" data-fa="۳۲ فرمول" data-en="32 formulations" data-ar="٣٢ تركيبة">۳۲ فرمول</div>
+                    </div>
+
+                    <div onclick="selectBodyPart(2)" style="background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%); padding: 24px; border-radius: var(--radius-lg); border: 3px solid #06b6d4; cursor: pointer; transition: var(--transition); text-align: center;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-xl)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                        <div style="font-size: 3rem; margin-bottom: 12px;">👁️</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; color: #0e7490; margin-bottom: 8px;" class="body-part-name" data-fa="چشم" data-en="Eyes" data-ar="العيون">چشم</div>
+                        <div style="color: #0891b2; font-size: 0.9rem;" class="body-part-count" data-fa="۱۸ فرمول" data-en="18 formulations" data-ar="١٨ تركيبة">۱۸ فرمول</div>
+                    </div>
+
+                    <div onclick="selectBodyPart(3)" style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 24px; border-radius: var(--radius-lg); border: 3px solid #10b981; cursor: pointer; transition: var(--transition); text-align: center;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-xl)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                        <div style="font-size: 3rem; margin-bottom: 12px;">👂</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; color: #065f46; margin-bottom: 8px;" class="body-part-name" data-fa="گوش، بینی و گلو" data-en="ENT" data-ar="الأذن والأنف">گوش، بینی و گلو</div>
+                        <div style="color: #047857; font-size: 0.9rem;" class="body-part-count" data-fa="۲۲ فرمول" data-en="22 formulations" data-ar="٢٢ تركيبة">۲۲ فرمول</div>
+                    </div>
+
+                    <div onclick="selectBodyPart(4)" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); padding: 24px; border-radius: var(--radius-lg); border: 3px solid #3b82f6; cursor: pointer; transition: var(--transition); text-align: center;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-xl)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                        <div style="font-size: 3rem; margin-bottom: 12px;">🫁</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; color: #1e40af; margin-bottom: 8px;" class="body-part-name" data-fa="ریه" data-en="Lungs" data-ar="الرئتين">ریه</div>
+                        <div style="color: #2563eb; font-size: 0.9rem;" class="body-part-count" data-fa="۲۶ فرمول" data-en="26 formulations" data-ar="٢٦ تركيبة">۲۶ فرمول</div>
+                    </div>
+
+                    <div onclick="selectBodyPart(5)" style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); padding: 24px; border-radius: var(--radius-lg); border: 3px solid #ef4444; cursor: pointer; transition: var(--transition); text-align: center;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-xl)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                        <div style="font-size: 3rem; margin-bottom: 12px;">❤️</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; color: #991b1b; margin-bottom: 8px;" class="body-part-name" data-fa="قلب" data-en="Heart" data-ar="القلب">قلب</div>
+                        <div style="color: #dc2626; font-size: 0.9rem;" class="body-part-count" data-fa="۱۵ فرمول" data-en="15 formulations" data-ar="١٥ تركيبة">۱۵ فرمول</div>
+                    </div>
+
+                    <div onclick="selectBodyPart(6)" style="background: linear-gradient(135deg, #ecfccb 0%, #d9f99d 100%); padding: 24px; border-radius: var(--radius-lg); border: 3px solid #84cc16; cursor: pointer; transition: var(--transition); text-align: center;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-xl)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                        <div style="font-size: 3rem; margin-bottom: 12px;">🫄</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; color: #3f6212; margin-bottom: 8px;" class="body-part-name" data-fa="معده" data-en="Stomach" data-ar="المعدة">معده</div>
+                        <div style="color: #4d7c0f; font-size: 0.9rem;" class="body-part-count" data-fa="۲۸ فرمول" data-en="28 formulations" data-ar="٢٨ تركيبة">۲۸ فرمول</div>
+                    </div>
+
+                    <div onclick="selectBodyPart(7)" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 24px; border-radius: var(--radius-lg); border: 3px solid #f59e0b; cursor: pointer; transition: var(--transition); text-align: center;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-xl)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                        <div style="font-size: 3rem; margin-bottom: 12px;">🟤</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; color: #92400e; margin-bottom: 8px;" class="body-part-name" data-fa="کبد" data-en="Liver" data-ar="الكبد">کبد</div>
+                        <div style="color: #b45309; font-size: 0.9rem;" class="body-part-count" data-fa="۱۹ فرمول" data-en="19 formulations" data-ar="١٩ تركيبة">۱۹ فرمول</div>
+                    </div>
+
+                    <div onclick="selectBodyPart(9)" style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); padding: 24px; border-radius: var(--radius-lg); border: 3px solid #22c55e; cursor: pointer; transition: var(--transition); text-align: center;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-xl)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                        <div style="font-size: 3rem; margin-bottom: 12px;">🫘</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; color: #14532d; margin-bottom: 8px;" class="body-part-name" data-fa="کلیه" data-en="Kidneys" data-ar="الكلى">کلیه</div>
+                        <div style="color: #15803d; font-size: 0.9rem;" class="body-part-count" data-fa="۲۴ فرمول" data-en="24 formulations" data-ar="٢٤ تركيبة">۲۴ فرمول</div>
+                    </div>
+
+                    <div onclick="selectBodyPart(12)" style="background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); padding: 24px; border-radius: var(--radius-lg); border: 3px solid #ec4899; cursor: pointer; transition: var(--transition); text-align: center;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-xl)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                        <div style="font-size: 3rem; margin-bottom: 12px;">🧴</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; color: #831843; margin-bottom: 8px;" class="body-part-name" data-fa="پوست" data-en="Skin" data-ar="الجلد">پوست</div>
+                        <div style="color: #9f1239; font-size: 0.9rem;" class="body-part-count" data-fa="۲۵ فرمول" data-en="25 formulations" data-ar="٢٥ تركيبة">۲۵ فرمول</div>
+                    </div>
+
+                    <div onclick="selectBodyPart(11)" style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); padding: 24px; border-radius: var(--radius-lg); border: 3px solid #a855f7; cursor: pointer; transition: var(--transition); text-align: center;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-xl)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)'">
+                        <div style="font-size: 3rem; margin-bottom: 12px;">🦴</div>
+                        <div style="font-weight: 700; font-size: 1.1rem; color: #6b21a8; margin-bottom: 8px;" class="body-part-name" data-fa="مفاصل" data-en="Joints" data-ar="المفاصل">مفاصل</div>
+                        <div style="color: #7c3aed; font-size: 0.9rem;" class="body-part-count" data-fa="۱۶ فرمول" data-en="16 formulations" data-ar="١٦ تركيبة">۱۶ فرمول</div>
                     </div>
 
                 </div>
             </div>
-        </section>
 
+        </div>
+    </section>
 
-        <!-- COLLABORATION FORM SECTION (Multilingual) -->
-        <section id="collaboration-section" class="section">
-            <div class="container" style="max-width: 1000px;">
+    <!-- RESEARCH PROBLEMS SECTION -->
+    <section id="openproblems-section" class="section">
+        <div class="container">
 
-                <!-- PERSIAN -->
-                <div class="lang-content" data-lang="fa">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                        🤝 فرم تقاضای همکاری
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
-                        به پروژه اعتبارسنجی علمی طب اسلامی بپیوندید
-                    </p>
-                </div>
-
-                <!-- ENGLISH -->
-                <div class="lang-content hidden" data-lang="en">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                        🤝 Collaboration Request Form
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
-                        Join the Islamic Medicine Scientific Validation Project
-                    </p>
-                </div>
-
-                <!-- ARABIC -->
-                <div class="lang-content hidden" data-lang="ar">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                        🤝 نموذج طلب التعاون
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
-                        انضم إلى مشروع التحقق العلمي من الطب الإسلامي
-                    </p>
-                </div>
-
-                <!-- Benefits Section -->
-                <div style="margin-bottom: 60px;">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
-                        <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 28px; border-radius: var(--radius-lg); border: 2px solid #a855f7; text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 12px;">🔬</div>
-                            <h4 style="font-size: 1.2rem; color: #6b21a8; margin-bottom: 12px;" class="benefit-title" data-fa="دسترسی به داده‌ها" data-en="Data Access" data-ar="الوصول إلى البيانات">دسترسی به داده‌ها</h4>
-                            <p style="color: #7c3aed; font-size: 0.95rem; line-height: 1.6;" class="benefit-desc" data-fa="دسترسی کامل به 237 فرمول و منابع" data-en="Full access to 237 formulations & sources" data-ar="وصول كامل إلى 237 تركيبة ومصادر">دسترسی کامل به 237 فرمول و منابع</p>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%); padding: 28px; border-radius: var(--radius-lg); border: 2px solid #06b6d4; text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 12px;">📝</div>
-                            <h4 style="font-size: 1.2rem; color: #0e7490; margin-bottom: 12px;" class="benefit-title" data-fa="انتشار مشترک" data-en="Co-authorship" data-ar="التأليف المشترك">انتشار مشترک</h4>
-                            <p style="color: #0891b2; font-size: 0.95rem; line-height: 1.6;" class="benefit-desc" data-fa="فرصت انتشار در مجلات معتبر" data-en="Publication opportunities in reputable journals" data-ar="فرص النشر في المجلات ذات السمعة الطيبة">فرصت انتشار در مجلات معتبر</p>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 28px; border-radius: var(--radius-lg); border: 2px solid #059669; text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 12px;">🌍</div>
-                            <h4 style="font-size: 1.2rem; color: #065f46; margin-bottom: 12px;" class="benefit-title" data-fa="شبکه بین‌المللی" data-en="International Network" data-ar="الشبكة الدولية">شبکه بین‌المللی</h4>
-                            <p style="color: #047857; font-size: 0.95rem; line-height: 1.6;" class="benefit-desc" data-fa="ارتباط با محققان جهان" data-en="Connect with researchers worldwide" data-ar="تواصل مع الباحثين في جميع أنحاء العالم">ارتباط با محققان جهان</p>
-                        </div>
-
-                        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 28px; border-radius: var(--radius-lg); border: 2px solid #f59e0b; text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 12px;">💰</div>
-                            <h4 style="font-size: 1.2rem; color: #92400e; margin-bottom: 12px;" class="benefit-title" data-fa="فرصت بودجه" data-en="Funding Opportunities" data-ar="فرص التمويل">فرصت بودجه</h4>
-                            <p style="color: #b45309; font-size: 0.95rem; line-height: 1.6;" class="benefit-desc" data-fa="دسترسی به گرنت‌های تحقیقاتی" data-en="Access to research grants" data-ar="الوصول إلى المنح البحثية">دسترسی به گرنت‌های تحقیقاتی</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Form -->
-                <form id="collaborationForm" onsubmit="submitCollaboration(event)" style="background: white; padding: 48px; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); border: 3px solid var(--primary);">
-
-                    <!-- Personal Information -->
-                    <div style="margin-bottom: 48px;">
-                        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 3px solid var(--primary);" class="form-section-title" data-fa="اطلاعات شخصی" data-en="Personal Information" data-ar="المعلومات الشخصية">اطلاعات شخصی</h3>
-
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="نام و نام خانوادگی *" data-en="Full Name *" data-ar="الاسم الكامل *">نام و نام خانوادگی *</label>
-                                <input type="text" name="fullName" required style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit;" class="form-input" data-placeholder-fa="نام شما" data-placeholder-en="Your name" data-placeholder-ar="اسمك" placeholder="نام شما">
-                            </div>
-
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="ایمیل *" data-en="Email *" data-ar="البريد الإلكتروني *">ایمیل *</label>
-                                <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit;" placeholder="email@example.com">
-                            </div>
-
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="سمت علمی" data-en="Position" data-ar="المنصب">سمت علمی</label>
-                                <input type="text" name="position" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit;" class="form-input" data-placeholder-fa="استاد، دانشجو، پژوهشگر" data-placeholder-en="Professor, Student, Researcher" data-placeholder-ar="أستاذ، طالب، باحث" placeholder="استاد، دانشجو، پژوهشگر">
-                            </div>
-
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="دانشگاه/سازمان" data-en="University/Organization" data-ar="الجامعة/المؤسسة">دانشگاه/سازمان</label>
-                                <input type="text" name="organization" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit;" class="form-input" data-placeholder-fa="نام دانشگاه" data-placeholder-en="University name" data-placeholder-ar="اسم الجامعة" placeholder="نام دانشگاه">
-                            </div>
-
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="کشور" data-en="Country" data-ar="البلد">کشور</label>
-                                <input type="text" name="country" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit;" class="form-input" data-placeholder-fa="کشور محل سکونت" data-placeholder-en="Your country" data-placeholder-ar="بلدك" placeholder="کشور محل سکونت">
-                            </div>
-
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="تلفن (اختیاری)" data-en="Phone (Optional)" data-ar="الهاتف (اختياري)">تلفن (اختیاری)</label>
-                                <input type="tel" name="phone" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit;" placeholder="+968 9123 4567">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Research Area -->
-                    <div style="margin-bottom: 48px;">
-                        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 3px solid var(--primary);" class="form-section-title" data-fa="زمینه تحقیقاتی" data-en="Research Area" data-ar="المجال البحثي">زمینه تحقیقاتی</h3>
-
-                        <div style="display: grid; gap: 24px;">
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="تخصص اصلی *" data-en="Main Expertise *" data-ar="الخبرة الرئيسية *">تخصص اصلی *</label>
-                                <select name="expertise" required style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit;">
-                                    <option value="" class="select-option" data-fa="انتخاب کنید" data-en="Select..." data-ar="اختر...">انتخاب کنید</option>
-                                    <option value="phytochemistry" class="select-option" data-fa="فیتوشیمی" data-en="Phytochemistry" data-ar="الكيمياء النباتية">فیتوشیمی</option>
-                                    <option value="pharmacology" class="select-option" data-fa="فارماکولوژی" data-en="Pharmacology" data-ar="علم الأدوية">فارماکولوژی</option>
-                                    <option value="clinical" class="select-option" data-fa="مطالعات بالینی" data-en="Clinical Studies" data-ar="الدراسات السريرية">مطالعات بالینی</option>
-                                    <option value="history" class="select-option" data-fa="تاریخ پزشکی" data-en="Medical History" data-ar="تاريخ الطب">تاریخ پزشکی</option>
-                                    <option value="other" class="select-option" data-fa="سایر" data-en="Other" data-ar="أخرى">سایر</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="فصل‌های مورد علاقه" data-en="Chapters of Interest" data-ar="الفصول المثيرة للاهتمام">فصل‌های مورد علاقه</label>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; padding: 16px; background: var(--bg); border-radius: var(--radius);">
-                                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                                        <input type="checkbox" name="chapters" value="1">
-                                        <span class="checkbox-label" data-fa="🧠 سر و اعصاب" data-en="🧠 Head & Neurological" data-ar="🧠 الرأس والأعصاب">🧠 سر و اعصاب</span>
-                                    </label>
-                                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                                        <input type="checkbox" name="chapters" value="2">
-                                        <span class="checkbox-label" data-fa="👁️ چشم" data-en="👁️ Eyes" data-ar="👁️ العيون">👁️ چشم</span>
-                                    </label>
-                                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                                        <input type="checkbox" name="chapters" value="6">
-                                        <span class="checkbox-label" data-fa="🥘 معده" data-en="🥘 Stomach" data-ar="🥘 المعدة">🥘 معده</span>
-                                    </label>
-                                    <!-- More checkboxes for all 13 chapters -->
-                                </div>
-                            </div>
-
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="نوع همکاری" data-en="Type of Collaboration" data-ar="نوع التعاون">نوع همکاری</label>
-                                <textarea name="collaborationType" rows="3" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit; resize: vertical;" class="form-input" data-placeholder-fa="مثال: اجرای مطالعه بالینی، تحلیل فیتوشیمی، مرور منابع تاریخی" data-placeholder-en="Example: Clinical trial, phytochemical analysis, historical review" data-placeholder-ar="مثال: تجربة سريرية، تحليل كيميائي نباتي، مراجعة تاريخية" placeholder="مثال: اجرای مطالعه بالینی، تحلیل فیتوشیمی، مرور منابع تاریخی"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Proposal -->
-                    <div style="margin-bottom: 48px;">
-                        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 3px solid var(--primary);" class="form-section-title" data-fa="پروپوزال پروژه (اختیاری)" data-en="Project Proposal (Optional)" data-ar="مقترح المشروع (اختياري)">پروپوزال پروژه (اختیاری)</h3>
-
-                        <div style="display: grid; gap: 24px;">
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="عنوان پروژه" data-en="Project Title" data-ar="عنوان المشروع">عنوان پروژه</label>
-                                <input type="text" name="projectTitle" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit;" class="form-input" data-placeholder-fa="عنوان تحقیق پیشنهادی" data-placeholder-en="Proposed research title" data-placeholder-ar="عنوان البحث المقترح" placeholder="عنوان تحقیق پیشنهادی">
-                            </div>
-
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="توضیحات پروژه" data-en="Project Description" data-ar="وصف المشروع">توضیحات پروژه</label>
-                                <textarea name="projectDescription" rows="6" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit; resize: vertical;" class="form-input" data-placeholder-fa="شرح مختصری از اهداف، روش‌ها و نتایج مورد انتظار" data-placeholder-en="Brief description of objectives, methods, and expected outcomes" data-placeholder-ar="وصف موجز للأهداف والأساليب والنتائج المتوقعة" placeholder="شرح مختصری از اهداف، روش‌ها و نتایج مورد انتظار"></textarea>
-                            </div>
-
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
-                                <div>
-                                    <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="مدت زمان (ماه)" data-en="Duration (months)" data-ar="المدة (أشهر)">مدت زمان (ماه)</label>
-                                    <input type="number" name="duration" min="1" max="60" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit;" placeholder="12">
-                                </div>
-
-                                <div>
-                                    <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="بودجه مورد نیاز (USD)" data-en="Budget Needed (USD)" data-ar="الميزانية المطلوبة (دولار)">بودجه مورد نیاز (USD)</label>
-                                    <input type="text" name="budget" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit;" placeholder="50,000">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Additional Info -->
-                    <div style="margin-bottom: 32px;">
-                        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 3px solid var(--primary);" class="form-section-title" data-fa="اطلاعات تکمیلی" data-en="Additional Information" data-ar="معلومات إضافية">اطلاعات تکمیلی</h3>
-
-                        <div style="display: grid; gap: 24px;">
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="ORCID / Google Scholar" data-en="ORCID / Google Scholar" data-ar="ORCID / Google Scholar">ORCID / Google Scholar</label>
-                                <input type="text" name="orcid" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit;" placeholder="0000-0000-0000-0000 or profile URL">
-                            </div>
-
-                            <div>
-                                <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="توضیحات بیشتر" data-en="Additional Comments" data-ar="تعليقات إضافية">توضیحات بیشتر</label>
-                                <textarea name="additionalComments" rows="4" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit; resize: vertical;" class="form-input" data-placeholder-fa="هر توضیح دیگری که لازم است" data-placeholder-en="Any other information you'd like to share" data-placeholder-ar="أي معلومات أخرى ترغب في مشاركتها" placeholder="هر توضیح دیگری که لازم است"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" style="width: 100%; padding: 18px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; border: none; border-radius: var(--radius); font-weight: 700; font-size: 1.2rem; cursor: pointer; transition: var(--transition); font-family: inherit;"
-                            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-xl)'"
-                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                        <span class="submit-btn-text" data-fa="📤 ارسال درخواست همکاری" data-en="📤 Submit Collaboration Request" data-ar="📤 إرسال طلب التعاون">📤 ارسال درخواست همکاری</span>
-                    </button>
-                </form>
-
-                <!-- Contact Info -->
-                <div style="margin-top: 60px; text-align: center; padding: 40px; background: var(--bg); border-radius: var(--radius-xl);">
-                    <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 24px;" class="contact-title" data-fa="تماس مستقیم" data-en="Direct Contact" data-ar="اتصال مباشر">تماس مستقیم</h3>
-                    <div style="display: flex; flex-direction: column; gap: 16px; align-items: center;">
-                        <div style="display: flex; align-items: center; gap: 12px; font-size: 1.1rem;">
-                            <span>📧</span>
-                            <a href="mailto:info@smarttech-services.om" style="color: var(--primary); text-decoration: none; font-weight: 600;">info@smarttech-services.om</a>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px; font-size: 1.1rem;">
-                            <span>📍</span>
-                            <span style="color: var(--text-secondary); font-weight: 600;">Muscat, Oman</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 12px; font-size: 1.1rem;">
-                            <span>🌐</span>
-                            <a href="https://www.smarttech-services.om" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">www.smarttech-services.om</a>
-                        </div>
-                    </div>
-                </div>
-
+            <!-- PERSIAN -->
+            <div class="lang-content" data-lang="fa">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">❓ مسائل تحقیقاتی باز</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
+                    ۴۶ سؤال تحقیقاتی برای پیشبرد دانش ما درباره طب اسلامی
+                </p>
             </div>
-        </section>
 
+            <!-- ENGLISH -->
+            <div class="lang-content hidden" data-lang="en">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">❓ Open Research Problems</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
+                    46 research questions to advance our knowledge of Islamic medicine
+                </p>
+            </div>
 
-        <!-- OVERVIEW SECTION (Multilingual) -->
-        <section id="overview-section" class="section active">
-            <div class="container">
+            <!-- ARABIC -->
+            <div class="lang-content hidden" data-lang="ar">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">❓ المسائل البحثية المفتوحة</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
+                    ٤٦ سؤالاً بحثياً للنهوض بمعرفتنا بالطب الإسلامي
+                </p>
+            </div>
+
+            <!-- Category 1: Multi-Herb Synergy -->
+            <div style="margin-bottom: 60px;">
 
                 <!-- PERSIAN -->
                 <div class="lang-content" data-lang="fa">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                        📊 نمای کلی پروژه
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
-                        این پروژه 237 فرمول دارویی از کتاب‌های کلاسیک طب اسلامی را با روش‌های علمی مدرن اعتبارسنجی می‌کند
-                    </p>
+                    <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 32px; padding-bottom: 12px; border-bottom: 3px solid var(--primary);">🌿 سینرژی چندگیاهی (۱۲ مسئله)</h3>
                 </div>
 
                 <!-- ENGLISH -->
                 <div class="lang-content hidden" data-lang="en">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                        📊 Project Overview
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
-                        This project validates 237 pharmaceutical formulations from classical Islamic medicine books using modern scientific methods
-                    </p>
+                    <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 32px; padding-bottom: 12px; border-bottom: 3px solid var(--primary);">🌿 Multi-Herb Synergy (12 Problems)</h3>
                 </div>
 
                 <!-- ARABIC -->
                 <div class="lang-content hidden" data-lang="ar">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                        📊 نظرة عامة على المشروع
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
-                        يتحقق هذا المشروع من صحة 237 تركيبة صيدلانية من كتب الطب الإسلامي الكلاسيكية باستخدام الأساليب العلمية الحديثة
-                    </p>
+                    <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 32px; padding-bottom: 12px; border-bottom: 3px solid var(--primary);">🌿 التآزر متعدد الأعشاب (١٢ مسألة)</h3>
                 </div>
 
-                <!-- Methodology Cards -->
-                <div style="margin-bottom: 60px;">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-
-                        <div style="background: white; padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border-top: 5px solid #3b82f6;">
-                            <div style="font-size: 3rem; margin-bottom: 16px; text-align: center;">🔬</div>
-                            <h3 style="font-size: 1.3rem; color: #1e40af; margin-bottom: 16px; text-align: center;" class="method-title" data-fa="مطالعات بالینی" data-en="Clinical Studies" data-ar="الدراسات السريرية">مطالعات بالینی</h3>
-                            <p style="color: var(--text-secondary); line-height: 1.8; text-align: center;" class="method-desc" data-fa="کارآزمایی‌های تصادفی‌سازی شده (RCT) برای ارزیابی اثربخشی" data-en="Randomized Controlled Trials (RCT) to evaluate efficacy" data-ar="تجارب عشوائية محكومة (RCT) لتقييم الفعالية">کارآزمایی‌های تصادفی‌سازی شده (RCT) برای ارزیابی اثربخشی</p>
-                        </div>
-
-                        <div style="background: white; padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border-top: 5px solid #10b981;">
-                            <div style="font-size: 3rem; margin-bottom: 16px; text-align: center;">🧪</div>
-                            <h3 style="font-size: 1.3rem; color: #065f46; margin-bottom: 16px; text-align: center;" class="method-title" data-fa="فیتوشیمی" data-en="Phytochemistry" data-ar="الكيمياء النباتية">فیتوشیمی</h3>
-                            <p style="color: var(--text-secondary); line-height: 1.8; text-align: center;" class="method-desc" data-fa="شناسایی ترکیبات فعال با HPLC، GC-MS و NMR" data-en="Active compound identification using HPLC, GC-MS, and NMR" data-ar="تحديد المركبات النشطة باستخدام HPLC و GC-MS و NMR">شناسایی ترکیبات فعال با HPLC، GC-MS و NMR</p>
-                        </div>
-
-                        <div style="background: white; padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border-top: 5px solid #f59e0b;">
-                            <div style="font-size: 3rem; margin-bottom: 16px; text-align: center;">🔍</div>
-                            <h3 style="font-size: 1.3rem; color: #92400e; margin-bottom: 16px; text-align: center;" class="method-title" data-fa="مکانیسم اثر" data-en="Mechanism of Action" data-ar="آلية العمل">مکانیسم اثر</h3>
-                            <p style="color: var(--text-secondary); line-height: 1.8; text-align: center;" class="method-desc" data-fa="مطالعات مولکولی برای تعیین مسیرهای بیولوژیک" data-en="Molecular studies to determine biological pathways" data-ar="دراسات جزيئية لتحديد المسارات البيولوجية">مطالعات مولکولی برای تعیین مسیرهای بیولوژیک</p>
-                        </div>
-
-                        <div style="background: white; padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border-top: 5px solid #ef4444;">
-                            <div style="font-size: 3rem; margin-bottom: 16px; text-align: center;">⚠️</div>
-                            <h3 style="font-size: 1.3rem; color: #991b1b; margin-bottom: 16px; text-align: center;" class="method-title" data-fa="ایمنی و سمیت" data-en="Safety & Toxicity" data-ar="السلامة والسمية">ایمنی و سمیت</h3>
-                            <p style="color: var(--text-secondary); line-height: 1.8; text-align: center;" class="method-desc" data-fa="ارزیابی پروفایل ایمنی و تعیین دوز مطمئن" data-en="Safety profile assessment and safe dosage determination" data-ar="تقييم ملف السلامة وتحديد الجرعة الآمنة">ارزیابی پروفایل ایمنی و تعیین دوز مطمئن</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- 13 Chapters Table -->
-                <div style="margin-bottom: 60px;">
+                <!-- Problem Card 1 -->
+                <div class="problem-card" style="background: white; padding: 40px; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); margin-bottom: 32px; border-left: 6px solid #8b5cf6;">
 
                     <!-- PERSIAN -->
                     <div class="lang-content" data-lang="fa">
-                        <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 32px; text-align: center;">
-                            13 فصل بر اساس دستگاه‌های بدن
-                        </h3>
+                        <h4 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px;">آیا ترکیب زعفران + گل سرخ اثر سینرژیستی در درمان افسردگی دارد؟</h4>
+
+                        <div style="margin-bottom: 24px;">
+                            <div style="font-weight: 700; color: #6b21a8; margin-bottom: 12px; font-size: 1.1rem;">📋 منطق علمی:</div>
+                            <p style="line-height: 1.8; color: var(--text-secondary);">
+                                زعفران و گل سرخ هر دو جداگانه اثر ضدافسردگی دارند. زعفران از طریق مهار بازجذب سروتونین (شبه SSRI) و گل سرخ از طریق تعدیل GABA عمل می‌کند. ترکیب این دو ممکن است اثری قوی‌تر از هر یک به تنهایی داشته باشد (سینرژی). معجون المفرّح (H-001) هر دو را دارد و WOW Factor 10/10 است.
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: 24px;">
+                            <div style="font-weight: 700; color: #6b21a8; margin-bottom: 12px; font-size: 1.1rem;">🔬 روش پیشنهادی:</div>
+                            <div style="background: #faf5ff; padding: 20px; border-radius: var(--radius); border-right: 4px solid #8b5cf6;">
+                                <p style="font-weight: 700; margin-bottom: 12px;">مطالعه کلینیکی RCT سه‌گروهی:</p>
+                                <ul style="line-height: 2; color: var(--text-secondary); padding-right: 24px;">
+                                    <li>گروه ۱: زعفران (30mg/day)</li>
+                                    <li>گروه ۲: گل سرخ (500mg/day)</li>
+                                    <li>گروه ۳: ترکیب (زعفران 30mg + گل سرخ 500mg)</li>
+                                    <li>دوره: ۸ هفته</li>
+                                    <li>اندازه‌گیری: مقیاس Hamilton Depression Rating Scale (HDRS)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 24px;">
+                            <div style="font-weight: 700; color: #6b21a8; margin-bottom: 12px; font-size: 1.1rem;">✅ نتایج مورد انتظار:</div>
+                            <div style="display: grid; gap: 12px;">
+                                <div style="background: #d1fae5; padding: 16px; border-radius: var(--radius); border-right: 4px solid #059669;">
+                                    اگر CI &lt; 0.9 → <strong>سینرژی تأیید می‌شود</strong>
+                                </div>
+                                <div style="background: #dbeafe; padding: 16px; border-radius: var(--radius); border-right: 4px solid #3b82f6;">
+                                    کاهش بیشتر نمرات HDRS در گروه ترکیبی (&gt;30% نسبت به تک‌درمانی)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <span class="validation-badge confirmed">WOW 10/10</span>
+                            <span class="validation-badge partial">نیاز به RCT</span>
+                            <span style="background: #fef3c7; padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; color: #92400e;">بودجه: $150,000</span>
+                            <span style="background: #e0e7ff; padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; color: #3730a3;">مدت: ۱۲ ماه</span>
+                        </div>
                     </div>
 
                     <!-- ENGLISH -->
                     <div class="lang-content hidden" data-lang="en">
-                        <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 32px; text-align: center;">
-                            13 Chapters Based on Body Systems
-                        </h3>
+                        <h4 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px;">Does Saffron + Rose Combination Show Synergistic Effect in Depression Treatment?</h4>
+
+                        <div style="margin-bottom: 24px;">
+                            <div style="font-weight: 700; color: #6b21a8; margin-bottom: 12px; font-size: 1.1rem;">📋 Scientific Rationale:</div>
+                            <p style="line-height: 1.8; color: var(--text-secondary);">
+                                Both saffron and rose have individual antidepressant effects. Saffron works through serotonin reuptake inhibition (SSRI-like) while rose acts through GABA modulation. Their combination may produce stronger effects than either alone (synergy). Majun al-Mufarrih (H-001) contains both and has WOW Factor 10/10.
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: 24px;">
+                            <div style="font-weight: 700; color: #6b21a8; margin-bottom: 12px; font-size: 1.1rem;">🔬 Proposed Method:</div>
+                            <div style="background: #faf5ff; padding: 20px; border-radius: var(--radius); border-left: 4px solid #8b5cf6;">
+                                <p style="font-weight: 700; margin-bottom: 12px;">Three-arm RCT Clinical Study:</p>
+                                <ul style="line-height: 2; color: var(--text-secondary); padding-left: 24px;">
+                                    <li>Group 1: Saffron (30mg/day)</li>
+                                    <li>Group 2: Rose (500mg/day)</li>
+                                    <li>Group 3: Combination (Saffron 30mg + Rose 500mg)</li>
+                                    <li>Duration: 8 weeks</li>
+                                    <li>Measurement: Hamilton Depression Rating Scale (HDRS)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 24px;">
+                            <div style="font-weight: 700; color: #6b21a8; margin-bottom: 12px; font-size: 1.1rem;">✅ Expected Results:</div>
+                            <div style="display: grid; gap: 12px;">
+                                <div style="background: #d1fae5; padding: 16px; border-radius: var(--radius); border-left: 4px solid #059669;">
+                                    If CI &lt; 0.9 → <strong>Synergy confirmed</strong>
+                                </div>
+                                <div style="background: #dbeafe; padding: 16px; border-radius: var(--radius); border-left: 4px solid #3b82f6;">
+                                    Greater reduction in HDRS scores in combination group (&gt;30% vs monotherapy)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <span class="validation-badge confirmed">WOW 10/10</span>
+                            <span class="validation-badge partial">RCT Needed</span>
+                            <span style="background: #fef3c7; padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; color: #92400e;">Budget: $150,000</span>
+                            <span style="background: #e0e7ff; padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; color: #3730a3;">Duration: 12 months</span>
+                        </div>
                     </div>
 
                     <!-- ARABIC -->
                     <div class="lang-content hidden" data-lang="ar">
-                        <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 32px; text-align: center;">
-                            13 فصلاً حسب أجهزة الجسم
-                        </h3>
+                        <h4 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px;">هل يظهر مزيج الزعفران + الورد تأثيراً تآزرياً في علاج الاكتئاب؟</h4>
+
+                        <div style="margin-bottom: 24px;">
+                            <div style="font-weight: 700; color: #6b21a8; margin-bottom: 12px; font-size: 1.1rem;">📋 المنطق العلمي:</div>
+                            <p style="line-height: 1.8; color: var(--text-secondary);">
+                                كل من الزعفران والورد لهما تأثيرات مضادة للاكتئاب بشكل فردي. يعمل الزعفران من خلال تثبيط إعادة امتصاص السيروتونين (مثل SSRI) بينما يعمل الورد من خلال تعديل GABA. قد ينتج عن مزيجهما تأثيرات أقوى من أي منهما بمفرده (تآزر). يحتوي معجون المفرح (H-001) على كليهما وله عامل WOW 10/10.
+                            </p>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <span class="validation-badge confirmed">WOW 10/10</span>
+                            <span class="validation-badge partial">يحتاج RCT</span>
+                            <span style="background: #fef3c7; padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; color: #92400e;">الميزانية: $150,000</span>
+                            <span style="background: #e0e7ff; padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; color: #3730a3;">المدة: ١٢ شهراً</span>
+                        </div>
                     </div>
 
-                    <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
-                            <thead>
-                                <tr style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white;">
-                                    <th style="padding: 20px; text-align: center; font-weight: 700; font-size: 1.1rem;" class="table-header" data-fa="#" data-en="#" data-ar="#">#</th>
-                                    <th style="padding: 20px; text-align: center; font-weight: 700; font-size: 1.1rem;"></th>
-                                    <th style="padding: 20px; font-weight: 700; font-size: 1.1rem;" class="table-header" data-fa="فصل (دستگاه بدن)" data-en="Chapter (Body System)" data-ar="الفصل (جهاز الجسم)">فصل (دستگاه بدن)</th>
-                                    <th style="padding: 20px; text-align: center; font-weight: 700; font-size: 1.1rem;" class="table-header" data-fa="تعداد فرمول" data-en="Formulations" data-ar="التركيبات">تعداد فرمول</th>
-                                    <th style="padding: 20px; text-align: center; font-weight: 700; font-size: 1.1rem;" class="table-header" data-fa="تأیید شده" data-en="Validated" data-ar="المثبتة">تأیید شده</th>
-                                    <th style="padding: 20px; text-align: center; font-weight: 700; font-size: 1.1rem;" class="table-header" data-fa="نرخ موفقیت" data-en="Success Rate" data-ar="معدل النجاح">نرخ موفقیت</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Chapter 1 -->
-                                <tr style="border-bottom: 2px solid var(--border); transition: var(--transition);" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='white'">
-                                    <td style="padding: 20px; text-align: center; font-weight: 700; color: var(--primary);">1</td>
-                                    <td style="padding: 20px; text-align: center; font-size: 2rem;">🧠</td>
-                                    <td style="padding: 20px;">
-                                        <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name-fa" data-fa="سر و اعصاب" data-en="Head & Neurological" data-ar="الرأس والأعصاب">سر و اعصاب</div>
-                                        <div style="font-size: 0.9rem; color: var(--text-muted);" class="chapter-desc" data-fa="سردرد، میگرن، صرع، بی‌خوابی، فراموشی، افسردگی" data-en="Headache, migraine, epilepsy, insomnia, memory loss, depression" data-ar="الصداع، الصداع النصفي، الصرع، الأرق، فقدان الذاكرة، الاكتئاب">سردرد، میگرن، صرع، بی‌خوابی، فراموشی، افسردگی</div>
-                                    </td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #8b5cf6;"><span class="num-fa" data-fa="۳۲" data-en="32" data-ar="٣٢">۳۲</span></td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #10b981;"><span class="num-fa" data-fa="۲۴" data-en="24" data-ar="٢٤">۲۴</span></td>
-                                    <td style="padding: 20px; text-align: center;">
-                                        <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 8px 16px; border-radius: 999px; font-weight: 900; color: #065f46; display: inline-block;">
-                                            <span class="num-fa" data-fa="۷۵٪" data-en="75%" data-ar="٧٥٪">۷۵٪</span>
-                                        </div>
-                                    </td>
-                                </tr>
+                </div>
 
-                                <!-- Chapter 2 -->
-                                <tr style="border-bottom: 2px solid var(--border); transition: var(--transition);" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='white'">
-                                    <td style="padding: 20px; text-align: center; font-weight: 700; color: var(--primary);">2</td>
-                                    <td style="padding: 20px; text-align: center; font-size: 2rem;">👁️</td>
-                                    <td style="padding: 20px;">
-                                        <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name-fa" data-fa="چشم و بینایی" data-en="Eyes & Vision" data-ar="العيون والرؤية">چشم و بینایی</div>
-                                        <div style="font-size: 0.9rem; color: var(--text-muted);" class="chapter-desc" data-fa="التهاب ملتحمه، آب مروارید، تیرگی بینایی، خشکی چشم" data-en="Conjunctivitis, cataract, blurred vision, dry eye" data-ar="التهاب الملتحمة، إعتام عدسة العين، عدم وضوح الرؤية، جفاف العين">التهاب ملتحمه، آب مروارید، تیرگی بینایی، خشکی چشم</div>
-                                    </td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #06b6d4;"><span class="num-fa" data-fa="۱۸" data-en="18" data-ar="١٨">۱۸</span></td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #10b981;"><span class="num-fa" data-fa="۱۲" data-en="12" data-ar="١٢">۱۲</span></td>
-                                    <td style="padding: 20px; text-align: center;">
-                                        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 8px 16px; border-radius: 999px; font-weight: 900; color: #92400e; display: inline-block;">
-                                            <span class="num-fa" data-fa="۶۷٪" data-en="67%" data-ar="٦٧٪">۶۷٪</span>
-                                        </div>
-                                    </td>
-                                </tr>
+                <!-- Summary: More Problems -->
+                <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 40px; border-radius: var(--radius-xl); border: 3px solid #8b5cf6; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">📚</div>
+                    <h4 style="font-size: 1.8rem; color: #6b21a8; margin-bottom: 20px;" class="more-problems" data-fa="+ ۱۱ مسئله دیگر در این دسته" data-en="+ 11 More Problems in This Category" data-ar="+ ١١ مسألة أخرى في هذه الفئة">+ ۱۱ مسئله دیگر در این دسته</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #7c3aed; max-width: 700px; margin: 0 auto;" class="more-desc" data-fa="شامل مطالعه سینرژی در فرمول‌های گوارشی، عصبی، تنفسی و کبدی" data-en="Including synergy studies in digestive, neurological, respiratory, and hepatic formulations" data-ar="بما في ذلك دراسات التآزر في التركيبات الهضمية والعصبية والتنفسية والكبدية">شامل مطالعه سینرژی در فرمول‌های گوارشی، عصبی، تنفسی و کبدی</p>
+                </div>
 
-                                <!-- Chapter 3 -->
-                                <tr style="border-bottom: 2px solid var(--border); transition: var(--transition);" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='white'">
-                                    <td style="padding: 20px; text-align: center; font-weight: 700; color: var(--primary);">3</td>
-                                    <td style="padding: 20px; text-align: center; font-size: 2rem;">👂</td>
-                                    <td style="padding: 20px;">
-                                        <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name-fa" data-fa="گوش، بینی و گلو" data-en="ENT (Ear, Nose, Throat)" data-ar="الأذن والأنف والحلق">گوش، بینی و گلو</div>
-                                        <div style="font-size: 0.9rem; color: var(--text-muted);" class="chapter-desc" data-fa="گلودرد، سینوزیت، سرفه، عفونت گوش" data-en="Sore throat, sinusitis, cough, ear infection" data-ar="التهاب الحلق، التهاب الجيوب الأنفية، السعال، التهاب الأذن">گلودرد، سینوزیت، سرفه، عفونت گوش</div>
-                                    </td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #10b981;"><span class="num-fa" data-fa="۲۲" data-en="22" data-ar="٢٢">۲۲</span></td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #10b981;"><span class="num-fa" data-fa="۱۸" data-en="18" data-ar="١٨">۱۸</span></td>
-                                    <td style="padding: 20px; text-align: center;">
-                                        <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 8px 16px; border-radius: 999px; font-weight: 900; color: #065f46; display: inline-block;">
-                                            <span class="num-fa" data-fa="۸۲٪" data-en="82%" data-ar="٨٢٪">۸۲٪</span>
-                                        </div>
-                                    </td>
-                                </tr>
+            </div>
 
-                                <!-- Chapter 4 -->
-                                <tr style="border-bottom: 2px solid var(--border); transition: var(--transition);" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='white'">
-                                    <td style="padding: 20px; text-align: center; font-weight: 700; color: var(--primary);">4</td>
-                                    <td style="padding: 20px; text-align: center; font-size: 2rem;">🫁</td>
-                                    <td style="padding: 20px;">
-                                        <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name-fa" data-fa="قفسه سینه و تنفس" data-en="Chest & Respiratory" data-ar="الصدر والجهاز التنفسي">قفسه سینه و تنفس</div>
-                                        <div style="font-size: 0.9rem; color: var(--text-muted);" class="chapter-desc" data-fa="آسم، برونشیت، سرفه، سل" data-en="Asthma, bronchitis, cough, tuberculosis" data-ar="الربو، التهاب الشعب الهوائية، السعال، السل">آسم، برونشیت، سرفه، سل</div>
-                                    </td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #3b82f6;"><span class="num-fa" data-fa="۲۶" data-en="26" data-ar="٢٦">۲۶</span></td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #10b981;"><span class="num-fa" data-fa="۲۱" data-en="21" data-ar="٢١">۲۱</span></td>
-                                    <td style="padding: 20px; text-align: center;">
-                                        <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 8px 16px; border-radius: 999px; font-weight: 900; color: #065f46; display: inline-block;">
-                                            <span class="num-fa" data-fa="۸۱٪" data-en="81%" data-ar="٨١٪">۸۱٪</span>
-                                        </div>
-                                    </td>
-                                </tr>
+            <!-- Additional Categories Placeholder -->
+            <div style="background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); padding: 48px; border-radius: var(--radius-xl); text-align: center; margin-top: 60px;">
+                <div style="font-size: 4rem; margin-bottom: 24px;">🔬</div>
+                <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 20px;" class="more-categories" data-fa="+ ۵ دسته دیگر (۳۴ مسئله)" data-en="+ 5 More Categories (34 Problems)" data-ar="+ ٥ فئات أخرى (٣٤ مسألة)">+ ۵ دسته دیگر (۳۴ مسئله)</h3>
+                <p style="font-size: 1.2rem; line-height: 1.8; color: var(--text-secondary); max-width: 800px; margin: 0 auto;" class="categories-desc" data-fa="فارماکوکینتیک، مطالعات بالینی، دوز-پاسخ، مکانیسم مولکولی، و ایمنی طولانی‌مدت" data-en="Pharmacokinetics, clinical studies, dose-response, molecular mechanisms, and long-term safety" data-ar="الحرائك الدوائية، الدراسات السريرية، استجابة الجرعة، الآليات الجزيئية، والسلامة طويلة الأجل">فارماکوکینتیک، مطالعات بالینی، دوز-پاسخ، مکانیسم مولکولی، و ایمنی طولانی‌مدت</p>
+            </div>
 
-                                <!-- Chapter 5 -->
-                                <tr style="border-bottom: 2px solid var(--border); transition: var(--transition);" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='white'">
-                                    <td style="padding: 20px; text-align: center; font-weight: 700; color: var(--primary);">5</td>
-                                    <td style="padding: 20px; text-align: center; font-size: 2rem;">❤️</td>
-                                    <td style="padding: 20px;">
-                                        <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name-fa" data-fa="قلب و عروق" data-en="Heart & Cardiovascular" data-ar="القلب والأوعية الدموية">قلب و عروق</div>
-                                        <div style="font-size: 0.9rem; color: var(--text-muted);" class="chapter-desc" data-fa="تپش قلب، فشار خون، ضعف عضله قلب" data-en="Palpitation, blood pressure, cardiac weakness" data-ar="الخفقان، ضغط الدم، ضعف عضلة القلب">تپش قلب، فشار خون، ضعف عضله قلب</div>
-                                    </td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #ef4444;"><span class="num-fa" data-fa="۱۵" data-en="15" data-ar="١٥">۱۵</span></td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #10b981;"><span class="num-fa" data-fa="۹" data-en="9" data-ar="٩">۹</span></td>
-                                    <td style="padding: 20px; text-align: center;">
-                                        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 8px 16px; border-radius: 999px; font-weight: 900; color: #92400e; display: inline-block;">
-                                            <span class="num-fa" data-fa="۶۰٪" data-en="60%" data-ar="٦٠٪">۶۰٪</span>
-                                        </div>
-                                    </td>
-                                </tr>
+        </div>
+    </section>
 
-                                <!-- Chapter 6 -->
-                                <tr style="border-bottom: 2px solid var(--border); transition: var(--transition);" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='white'">
-                                    <td style="padding: 20px; text-align: center; font-weight: 700; color: var(--primary);">6</td>
-                                    <td style="padding: 20px; text-align: center; font-size: 2rem;">🥘</td>
-                                    <td style="padding: 20px;">
-                                        <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name-fa" data-fa="معده و گوارش" data-en="Stomach & Digestive" data-ar="المعدة والجهاز الهضمي">معده و گوارش</div>
-                                        <div style="font-size: 0.9rem; color: var(--text-muted);" class="chapter-desc" data-fa="سوءهاضمه، نفخ، زخم معده، حالت تهوع" data-en="Indigestion, bloating, gastric ulcer, nausea" data-ar="عسر الهضم، الانتفاخ، قرحة المعدة، الغثيان">سوءهاضمه، نفخ، زخم معده، حالت تهوع</div>
-                                    </td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #84cc16;"><span class="num-fa" data-fa="۲۸" data-en="28" data-ar="٢٨">۲۸</span></td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #10b981;"><span class="num-fa" data-fa="۲۳" data-en="23" data-ar="٢٣">۲۳</span></td>
-                                    <td style="padding: 20px; text-align: center;">
-                                        <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 8px 16px; border-radius: 999px; font-weight: 900; color: #065f46; display: inline-block;">
-                                            <span class="num-fa" data-fa="۸۲٪" data-en="82%" data-ar="٨٢٪">۸۲٪</span>
-                                        </div>
-                                    </td>
-                                </tr>
+    <!-- COLLABORATION SECTION -->
+    <section id="collaboration-section" class="section">
+        <div class="container" style="max-width: 1000px;">
 
-                                <!-- Chapter 7 -->
-                                <tr style="border-bottom: 2px solid var(--border); transition: var(--transition);" onmouseover="this.style.background='var(--bg)'" onmouseout="this.style.background='white'">
-                                    <td style="padding: 20px; text-align: center; font-weight: 700; color: var(--primary);">7</td>
-                                    <td style="padding: 20px; text-align: center; font-size: 2rem;">🫀</td>
-                                    <td style="padding: 20px;">
-                                        <div style="font-weight: 700; font-size: 1.1rem; color: var(--primary); margin-bottom: 4px;" class="chapter-name-fa" data-fa="کبد" data-en="Liver" data-ar="الكبد">کبد</div>
-                                        <div style="font-size: 0.9rem; color: var(--text-muted);" class="chapter-desc" data-fa="یرقان، کبد چرب، التهاب کبد" data-en="Jaundice, fatty liver, hepatitis" data-ar="اليرقان، الكبد الدهني، التهاب الكبد">یرقان، کبد چرب، التهاب کبد</div>
-                                    </td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #f59e0b;"><span class="num-fa" data-fa="۱۹" data-en="19" data-ar="١٩">۱۹</span></td>
-                                    <td style="padding: 20px; text-align: center; font-size: 1.5rem; font-weight: 900; color: #10b981;"><span class="num-fa" data-fa="۱۲" data-en="12" data-ar="١٢">۱۲</span></td>
-                                    <td style="padding: 20px; text-align: center;">
-                                        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 8px 16px; border-radius: 999px; font-weight: 900; color: #92400e; display: inline-block;">
-                                            <span class="num-fa" data-fa="۶۳٪" data-en="63%" data-ar="٦٣٪">۶۳٪</span>
-                                        </div>
-                                    </td>
-                                </tr>
+            <!-- PERSIAN -->
+            <div class="lang-content" data-lang="fa">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">🤝 فرم تقاضای همکاری</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
+                    به پروژه اعتبارسنجی علمی طب اسلامی بپیوندید
+                </p>
+            </div>
 
-                                <!-- Chapters 8-13 continue... -->
-                                <!-- For brevity showing pattern. Full version has all 13 rows -->
+            <!-- ENGLISH -->
+            <div class="lang-content hidden" data-lang="en">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">🤝 Collaboration Request Form</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
+                    Join the Islamic Medicine Scientific Validation Project
+                </p>
+            </div>
 
-                                <!-- TOTALS ROW -->
-                                <tr style="background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%); color: white; font-weight: 900;">
-                                    <td colspan="3" style="padding: 24px; font-size: 1.2rem;" class="table-total" data-fa="جمع کل" data-en="TOTAL" data-ar="المجموع الكلي">جمع کل</td>
-                                    <td style="padding: 24px; text-align: center; font-size: 1.8rem;"><span class="num-fa" data-fa="۲۳۷" data-en="237" data-ar="٢٣٧">۲۳۷</span></td>
-                                    <td style="padding: 24px; text-align: center; font-size: 1.8rem;"><span class="num-fa" data-fa="۱۷۵" data-en="175" data-ar="١٧٥">۱۷۵</span></td>
-                                    <td style="padding: 24px; text-align: center; font-size: 1.8rem;"><span class="num-fa" data-fa="۷۳٫۸٪" data-en="73.8%" data-ar="٧٣٫٨٪">۷۳٫۸٪</span></td>
-                                </tr>
+            <!-- ARABIC -->
+            <div class="lang-content hidden" data-lang="ar">
+                <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">🤝 نموذج طلب التعاون</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 48px; line-height: 2;">
+                    انضم إلى مشروع التحقق العلمي من الطب الإسلامي
+                </p>
+            </div>
 
-                            </tbody>
-                        </table>
+            <!-- Benefits Grid -->
+            <div style="margin-bottom: 48px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+
+                    <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 24px; border-radius: var(--radius-lg); border: 2px solid #a855f7; text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: 12px;">📊</div>
+                        <h4 style="font-size: 1.1rem; color: #6b21a8; margin-bottom: 8px;" class="benefit-title" data-fa="دسترسی به داده‌ها" data-en="Data Access" data-ar="الوصول إلى البيانات">دسترسی به داده‌ها</h4>
+                        <p style="color: #7c3aed; font-size: 0.9rem; line-height: 1.5;" class="benefit-desc" data-fa="دسترسی کامل به 237 فرمول و منابع" data-en="Full access to 237 formulations & sources" data-ar="وصول كامل إلى 237 تركيبة ومصادر">دسترسی کامل به ۲۳۷ فرمول و منابع</p>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%); padding: 24px; border-radius: var(--radius-lg); border: 2px solid #06b6d4; text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: 12px;">📝</div>
+                        <h4 style="font-size: 1.1rem; color: #0e7490; margin-bottom: 8px;" class="benefit-title" data-fa="انتشار مشترک" data-en="Co-authorship" data-ar="التأليف المشترك">انتشار مشترک</h4>
+                        <p style="color: #0891b2; font-size: 0.9rem; line-height: 1.5;" class="benefit-desc" data-fa="فرصت انتشار در مجلات معتبر" data-en="Publication in reputable journals" data-ar="النشر في مجلات محترمة">فرصت انتشار در مجلات معتبر</p>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 24px; border-radius: var(--radius-lg); border: 2px solid #059669; text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: 12px;">🌐</div>
+                        <h4 style="font-size: 1.1rem; color: #065f46; margin-bottom: 8px;" class="benefit-title" data-fa="شبکه بین‌المللی" data-en="International Network" data-ar="الشبكة الدولية">شبکه بین‌المللی</h4>
+                        <p style="color: #047857; font-size: 0.9rem; line-height: 1.5;" class="benefit-desc" data-fa="ارتباط با محققان جهان" data-en="Connect with global researchers" data-ar="تواصل مع الباحثين العالميين">ارتباط با محققان جهان</p>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 24px; border-radius: var(--radius-lg); border: 2px solid #f59e0b; text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: 12px;">💰</div>
+                        <h4 style="font-size: 1.1rem; color: #92400e; margin-bottom: 8px;" class="benefit-title" data-fa="فرصت بودجه" data-en="Funding Opportunities" data-ar="فرص التمويل">فرصت بودجه</h4>
+                        <p style="color: #b45309; font-size: 0.9rem; line-height: 1.5;" class="benefit-desc" data-fa="دسترسی به گرنت‌های تحقیقاتی" data-en="Access to research grants" data-ar="الوصول إلى منح البحث">دسترسی به گرنت‌های تحقیقاتی</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form id="collaborationForm" onsubmit="submitCollaboration(event)" style="background: white; padding: 48px; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); border: 3px solid var(--primary);">
+
+                <!-- Personal Info -->
+                <div style="margin-bottom: 32px;">
+                    <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--primary);" class="form-section-title" data-fa="اطلاعات شخصی" data-en="Personal Information" data-ar="المعلومات الشخصية">اطلاعات شخصی</h3>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="نام کامل" data-en="Full Name" data-ar="الاسم الكامل">نام کامل</label>
+                            <input type="text" name="fullName" required style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="ایمیل" data-en="Email" data-ar="البريد الإلكتروني">ایمیل</label>
+                            <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="سمت" data-en="Position" data-ar="المنصب">سمت</label>
+                            <input type="text" name="position" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="دانشگاه / سازمان" data-en="University / Organization" data-ar="الجامعة / المنظمة">دانشگاه / سازمان</label>
+                            <input type="text" name="organization" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit; font-size: 1rem;">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Statistics Summary -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 60px;">
-                    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); padding: 28px; border-radius: var(--radius-lg); text-align: center; border: 3px solid #3b82f6;">
-                        <div style="font-size: 3rem; font-weight: 900; color: #1e40af; margin-bottom: 8px;"><span class="num-fa" data-fa="۲۳۷" data-en="237" data-ar="٢٣٧">۲۳۷</span></div>
-                        <div style="font-weight: 700; color: #1e40af;" class="stat-label" data-fa="فرمول کل" data-en="Total Formulations" data-ar="إجمالي التركيبات">فرمول کل</div>
+                <!-- Research Area -->
+                <div style="margin-bottom: 32px;">
+                    <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--primary);" class="form-section-title" data-fa="حوزه تحقیقاتی" data-en="Research Area" data-ar="مجال البحث">حوزه تحقیقاتی</h3>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="تخصص اصلی" data-en="Main Expertise" data-ar="التخصص الرئيسي">تخصص اصلی</label>
+                        <select name="expertise" required style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit; font-size: 1rem;">
+                            <option value="" class="select-option" data-fa="انتخاب کنید..." data-en="Select..." data-ar="اختر...">انتخاب کنید...</option>
+                            <option value="phytochemistry" class="select-option" data-fa="فیتوشیمی" data-en="Phytochemistry" data-ar="الكيمياء النباتية">فیتوشیمی</option>
+                            <option value="pharmacology" class="select-option" data-fa="فارماکولوژی" data-en="Pharmacology" data-ar="علم الأدوية">فارماکولوژی</option>
+                            <option value="clinical" class="select-option" data-fa="مطالعات بالینی" data-en="Clinical Studies" data-ar="الدراسات السريرية">مطالعات بالینی</option>
+                            <option value="history" class="select-option" data-fa="تاریخ پزشکی" data-en="Medical History" data-ar="تاريخ الطب">تاریخ پزشکی</option>
+                        </select>
                     </div>
 
-                    <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 28px; border-radius: var(--radius-lg); text-align: center; border: 3px solid #059669;">
-                        <div style="font-size: 3rem; font-weight: 900; color: #065f46; margin-bottom: 8px;"><span class="num-fa" data-fa="۱۷۵" data-en="175" data-ar="١٧٥">۱۷۵</span></div>
-                        <div style="font-weight: 700; color: #065f46;" class="stat-label" data-fa="تأیید شده" data-en="Validated" data-ar="مثبتة">تأیید شده</div>
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text);" class="form-label" data-fa="نوع همکاری" data-en="Type of Collaboration" data-ar="نوع التعاون">نوع همکاری</label>
+                        <textarea name="collaborationType" rows="3" style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
                     </div>
+                </div>
 
-                    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 28px; border-radius: var(--radius-lg); text-align: center; border: 3px solid #f59e0b;">
-                        <div style="font-size: 3rem; font-weight: 900; color: #92400e; margin-bottom: 8px;"><span class="num-fa" data-fa="۴۶" data-en="46" data-ar="٤٦">۴۶</span></div>
-                        <div style="font-weight: 700; color: #92400e;" class="stat-label" data-fa="مسئله تحقیقاتی" data-en="Research Problems" data-ar="مشاكل بحثية">مسئله تحقیقاتی</div>
+                <!-- Submit Button -->
+                <button type="submit" style="width: 100%; padding: 18px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; border: none; border-radius: var(--radius); font-weight: 700; font-size: 1.2rem; cursor: pointer; transition: var(--transition); font-family: inherit;">
+                    <span class="submit-btn-text" data-fa="✅ ارسال درخواست همکاری" data-en="✅ Submit Collaboration Request" data-ar="✅ إرسال طلب التعاون">✅ ارسال درخواست همکاری</span>
+                </button>
+            </form>
+
+            <!-- Contact Info -->
+            <div style="margin-top: 48px; text-align: center; padding: 32px; background: var(--bg); border-radius: var(--radius-xl);">
+                <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px;" class="contact-title" data-fa="تماس مستقیم" data-en="Direct Contact" data-ar="اتصال مباشر">تماس مستقیم</h3>
+                <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 10px; font-size: 1.1rem;">
+                        <span>📧</span>
+                        <a href="mailto:info@smarttech-services.om" style="color: var(--primary); text-decoration: none; font-weight: 600;">info@smarttech-services.om</a>
                     </div>
+                    <div style="display: flex; align-items: center; gap: 10px; font-size: 1.1rem;">
+                        <span>📍</span>
+                        <span style="color: var(--text-secondary); font-weight: 600;">Muscat, Oman</span>
+                    </div>
+                </div>
+            </div>
 
-                    <div style="background: linear-gradient(135deg, #fae8ff 0%, #f3e8ff 100%); padding: 28px; border-radius: var(--radius-lg); text-align: center; border: 3px solid #a855f7;">
-                        <div style="font-size: 3rem; font-weight: 900; color: #6b21a8; margin-bottom: 8px;"><span class="num-fa" data-fa="۲۰۰+" data-en="200+" data-ar="٢٠٠+">۲۰۰+</span></div>
-                        <div style="font-weight: 700; color: #6b21a8;" class="stat-label" data-fa="مرجع علمی" data-en="References" data-ar="مراجع علمية">مرجع علمی</div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%); color: white; padding: 60px 0 30px; margin-top: 80px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+
+                <!-- About -->
+                <div>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: white;" class="footer-heading" data-fa="درباره پروژه" data-en="About Project" data-ar="عن المشروع">درباره پروژه</h4>
+                    <p style="line-height: 1.8; color: rgba(255,255,255,0.9); font-size: 0.95rem;" class="footer-text" data-fa="اعتبارسنجی علمی 237 فرمول دارویی از منابع طب اسلامی با روش‌های مدرن" data-en="Scientific validation of 237 pharmaceutical formulations from Islamic medicine sources" data-ar="التحقق العلمي من 237 تركيبة صيدلانية من مصادر الطب الإسلامي">
+                        اعتبارسنجی علمی ۲۳۷ فرمول دارویی از منابع طب اسلامی با روش‌های مدرن
+                    </p>
+                    <div style="margin-top: 20px;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 999px; font-weight: 700; display: inline-block;">
+                            <span class="footer-stat" data-fa="۷۵٪ تأیید شده" data-en="75% Validated" data-ar="٧٥٪ مثبتة">۷۵٪ تأیید شده</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: white;" class="footer-heading" data-fa="دسترسی سریع" data-en="Quick Links" data-ar="روابط سريعة">دسترسی سریع</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2.2;">
+                        <li><a href="#overview-section" style="color: rgba(255,255,255,0.9); text-decoration: none;" class="footer-link" data-fa="نمای کلی" data-en="Overview" data-ar="نظرة عامة">نمای کلی</a></li>
+                        <li><a href="#bodymap-section" style="color: rgba(255,255,255,0.9); text-decoration: none;" class="footer-link" data-fa="نقشه بدن" data-en="Body Map" data-ar="خريطة الجسم">نقشه بدن</a></li>
+                        <li><a href="#openproblems-section" style="color: rgba(255,255,255,0.9); text-decoration: none;" class="footer-link" data-fa="مسائل تحقیقاتی" data-en="Research Problems" data-ar="المسائل البحثية">مسائل تحقیقاتی</a></li>
+                        <li><a href="#collaboration-section" style="color: rgba(255,255,255,0.9); text-decoration: none;" class="footer-link" data-fa="همکاری" data-en="Collaboration" data-ar="التعاون">همکاری</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: white;" class="footer-heading" data-fa="تماس" data-en="Contact" data-ar="اتصال">تماس</h4>
+                    <div style="line-height: 2.2; color: rgba(255,255,255,0.9);">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <span style="font-size: 1.2rem;">📧</span>
+                            <a href="mailto:info@smarttech-services.om" style="color: rgba(255,255,255,0.9); text-decoration: none;">info@smarttech-services.om</a>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span style="font-size: 1.2rem;">📍</span>
+                            <span>Muscat, Oman</span>
+                        </div>
                     </div>
                 </div>
 
             </div>
-        </section>
 
+            <!-- Divider -->
+            <div style="border-top: 2px solid rgba(255,255,255,0.2); margin: 40px 0 30px;"></div>
 
-        <!-- OPEN RESEARCH PROBLEMS SECTION (Multilingual) -->
-        <section id="openproblems-section" class="section">
-            <div class="container">
-
-                <!-- PERSIAN -->
-                <div class="lang-content" data-lang="fa">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                        ❓ مسائل تحقیقاتی باز
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
-                        46 سؤال تحقیقاتی برای پیشبرد دانش ما درباره طب اسلامی
-                    </p>
+            <!-- Bottom Row -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">
+                    <span class="footer-copyright" data-fa="© ۲۰۲۶ Smart Tech Services. تمام حقوق محفوظ است." data-en="© 2026 Smart Tech Services. All rights reserved." data-ar="© ٢٠٢٦ Smart Tech Services. جميع الحقوق محفوظة.">© ۲۰۲۶ Smart Tech Services. تمام حقوق محفوظ است.</span>
                 </div>
-
-                <!-- ENGLISH -->
-                <div class="lang-content hidden" data-lang="en">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                        ❓ Open Research Problems
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
-                        46 research questions to advance our knowledge of Islamic medicine
-                    </p>
-                </div>
-
-                <!-- ARABIC -->
-                <div class="lang-content hidden" data-lang="ar">
-                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 24px; text-align: center;">
-                        ❓ مسائل بحثية مفتوحة
-                    </h2>
-                    <p style="text-align: center; font-size: 1.2rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto 48px; line-height: 2;">
-                        46 سؤالاً بحثياً لتطوير معرفتنا بالطب الإسلامي
-                    </p>
-                </div>
-
-                <!-- Categories Overview -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-bottom: 60px;">
-
-                    <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 32px; border-radius: var(--radius-lg); border: 3px solid #8b5cf6; text-align: center; cursor: pointer; transition: var(--transition);"
-                         onclick="scrollToCategory('polyherbal')"
-                         onmouseover="this.style.transform='translateY(-8px)'"
-                         onmouseout="this.style.transform='translateY(0)'">
-                        <div style="font-size: 3rem; margin-bottom: 16px;">🌿</div>
-                        <div style="font-size: 2rem; font-weight: 900; color: #8b5cf6; margin-bottom: 8px;"><span class="num-fa" data-fa="۱۲" data-en="12" data-ar="١٢">۱۲</span></div>
-                        <div style="font-weight: 700; font-size: 1.1rem; color: #6b21a8;" class="category-title" data-fa="سینرژی چندگیاهی" data-en="Polyherbal Synergy" data-ar="التآزر متعدد الأعشاب">سینرژی چندگیاهی</div>
-                    </div>
-
-                    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); padding: 32px; border-radius: var(--radius-lg); border: 3px solid #3b82f6; text-align: center; cursor: pointer; transition: var(--transition);"
-                         onclick="scrollToCategory('mechanism')"
-                         onmouseover="this.style.transform='translateY(-8px)'"
-                         onmouseout="this.style.transform='translateY(0)'">
-                        <div style="font-size: 3rem; margin-bottom: 16px;">🔬</div>
-                        <div style="font-size: 2rem; font-weight: 900; color: #3b82f6; margin-bottom: 8px;"><span class="num-fa" data-fa="۸" data-en="8" data-ar="٨">۸</span></div>
-                        <div style="font-weight: 700; font-size: 1.1rem; color: #1e40af;" class="category-title" data-fa="مکانیسم اثر" data-en="Mechanism of Action" data-ar="آلية العمل">مکانیسم اثر</div>
-                    </div>
-
-                    <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); padding: 32px; border-radius: var(--radius-lg); border: 3px solid #ef4444; text-align: center; cursor: pointer; transition: var(--transition);"
-                         onclick="scrollToCategory('safety')"
-                         onmouseover="this.style.transform='translateY(-8px)'"
-                         onmouseout="this.style.transform='translateY(0)'">
-                        <div style="font-size: 3rem; margin-bottom: 16px;">⚠️</div>
-                        <div style="font-size: 2rem; font-weight: 900; color: #ef4444; margin-bottom: 8px;"><span class="num-fa" data-fa="۷" data-en="7" data-ar="٧">۷</span></div>
-                        <div style="font-weight: 700; font-size: 1.1rem; color: #991b1b;" class="category-title" data-fa="ایمنی و سمیت" data-en="Safety & Toxicity" data-ar="السلامة والسمية">ایمنی و سمیت</div>
-                    </div>
-
-                    <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 32px; border-radius: var(--radius-lg); border: 3px solid #10b981; text-align: center; cursor: pointer; transition: var(--transition);"
-                         onclick="scrollToCategory('dosage')"
-                         onmouseover="this.style.transform='translateY(-8px)'"
-                         onmouseout="this.style.transform='translateY(0)'">
-                        <div style="font-size: 3rem; margin-bottom: 16px;">💊</div>
-                        <div style="font-size: 2rem; font-weight: 900; color: #10b981; margin-bottom: 8px;"><span class="num-fa" data-fa="۱۹" data-en="19" data-ar="١٩">۱۹</span></div>
-                        <div style="font-weight: 700; font-size: 1.1rem; color: #065f46;" class="category-title" data-fa="بهینه‌سازی دوز" data-en="Dosage Optimization" data-ar="تحسين الجرعة">بهینه‌سازی دوز</div>
-                    </div>
-
-                </div>
-
-                <!-- CATEGORY 1: POLYHERBAL SYNERGY (12 problems) -->
-                <div id="polyherbal-category" style="margin-bottom: 80px;">
-                    <h3 style="font-size: 2.2rem; color: #8b5cf6; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 4px solid #8b5cf6; display: flex; align-items: center; gap: 16px;">
-                        <span style="font-size: 2.5rem;">🌿</span>
-                        <span class="category-heading" data-fa="سینرژی چندگیاهی (12 مسئله)" data-en="Polyherbal Synergy (12 Problems)" data-ar="التآزر متعدد الأعشاب (12 مسألة)">سینرژی چندگیاهی (12 مسئله)</span>
-                    </h3>
-
-                    <!-- Problem 1: Saffron + Rose Synergy -->
-                    <div class="problem-card" style="background: white; border: 3px solid #8b5cf6; border-radius: var(--radius-xl); padding: 40px; margin-bottom: 32px; box-shadow: var(--shadow-xl);">
-                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
-                            <div style="flex: 1;">
-                                <div style="display: inline-block; background: #8b5cf6; color: white; padding: 8px 16px; border-radius: 999px; font-weight: 700; font-size: 0.9rem; margin-bottom: 16px;">
-                                    <span class="problem-id" data-fa="مسئله P-01" data-en="Problem P-01" data-ar="مسألة P-01">مسئله P-01</span>
-                                </div>
-
-                                <!-- PERSIAN -->
-                                <div class="lang-content" data-lang="fa">
-                                    <h4 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 16px; line-height: 1.4;">
-                                        آیا ترکیب زعفران + گل سرخ اثر سینرژیستی در درمان افسردگی دارد؟
-                                    </h4>
-                                </div>
-
-                                <!-- ENGLISH -->
-                                <div class="lang-content hidden" data-lang="en">
-                                    <h4 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 16px; line-height: 1.4;">
-                                        Does the combination of Saffron + Rose have synergistic effects in treating depression?
-                                    </h4>
-                                </div>
-
-                                <!-- ARABIC -->
-                                <div class="lang-content hidden" data-lang="ar">
-                                    <h4 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 16px; line-height: 1.4;">
-                                        هل لمزيج الزعفران + الورد تأثيرات تآزرية في علاج الاكتئاب؟
-                                    </h4>
-                                </div>
-                            </div>
-                            <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-end;">
-                                <span style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); color: #92400e; padding: 8px 16px; border-radius: 999px; font-weight: 700; font-size: 0.9rem; border: 2px solid #f59e0b;">
-                                    <span class="problem-wow" data-fa="⭐ WOW: 10/10" data-en="⭐ WOW: 10/10" data-ar="⭐ WOW: 10/10">⭐ WOW: 10/10</span>
-                                </span>
-                                <span style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); color: #991b1b; padding: 8px 16px; border-radius: 999px; font-weight: 700; font-size: 0.9rem; border: 2px solid #dc2626;">
-                                    <span class="problem-priority" data-fa="🔥 بسیار بالا" data-en="🔥 Very High" data-ar="🔥 عالية جدا">🔥 بسیار بالا</span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <!-- PERSIAN CONTENT -->
-                        <div class="lang-content" data-lang="fa">
-                            <div style="background: var(--bg); padding: 24px; border-radius: var(--radius); margin-bottom: 20px;">
-                                <strong style="color: var(--primary); font-size: 1.1rem;">📋 منطق علمی:</strong>
-                                <p style="margin-top: 12px; line-height: 1.8; color: var(--text);">
-                                    زعفران و گل سرخ هر دو جداگانه اثر ضدافسردگی دارند. زعفران از طریق مهار بازجذب سروتونین (شبه SSRI) و گل سرخ از طریق تعدیل GABA عمل می‌کند. ترکیب این دو ممکن است اثری قوی‌تر از هر یک به تنهایی داشته باشد (سینرژی). معجون المفرّح (H-001) هر دو را دارد و WOW Factor 10/10 است.
-                                </p>
-                            </div>
-
-                            <div style="background: #eff6ff; padding: 24px; border-radius: var(--radius); margin-bottom: 20px; border-right: 4px solid #3b82f6;">
-                                <strong style="color: #1e40af; font-size: 1.1rem;">🔬 روش پیشنهادی:</strong>
-                                <ol style="margin-top: 12px; padding-right: 24px; line-height: 1.8; color: #1e40af;">
-                                    <li><strong>مطالعه کلینیکی RCT سه‌گروهی:</strong>
-                                        <ul style="margin-top: 8px; padding-right: 24px;">
-                                            <li>گروه 1: زعفران (30mg/day)</li>
-                                            <li>گروه 2: گل سرخ (500mg/day)</li>
-                                            <li>گروه 3: ترکیب (زعفران 30mg + گل سرخ 500mg)</li>
-                                            <li>دوره: 8 هفته</li>
-                                            <li>اندازه‌گیری: مقیاس Hamilton Depression Rating Scale (HDRS)</li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>تحلیل آماری سینرژی:</strong> استفاده از Combination Index (CI) برای تعیین نوع تعامل (synergistic, additive, or antagonistic)</li>
-                                    <li><strong>مطالعات مولکولی:</strong> سنجش سطح سروتونین و GABA در پلاسما</li>
-                                </ol>
-                            </div>
-
-                            <div style="background: #f0fdf4; padding: 24px; border-radius: var(--radius); margin-bottom: 20px; border-right: 4px solid #10b981;">
-                                <strong style="color: #065f46; font-size: 1.1rem;">✅ نتایج مورد انتظار:</strong>
-                                <ul style="margin-top: 12px; padding-right: 24px; line-height: 1.8; color: #065f46;">
-                                    <li>اگر CI < 0.9 → <strong>سینرژی تأیید می‌شود</strong></li>
-                                    <li>کاهش بیشتر نمرات HDRS در گروه ترکیبی (>30% نسبت به تک‌درمانی)</li>
-                                    <li>اثبات دو مکانیسم مکمل (serotonergic + GABAergic)</li>
-                                    <li>پتانسیل برای دارو: یک فرمول دو‌مکانیسمی طبیعی!</li>
-                                </ul>
-                            </div>
-
-                            <div style="background: #fef3c7; padding: 24px; border-radius: var(--radius); margin-bottom: 20px;">
-                                <strong style="color: #92400e; font-size: 1.1rem;">💡 چرا WOW 10/10؟</strong>
-                                <p style="margin-top: 12px; line-height: 1.8; color: #92400e;">
-                                    1) شواهد قوی برای هر دو جزء به تنهایی<br>
-                                    2) دو مکانیسم مکمل (نه یکسان)<br>
-                                    3) فرمول تاریخی معتبر (از قرن ۱۱ میلادی)<br>
-                                    4) ایمن و بدون عوارض جدی<br>
-                                    5) پتانسیل دارو تجاری بالا
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- ENGLISH CONTENT -->
-                        <div class="lang-content hidden" data-lang="en">
-                            <div style="background: var(--bg); padding: 24px; border-radius: var(--radius); margin-bottom: 20px;">
-                                <strong style="color: var(--primary); font-size: 1.1rem;">📋 Scientific Rationale:</strong>
-                                <p style="margin-top: 12px; line-height: 1.8; color: var(--text);">
-                                    Both saffron and rose have individual antidepressant effects. Saffron works via serotonin reuptake inhibition (SSRI-like) and rose via GABA modulation. Their combination may produce stronger effects than either alone (synergy). Ma'jun al-Mufarrih (H-001) contains both and has WOW Factor 10/10.
-                                </p>
-                            </div>
-
-                            <div style="background: #eff6ff; padding: 24px; border-radius: var(--radius); margin-bottom: 20px; border-left: 4px solid #3b82f6;">
-                                <strong style="color: #1e40af; font-size: 1.1rem;">🔬 Proposed Method:</strong>
-                                <ol style="margin-top: 12px; padding-left: 24px; line-height: 1.8; color: #1e40af;">
-                                    <li><strong>Three-arm RCT clinical study:</strong>
-                                        <ul style="margin-top: 8px; padding-left: 24px;">
-                                            <li>Group 1: Saffron (30mg/day)</li>
-                                            <li>Group 2: Rose (500mg/day)</li>
-                                            <li>Group 3: Combination (Saffron 30mg + Rose 500mg)</li>
-                                            <li>Duration: 8 weeks</li>
-                                            <li>Measurement: Hamilton Depression Rating Scale (HDRS)</li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>Synergy statistical analysis:</strong> Use Combination Index (CI) to determine interaction type (synergistic, additive, or antagonistic)</li>
-                                    <li><strong>Molecular studies:</strong> Measure plasma serotonin and GABA levels</li>
-                                </ol>
-                            </div>
-
-                            <div style="background: #f0fdf4; padding: 24px; border-radius: var(--radius); margin-bottom: 20px; border-left: 4px solid #10b981;">
-                                <strong style="color: #065f46; font-size: 1.1rem;">✅ Expected Outcomes:</strong>
-                                <ul style="margin-top: 12px; padding-left: 24px; line-height: 1.8; color: #065f46;">
-                                    <li>If CI < 0.9 → <strong>Synergy confirmed</strong></li>
-                                    <li>Greater HDRS reduction in combination group (>30% vs monotherapy)</li>
-                                    <li>Proof of two complementary mechanisms (serotonergic + GABAergic)</li>
-                                    <li>Drug potential: a natural dual-mechanism formulation!</li>
-                                </ul>
-                            </div>
-
-                            <div style="background: #fef3c7; padding: 24px; border-radius: var(--radius); margin-bottom: 20px;">
-                                <strong style="color: #92400e; font-size: 1.1rem;">💡 Why WOW 10/10?</strong>
-                                <p style="margin-top: 12px; line-height: 1.8; color: #92400e;">
-                                    1) Strong evidence for each component alone<br>
-                                    2) Two complementary mechanisms (not identical)<br>
-                                    3) Credible historical formulation (11th century)<br>
-                                    4) Safe with no serious side effects<br>
-                                    5) High commercial drug potential
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- ARABIC CONTENT (Same structure) -->
-                        <div class="lang-content hidden" data-lang="ar">
-                            <!-- Arabic translation of all sections -->
-                        </div>
-
-                        <!-- References -->
-                        <div style="margin-top: 24px; padding-top: 24px; border-top: 2px solid var(--border);">
-                            <strong style="color: var(--primary);" class="ref-title" data-fa="📚 مراجع کلیدی:" data-en="📚 Key References:" data-ar="📚 المراجع الرئيسية:">📚 مراجع کلیدی:</strong>
-                            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-                                <a href="https://doi.org/10.1186/1472-6882-4-12" target="_blank" class="reference-link">Akhondzadeh 2004 (Saffron RCT)</a>
-                                <a href="https://doi.org/10.1177/1934578X0900400217" target="_blank" class="reference-link">Hongratanaworakit 2009 (Rose)</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Problem 2: Five-spice digestive formula -->
-                    <div class="problem-card" style="background: white; border: 3px solid #8b5cf6; border-radius: var(--radius-xl); padding: 40px; margin-bottom: 32px; box-shadow: var(--shadow-xl);">
-                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
-                            <div style="flex: 1;">
-                                <div style="display: inline-block; background: #8b5cf6; color: white; padding: 8px 16px; border-radius: 999px; font-weight: 700; font-size: 0.9rem; margin-bottom: 16px;">
-                                    <span class="problem-id" data-fa="مسئله P-02" data-en="Problem P-02" data-ar="مسألة P-02">مسئله P-02</span>
-                                </div>
-
-                                <!-- PERSIAN -->
-                                <div class="lang-content" data-lang="fa">
-                                    <h4 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 16px; line-height: 1.4;">
-                                        آیا فرمول 5 ادویه (زیره، گشنیز، رازیانه، زنجبیل، فلفل) سینرژی واقعی دارد؟
-                                    </h4>
-                                </div>
-
-                                <!-- ENGLISH -->
-                                <div class="lang-content hidden" data-lang="en">
-                                    <h4 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 16px; line-height: 1.4;">
-                                        Does the 5-spice formula (cumin, coriander, fennel, ginger, pepper) have real synergy?
-                                    </h4>
-                                </div>
-
-                                <!-- ARABIC -->
-                                <div class="lang-content hidden" data-lang="ar">
-                                    <h4 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 16px; line-height: 1.4;">
-                                        هل لتركيبة التوابل الخمسة (كمون، كزبرة، شمر، زنجبيل، فلفل) تآزر حقيقي؟
-                                    </h4>
-                                </div>
-                            </div>
-                            <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-end;">
-                                <span style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); color: #92400e; padding: 8px 16px; border-radius: 999px; font-weight: 700; font-size: 0.9rem; border: 2px solid #f59e0b;">
-                                    <span class="problem-wow" data-fa="⭐ WOW: 8/10" data-en="⭐ WOW: 8/10" data-ar="⭐ WOW: 8/10">⭐ WOW: 8/10</span>
-                                </span>
-                                <span style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); color: #92400e; padding: 8px 16px; border-radius: 999px; font-weight: 700; font-size: 0.9rem; border: 2px solid #f59e0b;">
-                                    <span class="problem-priority" data-fa="📌 بالا" data-en="📌 High" data-ar="📌 عالية">📌 بالا</span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <!-- Content sections (similar structure) -->
-                        <div class="lang-content" data-lang="fa">
-                            <div style="background: var(--bg); padding: 24px; border-radius: var(--radius); margin-bottom: 20px;">
-                                <strong style="color: var(--primary); font-size: 1.1rem;">📋 منطق علمی:</strong>
-                                <p style="margin-top: 12px; line-height: 1.8; color: var(--text);">
-                                    جوارش الکمون (G-006) حاوی 5 ادویه است که هر یک به تنهایی خاصیت بادشکن (carminative) دارند. سؤال: آیا ترکیب آنها اثر افزایشی یا سینرژیستی دارد؟ تمام 5 ادویه بر عضله صاف روده اثر می‌گذارند ولی از طریق مسیرهای متفاوت.
-                                </p>
-                            </div>
-
-                            <div style="background: #eff6ff; padding: 24px; border-radius: var(--radius); margin-bottom: 20px; border-right: 4px solid #3b82f6;">
-                                <strong style="color: #1e40af; font-size: 1.1rem;">🔬 روش پیشنهادی:</strong>
-                                <ol style="margin-top: 12px; padding-right: 24px; line-height: 1.8; color: #1e40af;">
-                                    <li><strong>مطالعه in vitro:</strong> سنجش اثر هر ادویه و ترکیبات مختلف بر انقباض روده ایزوله موش صحرایی</li>
-                                    <li><strong>مطالعه بالینی:</strong> RCT با 6 گروه (5 تک‌درمانی + 1 ترکیب) در بیماران IBS</li>
-                                    <li><strong>تحلیل ایزوبولوگرام:</strong> برای تعیین نوع تعامل دارویی</li>
-                                    <li><strong>فارماکوکینتیک:</strong> بررسی تغییرات جذب و متابولیسم در ترکیب</li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <!-- English & Arabic versions... -->
-                    </div>
-
-                    <!-- Summary: 10 more problems in this category -->
-                    <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 40px; border-radius: var(--radius-xl); border: 3px solid #8b5cf6; text-align: center;">
-                        <div style="font-size: 3rem; margin-bottom: 20px;">📚</div>
-                        <h4 style="font-size: 1.8rem; color: #6b21a8; margin-bottom: 20px;" class="more-problems" data-fa="+ ۱۰ مسئله دیگر در این دسته" data-en="+ 10 More Problems in This Category" data-ar="+ 10 مسائل أخرى في هذه الفئة">+ ۱۰ مسئله دیگر در این دسته</h4>
-                        <p style="font-size: 1.1rem; line-height: 1.8; color: #7c3aed; max-width: 700px; margin: 0 auto;" class="more-desc" data-fa="شامل مطالعه سینرژی در فرمول‌های گوارشی، عصبی، تنفسی و کبدی" data-en="Including synergy studies in digestive, neurological, respiratory, and hepatic formulations" data-ar="بما في ذلك دراسات التآزر في التركيبات الهضمية والعصبية والتنفسية والكبدية">شامل مطالعه سینرژی در فرمول‌های گوارشی، عصبی، تنفسی و کبدی</p>
-                    </div>
-
-                </div>
-
-                <!-- CATEGORY 2-4 would follow similar pattern... -->
-                <!-- For space, showing structure. Full version has all 46 problems -->
-
-            </div>
-        </section>
-
-
-        <!-- FOOTER SECTION -->
-        <footer style="background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%); color: white; padding: 60px 0 30px; margin-top: 80px;">
-            <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
-
-                    <!-- About Column -->
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: white;" class="footer-heading" data-fa="درباره پروژه" data-en="About Project" data-ar="عن المشروع">درباره پروژه</h4>
-                        <p style="line-height: 1.8; color: rgba(255,255,255,0.9); font-size: 0.95rem;" class="footer-text" data-fa="اعتبارسنجی علمی 237 فرمول دارویی از منابع طب اسلامی با روش‌های مدرن" data-en="Scientific validation of 237 pharmaceutical formulations from Islamic medicine sources using modern methods" data-ar="التحقق العلمي من 237 تركيبة صيدلانية من مصادر الطب الإسلامي بالأساليب الحديثة">
-                            اعتبارسنجی علمی 237 فرمول دارویی از منابع طب اسلامی با روش‌های مدرن
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <span style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 999px; font-weight: 700; display: inline-block;">
-                                <span class="footer-stat" data-fa="۷۵٪ تأیید شده" data-en="75% Validated" data-ar="٧٥٪ مثبتة">۷۵٪ تأیید شده</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: white;" class="footer-heading" data-fa="دسترسی سریع" data-en="Quick Links" data-ar="روابط سريعة">دسترسی سریع</h4>
-                        <ul style="list-style: none; padding: 0; line-height: 2.2;">
-                            <li><a href="#overview-section" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='rgba(255,255,255,0.9)'" class="footer-link" data-fa="نمای کلی" data-en="Overview" data-ar="نظرة عامة">نمای کلی</a></li>
-                            <li><a href="#bodymap-section" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='rgba(255,255,255,0.9)'" class="footer-link" data-fa="نقشه بدن" data-en="Body Map" data-ar="خريطة الجسم">نقشه بدن</a></li>
-                            <li><a href="#openproblems-section" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='rgba(255,255,255,0.9)'" class="footer-link" data-fa="مسائل تحقیقاتی" data-en="Research Problems" data-ar="المسائل البحثية">مسائل تحقیقاتی</a></li>
-                            <li><a href="#collaboration-section" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='rgba(255,255,255,0.9)'" class="footer-link" data-fa="همکاری" data-en="Collaboration" data-ar="التعاون">همکاری</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Resources -->
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: white;" class="footer-heading" data-fa="منابع" data-en="Resources" data-ar="الموارد">منابع</h4>
-                        <ul style="list-style: none; padding: 0; line-height: 2.2;">
-                            <li><a href="#database-section" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='rgba(255,255,255,0.9)'" class="footer-link" data-fa="پایگاه داده" data-en="Database" data-ar="قاعدة البيانات">پایگاه داده</a></li>
-                            <li><a href="#references-section" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='rgba(255,255,255,0.9)'" class="footer-link" data-fa="مراجع علمی" data-en="References" data-ar="المراجع العلمية">مراجع علمی</a></li>
-                            <li><a href="#" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='rgba(255,255,255,0.9)'" class="footer-link" data-fa="راهنمای استفاده" data-en="User Guide" data-ar="دليل الاستخدام">راهنمای استفاده</a></li>
-                            <li><a href="#" style="color: rgba(255,255,255,0.9); text-decoration: none; transition: var(--transition);" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='rgba(255,255,255,0.9)'" class="footer-link" data-fa="API دسترسی" data-en="API Access" data-ar="وصول API">API دسترسی</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Contact -->
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: white;" class="footer-heading" data-fa="تماس" data-en="Contact" data-ar="اتصال">تماس</h4>
-                        <div style="line-height: 2.2; color: rgba(255,255,255,0.9);">
-                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-                                <span style="font-size: 1.2rem;">📧</span>
-                                <a href="mailto:info@smarttech-services.om" style="color: rgba(255,255,255,0.9); text-decoration: none;">info@smarttech-services.om</a>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-                                <span style="font-size: 1.2rem;">🌐</span>
-                                <a href="https://www.smarttech-services.om" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: none;">smarttech-services.om</a>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-                                <span style="font-size: 1.2rem;">📍</span>
-                                <span>Muscat, Oman</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 10px;">
-                                <span style="font-size: 1.2rem;">🏢</span>
-                                <span>Smart Tech Services SPC</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Divider -->
-                <div style="border-top: 2px solid rgba(255,255,255,0.2); margin: 40px 0 30px;"></div>
-
-                <!-- Bottom Row -->
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-                    <div style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">
-                        <span class="footer-copyright" data-fa="© ۲۰۲۶ Smart Tech Services. تمام حقوق محفوظ است." data-en="© 2026 Smart Tech Services. All rights reserved." data-ar="© ٢٠٢٦ Smart Tech Services. جميع الحقوق محفوظة.">© ۲۰۲۶ Smart Tech Services. تمام حقوق محفوظ است.</span>
-                    </div>
-                    <div style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">
-                        <span class="footer-version" data-fa="نسخه 1.0 | بتا" data-en="Version 1.0 | Beta" data-ar="الإصدار 1.0 | تجريبي">نسخه 1.0 | بتا</span>
-                    </div>
-                    <div style="display: flex; gap: 16px;">
-                        <a href="#" style="color: rgba(255,255,255,0.8); font-size: 1.8rem; transition: var(--transition);" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='rgba(255,255,255,0.8)'" title="LinkedIn">💼</a>
-                        <a href="#" style="color: rgba(255,255,255,0.8); font-size: 1.8rem; transition: var(--transition);" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='rgba(255,255,255,0.8)'" title="ResearchGate">🔬</a>
-                        <a href="#" style="color: rgba(255,255,255,0.8); font-size: 1.8rem; transition: var(--transition);" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='rgba(255,255,255,0.8)'" title="GitHub">💻</a>
-                    </div>
-                </div>
-
-                <!-- Back to Top Button -->
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="#top" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 12px 24px; border-radius: 999px; text-decoration: none; font-weight: 700; transition: var(--transition);" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                <div>
+                    <a href="#top" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 999px; text-decoration: none; font-weight: 700;">
                         <span class="back-to-top" data-fa="⬆️ بازگشت به بالا" data-en="⬆️ Back to Top" data-ar="⬆️ العودة إلى الأعلى">⬆️ بازگشت به بالا</span>
                     </a>
                 </div>
-
             </div>
-        </footer>
 
-        <!-- JAVASCRIPT -->
-        <script>
-            // ====================================================================
-            // LANGUAGE SWITCHING SYSTEM
-            // ====================================================================
+        </div>
+    </footer>
 
-            let currentLang = 'fa';
+    <!-- JAVASCRIPT - CORRECTED VERSION -->
+    <script>
+        // ====================================================================
+        // LANGUAGE SWITCHING
+        // ====================================================================
+        let currentLang = 'fa';
 
-            function switchLanguage(lang) {
-                currentLang = lang;
+        function switchLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
 
-                // Update lang attribute
-                document.documentElement.lang = lang;
-
-                // Update direction
-                if (lang === 'ar' || lang === 'fa') {
-                    document.documentElement.dir = 'rtl';
-                    document.body.style.textAlign = 'right';
-                } else {
-                    document.documentElement.dir = 'ltr';
-                    document.body.style.textAlign = 'left';
-                }
-
-                // Hide all lang-content divs
-                document.querySelectorAll('.lang-content').forEach(el => {
-                    el.classList.add('hidden');
-                });
-
-                // Show content for selected language
-                document.querySelectorAll(\`.lang-content[data-lang="\${lang}"]\`).forEach(el => {
-                    el.classList.remove('hidden');
-                });
-
-                // Update language buttons
-                document.querySelectorAll('.lang-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                document.querySelector(\`.lang-btn[data-lang="\${lang}"]\`)?.classList.add('active');
-
-                // Update dynamic text elements
-                updateDynamicText(lang);
-
-                // Store preference
-                localStorage.setItem('preferredLanguage', lang);
+            // Update direction
+            if (lang === 'ar' || lang === 'fa') {
+                document.documentElement.dir = 'rtl';
+            } else {
+                document.documentElement.dir = 'ltr';
             }
 
-            function updateDynamicText(lang) {
-                // Update all elements with data-fa/en/ar attributes
-                document.querySelectorAll('[data-fa][data-en][data-ar]').forEach(el => {
-                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                        // For form inputs, update placeholder
-                        const placeholder = el.getAttribute(\`data-placeholder-\${lang}\`);
-                        if (placeholder) el.placeholder = placeholder;
-                    } else if (el.tagName === 'SELECT') {
-                        // Skip selects, handle options separately
-                    } else {
-                        // For other elements, update textContent
-                        const text = el.getAttribute(\`data-\${lang}\`);
-                        if (text && !el.querySelector('[data-fa]')) { // Don't update if has child elements
-                            el.textContent = text;
-                        }
+            // Hide all lang-content
+            document.querySelectorAll('.lang-content').forEach(function(el) {
+                el.classList.add('hidden');
+            });
+
+            // Show selected language
+            document.querySelectorAll('.lang-content[data-lang="' + lang + '"]').forEach(function(el) {
+                el.classList.remove('hidden');
+            });
+
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            var activeBtn = document.querySelector('.lang-btn[data-lang="' + lang + '"]');
+            if (activeBtn) activeBtn.classList.add('active');
+
+            // Update dynamic text
+            updateDynamicText(lang);
+
+            // Store preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        function updateDynamicText(lang) {
+            document.querySelectorAll('[data-fa][data-en][data-ar]').forEach(function(el) {
+                var text = el.getAttribute('data-' + lang);
+                if (text && el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA' && el.tagName !== 'SELECT') {
+                    if (!el.querySelector('[data-fa]')) {
+                        el.textContent = text;
                     }
-                });
+                }
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    var placeholder = el.getAttribute('data-placeholder-' + lang);
+                    if (placeholder) el.placeholder = placeholder;
+                }
+            });
+        }
 
-                // Update select options
-                document.querySelectorAll('select option[data-fa][data-en][data-ar]').forEach(option => {
-                    const text = option.getAttribute(\`data-\${lang}\`);
-                    if (text) option.textContent = text;
-                });
-
-                // Update number display (Persian/Arabic/English numerals)
-                document.querySelectorAll('.num-fa').forEach(el => {
-                    const num = el.getAttribute(\`data-\${lang}\`);
-                    if (num) el.textContent = num;
-                });
-            }
-
-            // Load saved language preference
-            document.addEventListener('DOMContentLoaded', function() {
-                const savedLang = localStorage.getItem('preferredLanguage') || 'fa';
-                switchLanguage(savedLang);
+        // ====================================================================
+        // NAVIGATION
+        // ====================================================================
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(function(s) {
+                s.classList.remove('active');
             });
 
-            // ====================================================================
-            // NAVIGATION SYSTEM
-            // ====================================================================
-
-            function showSection(sectionId) {
-                // Hide all sections
-                document.querySelectorAll('.section').forEach(section => {
-                    section.classList.remove('active');
-                });
-
-                // Show selected section
-                const targetSection = document.getElementById(sectionId);
-                if (targetSection) {
-                    targetSection.classList.add('active');
-
-                    // Smooth scroll to section
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                }
-
-                // Update active tab
-                document.querySelectorAll('.tab').forEach(tab => {
-                    tab.classList.remove('active');
-                });
-                document.querySelector(\`.tab[onclick="showSection('\${sectionId}')"]\`)?.classList.add('active');
+            // Show target section
+            var target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+                target.scrollIntoView({ behavior: 'smooth' });
             }
 
-            // ====================================================================
-            // BODY MAP INTERACTIONS
-            // ====================================================================
-
-            function selectBodyPart(chapterId) {
-                // Get chapter info
-                const chapterInfo = {
-                    1: {fa: "سر و اعصاب", en: "Head & Neurological", ar: "الرأس والأعصاب", formulations: 32},
-                    2: {fa: "چشم و بینایی", en: "Eyes & Vision", ar: "العيون والرؤية", formulations: 18},
-                    3: {fa: "گوش، بینی و گلو", en: "ENT", ar: "الأذن والأنف والحلق", formulations: 22},
-                    4: {fa: "قفسه سینه و تنفس", en: "Chest & Respiratory", ar: "الصدر والجهاز التنفسي", formulations: 26},
-                    5: {fa: "قلب و عروق", en: "Heart & Cardiovascular", ar: "القلب والأوعية الدموية", formulations: 15},
-                    6: {fa: "معده و گوارش", en: "Stomach & Digestive", ar: "المعدة والجهاز الهضمي", formulations: 28},
-                    7: {fa: "کبد", en: "Liver", ar: "الكبد", formulations: 19},
-                    8: {fa: "طحال", en: "Spleen", ar: "الطحال", formulations: 12},
-                    9: {fa: "کلیه و مثانه", en: "Kidney & Bladder", ar: "الكلى والمثانة", formulations: 24},
-                    10: {fa: "روده", en: "Intestines", ar: "الأمعاء", formulations: 21},
-                    11: {fa: "مفاصل و استخوان", en: "Joints & Bones", ar: "المفاصل والعظام", formulations: 16},
-                    12: {fa: "پوست", en: "Skin", ar: "الجلد", formulations: 25},
-                    13: {fa: "بیماری‌های عمومی", en: "General Diseases", ar: "الأمراض العامة", formulations: 19}
-                };
-
-                const info = chapterInfo[chapterId];
-                const langName = info[currentLang] || info.fa;
-
-                // Show chapter browser with this chapter selected
-                showSection('chapters-section');
-
-                // Filter to show only this chapter
-                if (typeof filterByChapter === 'function') {
-                    filterByChapter(chapterId);
-                }
-
-                // Show notification
-                showNotification(\`📖 \${langName} - \${info.formulations} فرمول\`);
-            }
-
-            function showNotification(message) {
-                // Create notification element
-                const notification = document.createElement('div');
-                notification.style.cssText = \`
-                    position: fixed;
-                    top: 100px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-                    color: white;
-                    padding: 16px 32px;
-                    border-radius: 999px;
-                    box-shadow: var(--shadow-xl);
-                    font-weight: 700;
-                    z-index: 10000;
-                    animation: slideDown 0.3s ease;
-                \`;
-                notification.textContent = message;
-
-                document.body.appendChild(notification);
-
-                // Remove after 3 seconds
-                setTimeout(() => {
-                    notification.style.animation = 'slideUp 0.3s ease';
-                    setTimeout(() => notification.remove(), 300);
-                }, 3000);
-            }
-
-            // ====================================================================
-            // FORM SUBMISSION
-            // ====================================================================
-
-            function submitCollaboration(event) {
-                event.preventDefault();
-
-                const formData = new FormData(event.target);
-                const data = Object.fromEntries(formData);
-
-                console.log('Collaboration form submitted:', data);
-
-                // Show success message
-                const messages = {
-                    fa: "✅ درخواست شما با موفقیت ارسال شد! به زودی با شما تماس خواهیم گرفت.",
-                    en: "✅ Your request was submitted successfully! We'll contact you soon.",
-                    ar: "✅ تم إرسال طلبك بنجاح! سنتواصل معك قريباً."
-                };
-
-                alert(messages[currentLang]);
-                event.target.reset();
-            }
-
-            // ====================================================================
-            // SCROLL UTILITIES
-            // ====================================================================
-
-            function scrollToCategory(categoryId) {
-                const element = document.getElementById(categoryId + '-category');
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-
-            // Add smooth scroll to all anchor links
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function(e) {
-                        const href = this.getAttribute('href');
-                        if (href !== '#' && href !== '#top') {
-                            e.preventDefault();
-                            const target = document.querySelector(href);
-                            if (target) {
-                                target.scrollIntoView({ behavior: 'smooth' });
-                            }
-                        }
-                    });
-                });
+            // Update nav tabs
+            document.querySelectorAll('.nav-tab').forEach(function(t) {
+                t.classList.remove('active');
             });
 
-            // ====================================================================
-            // ANIMATIONS ON SCROLL
-            // ====================================================================
+            document.querySelectorAll('.nav-tab').forEach(function(tab) {
+                var onclick = tab.getAttribute('onclick');
+                if (onclick && onclick.includes(sectionId)) {
+                    tab.classList.add('active');
+                }
+            });
+        }
 
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+        // ====================================================================
+        // BODY MAP & INTERACTIONS
+        // ====================================================================
+        function selectBodyPart(chapterId) {
+            var chapterInfo = {
+                1: {fa: "سر و اعصاب", en: "Head & Neurological", ar: "الرأس والأعصاب"},
+                2: {fa: "چشم", en: "Eyes", ar: "العيون"},
+                3: {fa: "گوش، بینی و گلو", en: "ENT", ar: "الأذن والأنف"},
+                4: {fa: "ریه", en: "Lungs", ar: "الرئتين"},
+                5: {fa: "قلب", en: "Heart", ar: "القلب"},
+                6: {fa: "معده", en: "Stomach", ar: "المعدة"},
+                7: {fa: "کبد", en: "Liver", ar: "الكبد"},
+                9: {fa: "کلیه", en: "Kidneys", ar: "الكلى"},
+                11: {fa: "مفاصل", en: "Joints", ar: "المفاصل"},
+                12: {fa: "پوست", en: "Skin", ar: "الجلد"}
             };
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
+            var info = chapterInfo[chapterId];
+            if (info) {
+                var name = info[currentLang] || info.fa;
+                showNotification('📖 ' + name + ' - Chapter ' + chapterId);
+            }
+        }
 
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelectorAll('.problem-card, .stat-card').forEach(el => {
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(30px)';
-                    el.style.transition = 'all 0.6s ease';
-                    observer.observe(el);
-                });
+        function showNotification(message) {
+            var notification = document.createElement('div');
+            notification.style.cssText = 'position: fixed; top: 100px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 16px 32px; border-radius: 999px; box-shadow: var(--shadow-xl); font-weight: 700; z-index: 10000; animation: slideDown 0.3s ease;';
+            notification.textContent = message;
+
+            document.body.appendChild(notification);
+
+            setTimeout(function() {
+                notification.style.animation = 'slideUp 0.3s ease';
+                setTimeout(function() {
+                    notification.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        // ====================================================================
+        // FORM SUBMISSION
+        // ====================================================================
+        function submitCollaboration(event) {
+            event.preventDefault();
+
+            var formData = new FormData(event.target);
+            var data = {};
+            formData.forEach(function(value, key) {
+                data[key] = value;
             });
 
-            // ====================================================================
-            // CONSOLE WELCOME MESSAGE
-            // ====================================================================
+            console.log('Collaboration form submitted:', data);
 
-            console.log(\`
-╔════════════════════════════════════════════════════════════════╗
-║                                                                ║
-║   🌙 Islamic Medicine Scientific Validation Platform          ║
-║                                                                ║
-║   📊 237 Formulations | 46 Research Problems | 200+ Refs      ║
-║   🌐 3 Languages: FA / EN / AR                                ║
-║   ✅ 75% Validated                                             ║
-║                                                                ║
-║   Built with ❤️ by Smart Tech Services, Oman                 ║
-║   © 2026 | Version 1.0 Beta                                    ║
-║                                                                ║
-╚════════════════════════════════════════════════════════════════╝
-            \`);
+            var messages = {
+                fa: "✅ درخواست شما با موفقیت ارسال شد! به زودی با شما تماس خواهیم گرفت.",
+                en: "✅ Your request was submitted successfully! We'll contact you soon.",
+                ar: "✅ تم إرسال طلبك بنجاح! سنتواصل معك قريباً."
+            };
 
-        </script>
+            alert(messages[currentLang]);
+            event.target.reset();
+        }
 
-    </body>
+        // ====================================================================
+        // INITIALIZATION
+        // ====================================================================
+        document.addEventListener('DOMContentLoaded', function() {
+            var savedLang = localStorage.getItem('preferredLanguage') || 'fa';
+            switchLanguage(savedLang);
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    var href = this.getAttribute('href');
+                    if (href !== '#' && href !== '#top') {
+                        e.preventDefault();
+                        var target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                });
+            });
+        });
+
+        console.log('Islamic Medicine Scientific Validation Platform - Ready!');
+        console.log('237 Formulations | 46 Research Problems | 200+ References');
+        console.log('© 2026 Smart Tech Services, Oman');
+    </script>
+
+</body>
 </html>
