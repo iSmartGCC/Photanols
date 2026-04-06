@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="dark">
+<html lang="ar" dir="ltr" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +70,7 @@ ul { list-style:none; }
    LOADER
    ============================================================ */
 #loader { position:fixed; inset:0; z-index:9999; background:var(--bg); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:var(--space-6); transition:opacity .6s ease, visibility .6s ease; }
-#loader.hidden { opacity:0; visibility:hidden; pointer-events:none; }
+#loader.hidden { opacity:0; visibility:hidden; pointer-events:none; display:none !important; }
 .loader-ring { width:60px; height:60px; border:2px solid var(--border); border-top-color:var(--gold); border-radius:50%; animation:spin 1s linear infinite; }
 .loader-text { font-family:var(--font-en-display); color:var(--gold); font-size:var(--text-lg); letter-spacing:.4em; text-transform:uppercase; }
 @keyframes spin { to { transform:rotate(360deg); } }
@@ -498,6 +498,22 @@ footer { background:var(--bg2); border-top:1px solid var(--border); padding:var(
 body { overflow: hidden; }
 body.loaded { overflow: auto; }
 #loader { transition: opacity 0.6s ease-out !important; }
+
+/* ── LANGUAGE SWITCHING — CSS dual-content ─────────────────── */
+html[lang="en"] .i18n-ar { display: none !important; }
+html[lang="ar"] .i18n-en { display: none !important; }
+
+/* ── FAQ native <details> ──────────────────────────────────── */
+details.faq-item { background:var(--bg2,var(--card)); border:1px solid var(--border); border-radius:var(--radius-lg,12px); overflow:hidden; transition:border-color .22s ease; margin-bottom:0; }
+details.faq-item + details.faq-item { margin-top:12px; }
+details.faq-item[open] { border-color:rgba(196,160,60,.35); }
+summary.faq-q { list-style:none; display:flex; align-items:center; justify-content:space-between; padding:20px 24px; cursor:pointer; font-size:1rem; font-weight:600; color:var(--text-h,var(--text)); user-select:none; gap:16px; }
+summary.faq-q::-webkit-details-marker { display:none; }
+.faq-chevron { flex-shrink:0; color:var(--gold,#C4A03C); transition:transform .3s ease; }
+details.faq-item[open] .faq-chevron { transform:rotate(180deg); }
+.faq-a-inner { padding:0 24px 20px; color:var(--text-m,var(--text-secondary)); font-size:.9rem; line-height:1.8; }
+[dir="rtl"] summary.faq-q { text-align:right; }
+[dir="rtl"] .faq-a-inner { text-align:right; }
 </style>
 
 
@@ -810,7 +826,7 @@ body.loaded { overflow: auto; }
     <circle cx="19" cy="29" r="2" fill="#1A9090" opacity=".8"/>
   </svg>
   <div class="loader-ring" aria-hidden="true"></div>
-  <span class="loader-text" data-i18n="brand">NOOR OMEGA</span>
+  <span class="loader-text"><span class="i18n-en">NOOR OMEGA</span><span class="i18n-ar">نور أوميغا</span></span>
 </div>
 
 <!-- TOAST -->
@@ -834,14 +850,14 @@ body.loaded { overflow: auto; }
         <circle cx="19" cy="29" r="2.2" fill="#1A9090"/>
       </svg>
       <div class="logo-text gold-text">NOOR OMEGA
-        <span data-i18n="logo-sub">Enlightened Nutrition</span>
+        <span><span class="i18n-en">Enlightened Nutrition</span><span class="i18n-ar">تغذية مستنيرة</span></span>
       </div>
     </a>
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="#products" data-i18n="nav-products">Products</a>
-      <a href="#why-noor" data-i18n="nav-why">Why NOOR?</a>
-      <a href="#science" data-i18n="nav-science">Science</a>
-      <a href="#partnership" data-i18n="nav-partners">Partners</a>
+      <a href="#products"><span class="i18n-en">Our Products</span><span class="i18n-ar">المنتجات</span></a>
+      <a href="#why-noor"><span class="i18n-en">Why NOOR</span><span class="i18n-ar">لماذا نور</span></a>
+      <a href="#science"><span class="i18n-en">The Science</span><span class="i18n-ar">العلم</span></a>
+      <a href="#partnership"><span class="i18n-en">Partners</span><span class="i18n-ar">الشركاء</span></a>
     </nav>
     <div class="header-actions">
       <button class="lang-btn" id="langToggle" aria-label="Switch language">AR | عربي</button>
@@ -866,12 +882,12 @@ body.loaded { overflow: auto; }
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-  <a href="#products" data-i18n="nav-products">Products</a>
-  <a href="#why-noor" data-i18n="nav-why">Why NOOR?</a>
-  <a href="#science" data-i18n="nav-science">Science</a>
-  <a href="#certifications" data-i18n="nav-certs">Certifications</a>
-  <a href="#partnership" data-i18n="nav-partners">Partners</a>
-  <a href="#faq" data-i18n="nav-faq">FAQ</a>
+  <a href="#products"><span class="i18n-en">Our Products</span><span class="i18n-ar">المنتجات</span></a>
+  <a href="#why-noor"><span class="i18n-en">Why NOOR</span><span class="i18n-ar">لماذا نور</span></a>
+  <a href="#science"><span class="i18n-en">The Science</span><span class="i18n-ar">العلم</span></a>
+  <a href="#certifications"><span class="i18n-en">Certifications</span><span class="i18n-ar">الشهادات</span></a>
+  <a href="#partnership"><span class="i18n-en">Partners</span><span class="i18n-ar">الشركاء</span></a>
+  <a href="#faq"><span class="i18n-en">FAQ</span><span class="i18n-ar">الأسئلة الشائعة</span></a>
 </div>
 
 <main>
@@ -882,21 +898,21 @@ body.loaded { overflow: auto; }
   <div class="hero-content">
     <div class="hero-badge">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-      <span data-i18n="hero-badge">GCC-First · Halal Certified · 100% Vegan</span>
+      <span><span class="i18n-en">GCC-First · Halal Certified · 100% Vegan</span><span class="i18n-ar">الخليج أولاً · حلال معتمد · نباتي 100٪</span></span>
     </div>
     <h1 class="hero-title">
-      <span class="gold-text" data-i18n="hero-title1">NOOR</span>
-      <strong data-i18n="hero-title2">OMEGA</strong>
+      <span class="gold-text"><span class="i18n-en">NOOR</span><span class="i18n-ar">نور</span></span>
+      <strong><span class="i18n-en">OMEGA</span><span class="i18n-ar">أوميغا</span></strong>
     </h1>
-    <p class="hero-subtitle" data-i18n="hero-subtitle">Enlightened Nutrition for the Gulf</p>
-    <em class="hero-subtitle-ar" data-i18n="hero-subtitle-ar">تغذية مستنيرة لمنطقة الخليج</em>
+    <p class="hero-subtitle"><span class="i18n-en">Enlightened Nutrition for the Gulf</span><span class="i18n-ar">تغذية مستنيرة لمنطقة الخليج</span></p>
+    <em class="hero-subtitle-ar"><span class="i18n-en">The Gulf's first halal & vegan algae DHA</span><span class="i18n-ar">أول DHA نباتي وحلال في الخليج — من الطحالب لا من الأسماك</span></em>
     <div class="hero-ctas">
       <button class="btn-primary" onclick="scrollToProducts()">
-        <span data-i18n="hero-cta1">Shop Now</span>
+        <span><span class="i18n-en">Shop Now</span><span class="i18n-ar">تسوق الآن</span></span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
       <button class="btn-secondary" onclick="document.getElementById('science').scrollIntoView({behavior:'smooth'})">
-        <span data-i18n="hero-cta2">Our Science</span>
+        <span><span class="i18n-en">Our Science</span><span class="i18n-ar">علمنا</span></span>
       </button>
     </div>
   </div>
@@ -931,9 +947,9 @@ body.loaded { overflow: auto; }
 <section id="products" aria-label="Our Products">
   <div class="container">
     <div class="products-header reveal">
-      <span class="section-label" data-i18n="products-label">Our Collection</span>
-      <h2 class="section-title" data-i18n="products-title">Five Pillars of Gulf Wellness</h2>
-      <p class="section-desc" data-i18n="products-desc">The GCC's only complete halal-certified, vegan micronutrient portfolio — all five uncontested niches, now in one brand.</p>
+      <span class="section-label"><span class="i18n-en">OUR COLLECTION</span><span class="i18n-ar">مجموعتنا</span></span>
+      <h2 class="section-title"><span class="i18n-en">Five Formulations. One Gulf.</span><span class="i18n-ar">خمسة تركيبات. خليج واحد.</span></h2>
+      <p class="section-desc"><span class="i18n-en">Each product solves a documented nutrient gap in GCC health data — from halal-certified, non-animal raw materials.</span><span class="i18n-ar">كل منتج يسد فجوة غذائية موثقة في دراسات صحة سكان الخليج — بمواد خام نباتية معتمدة حلال.</span></p>
     </div>
 
     <!-- TOP ROW: 3 products -->
@@ -958,22 +974,22 @@ body.loaded { overflow: auto; }
         <div class="product-body">
           <div class="product-name gold-text">NOOR OMEGA</div>
           <div class="product-name-ar">نور أوميغا</div>
-          <div class="product-subtitle" data-i18n="omega-sub">Pure Algae DHA 500mg · 60 Softgels</div>
-          <p class="product-desc" data-i18n="omega-desc">The Gulf's first halal & vegan algae DHA. No fish, no mercury — pure ocean intelligence in every softgel. Supports heart, brain, and eye health.</p>
+          <div class="product-subtitle"><span class="i18n-en">Pure Algae DHA 500mg · 60 Softgels</span><span class="i18n-ar">DHA نقي من الطحالب 500mg · 60 كبسولة ناعمة</span></div>
+          <p class="product-desc"><span class="i18n-en">The Gulf's first halal & vegan algae DHA. No fish, no mercury, no gelatin — pure ocean intelligence in every softgel. Zero heavy metals. USP-grade Schizochytrium source.</span><span class="i18n-ar">أول DHA حلال ونباتي من الطحالب في الخليج. لا أسماك، لا زئبق، لا جيلاتين — ذكاء المحيط في كل كبسولة ناعمة. درجة USP، مصدر Schizochytrium، خالٍ تماماً من المعادن الثقيلة.</span></p>
           <div class="product-benefits-mini">
-            <span class="mini-tag" data-i18n="tag-heart">Heart Health</span>
-            <span class="mini-tag" data-i18n="tag-brain">Brain</span>
-            <span class="mini-tag" data-i18n="tag-eye">Eye Health</span>
+            <span class="mini-tag"><span class="i18n-en">Heart Health</span><span class="i18n-ar">صحة القلب</span></span>
+            <span class="mini-tag"><span class="i18n-en">Brain</span><span class="i18n-ar">صحة الدماغ</span></span>
+            <span class="mini-tag"><span class="i18n-en">Eye Health</span><span class="i18n-ar">صحة العين</span></span>
             <span class="mini-tag">Halal ✓</span>
           </div>
           <div class="product-footer">
             <div class="product-price">
               <span class="price-amount">USD 14.99</span>
-              <span class="price-sub" data-i18n="price-sub">Subscribe & save 15%</span>
+              <span class="price-sub"><span class="i18n-en">Subscribe & save 15%</span><span class="i18n-ar">اشترك ووفّر 15٪</span></span>
             </div>
             <button class="btn-add-cart" onclick="event.stopPropagation();addToCart('omega')" aria-label="Add NOOR OMEGA to cart">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              <span data-i18n="add-cart">Add</span>
+              <span><span class="i18n-en">Add</span><span class="i18n-ar">أضف</span></span>
             </button>
           </div>
         </div>
@@ -1003,22 +1019,22 @@ body.loaded { overflow: auto; }
         <div class="product-body">
           <div class="product-name gold-text">NOOR VITALITY</div>
           <div class="product-name-ar">نور فيتاليتي</div>
-          <div class="product-subtitle" data-i18n="vitality-sub">Lichen Vitamin D3 1000 IU · 60 Tablets</div>
-          <p class="product-desc" data-i18n="vitality-desc">80%+ of GCC residents are Vitamin D deficient. Our lichen-sourced D3 is the only halal & vegan option at the clinically ideal 1,000 IU dose.</p>
+          <div class="product-subtitle"><span class="i18n-en">Lichen Vitamin D3 1000 IU · 60 Tablets</span><span class="i18n-ar">فيتامين D3 من الحزاز 1000 IU · 60 قرص</span></div>
+          <p class="product-desc"><span class="i18n-en">80%+ of GCC residents are Vitamin D deficient — among the highest rates globally. Our lichen-sourced D3 is the only halal & vegan alternative to lanolin (sheep wool) D3.</span><span class="i18n-ar">أكثر من 80٪ من سكان الخليج يعانون من نقص فيتامين D — من أعلى المعدلات عالمياً. فيتامين D3 من الحزاز: الخيار الحلال والنباتي الوحيد بديلاً عن اللانولين (صوف الأغنام).</span></p>
           <div class="product-benefits-mini">
-            <span class="mini-tag" data-i18n="tag-bone">Bone Strength</span>
-            <span class="mini-tag" data-i18n="tag-immune">Immunity</span>
-            <span class="mini-tag" data-i18n="tag-mood">Mood</span>
+            <span class="mini-tag"><span class="i18n-en">Bone Strength</span><span class="i18n-ar">قوة العظام</span></span>
+            <span class="mini-tag"><span class="i18n-en">Immunity</span><span class="i18n-ar">المناعة</span></span>
+            <span class="mini-tag"><span class="i18n-en">Mood</span><span class="i18n-ar">تحسين المزاج</span></span>
             <span class="mini-tag">Halal ✓</span>
           </div>
           <div class="product-footer">
             <div class="product-price">
               <span class="price-amount">USD 11.99</span>
-              <span class="price-sub" data-i18n="price-sub">Subscribe & save 15%</span>
+              <span class="price-sub"><span class="i18n-en">Subscribe & save 15%</span><span class="i18n-ar">اشترك ووفّر 15٪</span></span>
             </div>
             <button class="btn-add-cart" onclick="event.stopPropagation();addToCart('vitality')" aria-label="Add NOOR VITALITY to cart">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              <span data-i18n="add-cart">Add</span>
+              <span><span class="i18n-en">Add</span><span class="i18n-ar">أضف</span></span>
             </button>
           </div>
         </div>
@@ -1045,22 +1061,22 @@ body.loaded { overflow: auto; }
         <div class="product-body">
           <div class="product-name gold-text">NOOR B-ACTIVE</div>
           <div class="product-name-ar">نور بي-أكتيف</div>
-          <div class="product-subtitle" data-i18n="b12-sub">Methylcobalamin B12 1000mcg · 60 Tablets</div>
-          <p class="product-desc" data-i18n="b12-desc">Bioactive methylcobalamin — the form your body actually uses. Essential for GCC's expat communities, plant-based consumers, and anyone on metformin.</p>
+          <div class="product-subtitle"><span class="i18n-en">Methylcobalamin B12 1000mcg · 60 Tablets</span><span class="i18n-ar">ميثيل كوبالامين B12 1000 mcg · 60 قرص</span></div>
+          <p class="product-desc"><span class="i18n-en">Bioactive methylcobalamin — the form your body actually absorbs directly. Essential for GCC expats, vegetarians, and diabetics on metformin.</span><span class="i18n-ar">ميثيل كوبالامين النشط بيولوجياً — الشكل الذي يمتصه جسمك مباشرةً. ضروري للمغتربين والنباتيين ومرضى السكري المتناولين للميتفورمين في منطقة الخليج.</span></p>
           <div class="product-benefits-mini">
-            <span class="mini-tag" data-i18n="tag-energy">Energy</span>
-            <span class="mini-tag" data-i18n="tag-nerve">Nerve Health</span>
-            <span class="mini-tag" data-i18n="tag-mental">Mental Clarity</span>
+            <span class="mini-tag"><span class="i18n-en">Energy</span><span class="i18n-ar">الطاقة</span></span>
+            <span class="mini-tag"><span class="i18n-en">Nerve Health</span><span class="i18n-ar">صحة الأعصاب</span></span>
+            <span class="mini-tag"><span class="i18n-en">Mental Clarity</span><span class="i18n-ar">الوضوح الذهني</span></span>
             <span class="mini-tag">Halal ✓</span>
           </div>
           <div class="product-footer">
             <div class="product-price">
               <span class="price-amount">USD 9.99</span>
-              <span class="price-sub" data-i18n="price-sub">Subscribe & save 15%</span>
+              <span class="price-sub"><span class="i18n-en">Subscribe & save 15%</span><span class="i18n-ar">اشترك ووفّر 15٪</span></span>
             </div>
             <button class="btn-add-cart" onclick="event.stopPropagation();addToCart('b12')" aria-label="Add NOOR B-ACTIVE to cart">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              <span data-i18n="add-cart">Add</span>
+              <span><span class="i18n-en">Add</span><span class="i18n-ar">أضف</span></span>
             </button>
           </div>
         </div>
@@ -1087,22 +1103,22 @@ body.loaded { overflow: auto; }
         <div class="product-body">
           <div class="product-name gold-text">NOOR CALM</div>
           <div class="product-name-ar">نور كالم</div>
-          <div class="product-subtitle" data-i18n="calm-sub">Magnesium Glycinate 400mg · 60 Capsules</div>
-          <p class="product-desc" data-i18n="calm-desc">Chelated magnesium glycinate for deep sleep, stress relief, and muscle relaxation. Superior absorption vs. magnesium oxide — no digestive side effects.</p>
+          <div class="product-subtitle"><span class="i18n-en">Magnesium Glycinate 400mg · 60 Capsules</span><span class="i18n-ar">غليسينات المغنيسيوم 400mg · 60 كبسولة</span></div>
+          <p class="product-desc"><span class="i18n-en">Chelated magnesium glycinate for deep sleep, stress relief, and muscle relaxation. Superior absorption with no digestive side effects. The GCC records some of the world's highest insomnia rates.</span><span class="i18n-ar">مغنيسيوم مخلّب لنوم عميق وتخفيف التوتر وارتخاء العضلات. امتصاص متفوق بلا آثار هضمية. منطقة الخليج تسجّل من أعلى معدلات الأرق عالمياً.</span></p>
           <div class="product-benefits-mini">
-            <span class="mini-tag" data-i18n="tag-sleep">Deep Sleep</span>
-            <span class="mini-tag" data-i18n="tag-stress">Stress Relief</span>
-            <span class="mini-tag" data-i18n="tag-muscle">Muscle Relax</span>
+            <span class="mini-tag"><span class="i18n-en">Deep Sleep</span><span class="i18n-ar">نوم عميق</span></span>
+            <span class="mini-tag"><span class="i18n-en">Stress Relief</span><span class="i18n-ar">تخفيف التوتر</span></span>
+            <span class="mini-tag"><span class="i18n-en">Muscle Relax</span><span class="i18n-ar">ارتخاء العضلات</span></span>
             <span class="mini-tag">Halal ✓</span>
           </div>
           <div class="product-footer">
             <div class="product-price">
               <span class="price-amount">USD 15.99</span>
-              <span class="price-sub" data-i18n="price-sub">Subscribe & save 15%</span>
+              <span class="price-sub"><span class="i18n-en">Subscribe & save 15%</span><span class="i18n-ar">اشترك ووفّر 15٪</span></span>
             </div>
             <button class="btn-add-cart" onclick="event.stopPropagation();addToCart('calm')" aria-label="Add NOOR CALM to cart">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              <span data-i18n="add-cart">Add</span>
+              <span><span class="i18n-en">Add</span><span class="i18n-ar">أضف</span></span>
             </button>
           </div>
         </div>
@@ -1127,22 +1143,22 @@ body.loaded { overflow: auto; }
         <div class="product-body">
           <div class="product-name gold-text">NOOR K2</div>
           <div class="product-name-ar">نور كيه-2</div>
-          <div class="product-subtitle" data-i18n="k2-sub">MK-7 Menaquinone 100mcg · 60 Capsules</div>
-          <p class="product-desc" data-i18n="k2-desc">The only halal MK-7 on GCC platforms. Directs calcium to bones — not arteries. The essential companion to NOOR VITALITY D3 for complete bone-cardiovascular protection.</p>
+          <div class="product-subtitle"><span class="i18n-en">MK-7 Menaquinone 100mcg · 60 Capsules</span><span class="i18n-ar">MK-7 مينا كينون 100 mcg · 60 كبسولة</span></div>
+          <p class="product-desc"><span class="i18n-en">The only halal MK-7 on any GCC digital platform. Directs calcium to bones — not arteries. The scientifically proven D3 companion. 15% annual market growth.</span><span class="i18n-ar">الـ MK-7 الحلال الوحيد على منصات الخليج الرقمية. يوجّه الكالسيوم إلى العظام لا الشرايين. المكمل المثالي لـ D3 — نمو سوقي 15٪ سنوياً.</span></p>
           <div class="product-benefits-mini">
-            <span class="mini-tag" data-i18n="tag-bone2">Bone Density</span>
-            <span class="mini-tag" data-i18n="tag-artery">Arterial Health</span>
+            <span class="mini-tag"><span class="i18n-en">Bone Density</span><span class="i18n-ar">كثافة العظام</span></span>
+            <span class="mini-tag"><span class="i18n-en">Arterial Health</span><span class="i18n-ar">صحة الشرايين</span></span>
             <span class="mini-tag">D3 Synergy</span>
             <span class="mini-tag">Halal ✓</span>
           </div>
           <div class="product-footer">
             <div class="product-price">
               <span class="price-amount">USD 16.99</span>
-              <span class="price-sub" data-i18n="price-sub">Subscribe & save 15%</span>
+              <span class="price-sub"><span class="i18n-en">Subscribe & save 15%</span><span class="i18n-ar">اشترك ووفّر 15٪</span></span>
             </div>
             <button class="btn-add-cart" onclick="event.stopPropagation();addToCart('k2')" aria-label="Add NOOR K2 to cart">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              <span data-i18n="add-cart">Add</span>
+              <span><span class="i18n-en">Add</span><span class="i18n-ar">أضف</span></span>
             </button>
           </div>
         </div>
@@ -1151,16 +1167,16 @@ body.loaded { overflow: auto; }
 
     <!-- BUNDLE PROMO -->
     <div class="bundle-promo reveal" role="complementary" aria-label="Bundle offer">
-      <span class="section-label" data-i18n="bundle-label">Best Value</span>
-      <h3 data-i18n="bundle-title">Complete Wellness Bundle — All 5 Products</h3>
-      <p data-i18n="bundle-desc">Save 15% when you take the full NOOR daily stack. Halal. Vegan. GCC-delivered.</p>
+      <span class="section-label"><span class="i18n-en">Best Value</span><span class="i18n-ar">أفضل قيمة</span></span>
+      <h3><span class="i18n-en">The Complete NOOR Stack</span><span class="i18n-ar">الباقة الكاملة نور</span></h3>
+      <p><span class="i18n-en">Save 15% when you take the full NOOR daily stack. Halal. Vegan. GCC-delivered. A scientific reason behind every supplement in the bundle.</span><span class="i18n-ar">وفّر 15٪ عند أخذ الروتين اليومي الكامل لنور. حلال. نباتي. يُسلَّم في جميع دول الخليج. سبب علمي موثق لكل مكمّل في الباقة.</span></p>
       <div class="bundle-price">
         <span class="bundle-original">USD 69.95</span>
         <span class="bundle-new gold-text">USD 59.46</span>
         <span class="bundle-save">Save 15%</span>
       </div>
       <button class="btn-primary" onclick="addBundle()">
-        <span data-i18n="bundle-cta">Add Complete Bundle</span>
+        <span><span class="i18n-en">Add Full Bundle</span><span class="i18n-ar">أضف الباقة الكاملة</span></span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
     </div>
@@ -1171,30 +1187,30 @@ body.loaded { overflow: auto; }
 <section id="why-noor" aria-labelledby="why-title" style="background:var(--bg2)">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:var(--space-4)">
-      <span class="section-label">Why Choose NOOR?</span>
-      <h2 class="section-title" id="why-title">The Gulf Deserves Better Supplements</h2>
+      <span class="section-label"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en">Why Choose NOOR?</span><span class="i18n-ar">لماذا تختار نور؟</span></span><span class="i18n-ar">لماذا تختار نور؟</span></span><span class="i18n-ar">لماذا تختار نور؟</span></span><span class="i18n-ar">لماذا تختار نور؟</span></span><span class="i18n-ar">لماذا تختار نور؟</span></span>
+      <h2 class="section-title" id="why-title"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en">The Gulf Deserves Better Supplements</span><span class="i18n-ar">الخليج يستحق مكملات أفضل</span></span><span class="i18n-ar">الخليج يستحق مكملات أفضل</span></span><span class="i18n-ar">الخليج يستحق مكملات أفضل</span></span><span class="i18n-ar">الخليج يستحق مكملات أفضل</span></span><span class="i18n-ar">الخليج يستحق مكملات أفضل</span></h2>
       <p class="section-desc" style="margin-inline:auto">Every formula addresses a documented deficiency affecting GCC populations &mdash; sourced from non-animal, halal-certified raw materials.</p>
     </div>
     <div class="why-grid">
       <div class="why-card reveal">
         <div class="why-icon" style="background:rgba(26,144,144,.12)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--teal-l)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3 data-i18n="why1-title">100% Halal Certified</h3>
-        <p data-i18n="why1-desc">Every ingredient and capsule shell carries a recognised GCC halal authority certificate. No gelatin, no ambiguous ingredients.</p>
+        <h3><span class="i18n-en">100% Halal Certified (IFANCA)</span><span class="i18n-ar">حلال معتمد IFANCA</span></h3>
+        <p><span class="i18n-en">Every ingredient in every NOOR product is certified by IFANCA — the internationally recognised Islamic Food and Nutrition Council, accepted across all GCC markets. No gelatin, no lanolin, no porcine derivatives, no ambiguous additives anywhere in our supply chain.</span><span class="i18n-ar">كل مكوّن في كل منتج من نور معتمد من IFANCA — المعترف بها في جميع دول مجلس التعاون. لا جيلاتين، لا لانولين، لا مشتقات خنزيرية، لا مواد غامضة في أي مرحلة من سلسلة الإنتاج.</span></p>
       </div>
       <div class="why-card reveal">
         <div class="why-icon" style="background:rgba(196,160,60,.12)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-        <h3 data-i18n="why2-title">Clinically Validated Doses</h3>
-        <p data-i18n="why2-desc">Formulas are built on peer-reviewed dosing &mdash; not marketing minimums. Every milligram justifiable by published research.</p>
+        <h3><span class="i18n-en">Clinically Validated Doses</span><span class="i18n-ar">جرعات مثبتة سريرياً</span></h3>
+        <p><span class="i18n-en">Our formulas are built on peer-reviewed dosing, not marketing claims. DHA 500mg, D3 1000 IU, Methyl-B12 1000mcg, Magnesium Glycinate 400mg, K2 MK-7 100mcg — every milligram justified by published evidence.</span><span class="i18n-ar">صيغنا مبنية على أبحاث محكّمة لا على ادعاءات تسويقية. DHA 500mg، D3 1000 IU، B12 ميثيل 1000 mcg، مغنيسيوم غليسينات 400mg، K2 MK-7 100mcg — كل ملليغرام موثق بالأدلة العلمية.</span></p>
       </div>
       <div class="why-card reveal">
         <div class="why-icon" style="background:rgba(80,224,144,.12)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50E090" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <h3 data-i18n="why3-title">GCC-First Strategy</h3>
-        <p data-i18n="why3-desc">Registered warehousing in Dubai, Arabic labelling, and distribution on Amazon.ae, Noon, and iHerb MENA from day one.</p>
+        <h3><span class="i18n-en">GCC-First Strategy</span><span class="i18n-ar">استراتيجية الخليج أولاً</span></h3>
+        <p><span class="i18n-en">Registered warehousing in Dubai, bilingual Arabic-English labelling, official registration with Oman Ministry of Health, Dubai Montaji, and Saudi SFDA. Distributed on Amazon.ae, Noon, and iHerb MENA.</span><span class="i18n-ar">مستودع مسجّل في دبي، بطاقات عربية ثنائية اللغة، تسجيل رسمي في وزارة الصحة عُمان ومنتجي دبي وSFDA السعودية. توزيع على أمازون الإمارات ونون وiHerb MENA.</span></p>
       </div>
       <div class="why-card reveal">
         <div class="why-icon" style="background:rgba(192,96,255,.12)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C060FF" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-        <h3 data-i18n="why4-title">Vegan &amp; Planet-Kind</h3>
-        <p data-i18n="why4-desc">Zero animal derivatives. Algae DHA instead of fish oil. Lichen D3 instead of lanolin. Lower carbon, no ocean by-catch.</p>
+        <h3><span class="i18n-en">Vegan & Planet-Kind</span><span class="i18n-ar">نباتي وصديق للبيئة</span></h3>
+        <p><span class="i18n-en">Zero animal derivatives — algae DHA instead of fish oil, lichen D3 instead of lanolin. 100% HPMC plant-based capsules. Lower carbon footprint and a clean supply chain from source to shelf.</span><span class="i18n-ar">صفر مشتقات حيوانية — DHA من الطحالب بدل زيت السمك، D3 من الحزاز بدل اللانولين. كبسولات HPMC نباتية 100٪. بصمة كربونية أقل وسلسلة توريد نظيفة من المصدر للرف.</span></p>
       </div>
     </div>
   </div>
@@ -1219,8 +1235,8 @@ body.loaded { overflow: auto; }
         </svg>
       </div>
       <div class="reveal">
-        <span class="section-label" data-i18n="sci-label">The Science</span>
-        <h2 class="section-title" id="sci-title" data-i18n="sci-title">From Ocean to Cell &mdash; Without the Middlefish</h2>
+        <span class="section-label"><span class="i18n-en">THE SCIENCE</span><span class="i18n-ar">العلم</span></span>
+        <h2 class="section-title" id="sci-title"><span class="i18n-en">From Ocean to Cell — Without the Middlefish.</span><span class="i18n-ar">من المحيط إلى الخلية</span></h2>
         <p class="section-desc">Microalgae <em>Schizochytrium sp.</em> produces DHA at concentrations 10&times; higher than fish. Fish don&rsquo;t make omega-3 &mdash; they eat algae. We cut the middlefish, eliminate mercury exposure, and deliver higher-purity cold-processed DHA your body absorbs faster.</p>
         <div class="divider"></div>
         <div class="science-stats">
@@ -1237,12 +1253,12 @@ body.loaded { overflow: auto; }
 <!-- CERTIFICATIONS -->
 <section id="certifications" aria-labelledby="cert-title" style="background:var(--bg2)">
   <div class="container">
-    <div class="reveal" style="text-align:center"><span class="section-label" data-i18n="cert-label">Quality Assurance</span><h2 class="section-title" id="cert-title" data-i18n="cert-title">Certified at Every Step</h2></div>
+    <div class="reveal" style="text-align:center"><span class="section-label"><span class="i18n-en">QUALITY & TRUST</span><span class="i18n-ar">الجودة والامتثال</span></span><h2 class="section-title" id="cert-title"><span class="i18n-en">Certified at Every Step</span><span class="i18n-ar">معتمد في كل خطوة</span></h2></div>
     <div class="cert-grid">
-      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n="cert1-title">Halal Certified</h3><p>Certified by a GCC-recognised halal authority. Full ingredient traceability from raw material to finished product.</p></div>
-      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><h3 data-i18n="cert2-title">ISO-Certified GMP</h3><p>Manufactured in ISO 22000 / cGMP-certified facilities with independent third-party batch testing.</p></div>
-      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg></div><h3 data-i18n="cert3-title">GCC Registered</h3><p>Products comply with UAE, Saudi, Omani, and Kuwaiti supplement regulations. SFDA / MOHE filing documentation ready.</p></div>
-      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3 data-i18n="cert4-title">Vegan Society</h3><p>All five products certified vegan &mdash; no animal-derived ingredients, no animal testing anywhere in our supply chain.</p></div>
+      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3><span class="i18n-en">Halal Certified (IFANCA)</span><span class="i18n-ar">حلال معتمد IFANCA</span></h3><p>Certified by a GCC-recognised halal authority. Full ingredient traceability from raw material to finished product.</p></div>
+      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><h3><span class="i18n-en">ISO / GMP Certified</span><span class="i18n-ar">ISO / GMP</span></h3><p>Manufactured in ISO 22000 / cGMP-certified facilities with independent third-party batch testing.</p></div>
+      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg></div><h3><span class="i18n-en">GCC Registered</span><span class="i18n-ar">مسجّل خليجياً</span></h3><p>Products comply with UAE, Saudi, Omani, and Kuwaiti supplement regulations. SFDA / MOHE filing documentation ready.</p></div>
+      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3><span class="i18n-en">Vegan Society</span><span class="i18n-ar">جمعية النباتيين</span></h3><p>All five products certified vegan &mdash; no animal-derived ingredients, no animal testing anywhere in our supply chain.</p></div>
     </div>
   </div>
 </section>
@@ -1252,17 +1268,17 @@ body.loaded { overflow: auto; }
   <div class="container">
     <div class="partnership-inner">
       <div class="reveal">
-        <span class="section-label">Become a Partner</span>
-        <h2 class="section-title" id="partner-title" data-i18n="partner-title">Grow With NOOR OMEGA</h2>
+        <span class="section-label"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en">Become a Partner</span><span class="i18n-ar">كن شريكاً</span></span><span class="i18n-ar">كن شريكاً</span></span><span class="i18n-ar">كن شريكاً</span></span><span class="i18n-ar">كن شريكاً</span></span><span class="i18n-ar">كن شريكاً</span></span>
+        <h2 class="section-title" id="partner-title"><span class="i18n-en">Grow With NOOR OMEGA</span><span class="i18n-ar">انمُ مع نور أوميغا</span></h2>
         <p class="section-desc">Whether you run a pharmacy chain, a gym, a wellness clinic, or an e-commerce store &mdash; we offer exclusive regional distribution rights with full marketing support.</p>
         <div class="partner-features">
-          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="partner-feat-text"><h4 data-i18n="partner1-title">Co-Branded Retail Kits</h4><p>Custom shelf displays, Arabic POS materials, and digital assets included with every distribution agreement.</p></div></div>
-          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="partner-feat-text"><h4 data-i18n="partner2-title">Regulatory Support</h4><p>We handle GCC regulatory filings and provide full compliance documentation to accelerate your market entry.</p></div></div>
-          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="partner-feat-text"><h4 data-i18n="partner3-title">Real-Time Analytics</h4><p>Partner dashboard showing sell-through rates, inventory levels, and campaign performance across all channels.</p></div></div>
+          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="partner-feat-text"><h4><span class="i18n-en">Co-Branded Retail Kits</span><span class="i18n-ar">مجموعات عرض مشتركة</span></h4><p>Custom shelf displays, Arabic POS materials, and digital assets included with every distribution agreement.</p></div></div>
+          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="partner-feat-text"><h4><span class="i18n-en">Full Regulatory Support</span><span class="i18n-ar">دعم تنظيمي كامل</span></h4><p>We handle GCC regulatory filings and provide full compliance documentation to accelerate your market entry.</p></div></div>
+          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="partner-feat-text"><h4><span class="i18n-en">Real-Time Analytics</span><span class="i18n-ar">تحليلات فورية</span></h4><p>Partner dashboard showing sell-through rates, inventory levels, and campaign performance across all channels.</p></div></div>
         </div>
       </div>
       <div class="partner-form reveal" role="form" aria-label="Partnership inquiry form">
-        <h3 style="font-family:var(--font-en-display);font-size:var(--text-xl);margin-bottom:var(--space-6)">Inquire About Partnership</h3>
+        <h3 style="font-family:var(--font-en-display);font-size:var(--text-xl);margin-bottom:var(--space-6)"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en">Inquire About Partnership</span><span class="i18n-ar">الاستفسار عن الشراكة</span></span><span class="i18n-ar">الاستفسار عن الشراكة</span></span><span class="i18n-ar">الاستفسار عن الشراكة</span></span><span class="i18n-ar">الاستفسار عن الشراكة</span></span><span class="i18n-ar">الاستفسار عن الشراكة</span></h3>
         <div class="form-row">
           <div class="form-group"><label for="pf-name">Full Name</label><input type="text" id="pf-name" placeholder="Ahmad Al-Rashidi" autocomplete="name"/></div>
           <div class="form-group"><label for="pf-company">Company</label><input type="text" id="pf-company" placeholder="Al Nahdi Pharmacies"/></div>
@@ -1289,48 +1305,58 @@ body.loaded { overflow: auto; }
 <!-- FAQ -->
 <section id="faq" aria-labelledby="faq-title" style="background:var(--bg2)">
   <div class="container">
-    <div class="reveal" style="text-align:center"><span class="section-label">Frequently Asked</span><h2 class="section-title" id="faq-title">Common Questions</h2></div>
+    <div class="reveal" style="text-align:center"><span class="section-label"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en">Frequently Asked</span><span class="i18n-ar">أسئلة شائعة</span></span><span class="i18n-ar">أسئلة شائعة</span></span><span class="i18n-ar">أسئلة شائعة</span></span><span class="i18n-ar">أسئلة شائعة</span></span><span class="i18n-ar">أسئلة شائعة</span></span><h2 class="section-title" id="faq-title"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en">Common Questions</span><span class="i18n-ar">الأسئلة الشائعة</span></span><span class="i18n-ar">الأسئلة الشائعة</span></span><span class="i18n-ar">الأسئلة الشائعة</span></span><span class="i18n-ar">الأسئلة الشائعة</span></span><span class="i18n-ar">الأسئلة الشائعة</span></h2></div>
     <div class="faq-list">
-      <!-- FAQ 1 -->
-      <details class="faq-item">
-        <summary class="faq-q">
-          <span data-i18n="faq1-q">Are all NOOR OMEGA products truly halal?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </summary>
-        <div class="faq-a-inner" data-i18n="faq1-a">Yes — and we mean genuinely halal, not just halal-friendly labelling. Every NOOR OMEGA product carries a formal halal certificate issued by IFANCA (the Islamic Food and Nutrition Council of America), accepted across all GCC markets. Active ingredients, HPMC plant-based capsule shells, processing aids, and manufacturing facilities are all reviewed and certified. No gelatin, no lanolin, no porcine derivatives anywhere in our supply chain. Certificate copies are available on request.</div>
-      </details>
-      <!-- FAQ 2 -->
-      <details class="faq-item">
-        <summary class="faq-q">
-          <span data-i18n="faq2-q">Why algae and not fish oil?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </summary>
-        <div class="faq-a-inner" data-i18n="faq2-a">Fish do not produce omega-3 — they obtain DHA and EPA by consuming microalgae. We go directly to that original source. Schizochytrium sp. algae are cultivated in closed bioreactors completely isolated from ocean pollution, meaning zero mercury, zero pesticides, zero heavy-metal contamination. Each softgel delivers 500 mg pure DHA cold-processed to preserve potency. Because the source is 100% plant-based, it is inherently halal and suitable for vegans.</div>
-      </details>
-      <!-- FAQ 3 -->
-      <details class="faq-item">
-        <summary class="faq-q">
-          <span data-i18n="faq3-q">Where do you ship, and how long does delivery take?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </summary>
-        <div class="faq-a-inner" data-i18n="faq3-a">NOOR OMEGA ships to all six GCC countries: UAE, Saudi Arabia, Oman, Kuwait, Qatar, and Bahrain. Orders are dispatched from our Dubai warehouse typically within one business day. Delivery takes 2–4 working days to UAE and Oman, and 3–5 days to other GCC countries. Free shipping on orders over USD 50. A tracking link is sent via WhatsApp or email immediately after dispatch.</div>
-      </details>
-      <!-- FAQ 4 -->
-      <details class="faq-item">
-        <summary class="faq-q">
-          <span data-i18n="faq4-q">Can I take multiple NOOR products together?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </summary>
-        <div class="faq-a-inner" data-i18n="faq4-a">Yes — all five products are designed to stack as a complete daily routine. NOOR OMEGA supports cardiovascular and brain health. VITALITY D3 and NOOR K2 work in scientifically proven synergy for bone density and arterial health. B-ACTIVE provides neurological energy. CALM supports deep sleep. For most healthy adults, using all five at recommended doses is safe. Consult your physician if you take chronic medication or are pregnant.</div>
-      </details>
-      <!-- FAQ 5 -->
-      <details class="faq-item">
-        <summary class="faq-q">
-          <span data-i18n="faq5-q">What is your return and refund policy?</span>
-          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-        </summary>
-        <div class="faq-a-inner" data-i18n="faq5-a">We stand behind every product with a full 30-day satisfaction guarantee from the date of delivery. If you are unsatisfied for any reason, contact us within 30 days and we will refund the full purchase price — no questions asked. Unopened sealed packages are accepted for return up to 60 days. Refunds are processed within 5–7 business days to the original payment method.</div>
-      </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span><span class="i18n-en">Are all NOOR OMEGA products truly halal?</span><span class="i18n-ar">هل جميع منتجات نور أوميغا حلال فعلاً؟</span></span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-a-inner">
+            <span class="i18n-en">Yes — and we mean genuinely halal, not just halal-friendly labelling. Every NOOR OMEGA product carries a formal halal certificate issued by IFANCA (the Islamic Food and Nutrition Council of America), accepted across all GCC markets. Active ingredients, HPMC plant-based capsule shells, processing aids, and manufacturing facilities are all reviewed and certified. No gelatin, no lanolin, no porcine derivatives anywhere in our supply chain. Certificate copies are available on request.</span>
+            <span class="i18n-ar">نعم — وليس مجرد ملصق ودود للحلال. كل منتج من نور يحمل شهادة حلال رسمية صادرة عن IFANCA المعترف بها في جميع دول مجلس التعاون. المكونات النشطة، الكبسولات النباتية HPMC، المساعدات التقنية، وعمليات التصنيع — كل شيء مراجع ومعتمد. لا جيلاتين، لا لانولين، لا مشتقات خنزيرية في أي مرحلة من سلسلة إنتاجنا. نسخ الشهادات متاحة عند الطلب.</span>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span><span class="i18n-en">Why algae and not fish oil?</span><span class="i18n-ar">لماذا الطحالب وليس زيت السمك؟</span></span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-a-inner">
+            <span class="i18n-en">Fish do not produce omega-3 — they obtain DHA and EPA by consuming microalgae. We go directly to that original source. Schizochytrium sp. algae are cultivated in closed bioreactors completely isolated from ocean pollution, meaning zero mercury, zero pesticides, zero heavy-metal contamination. Each softgel delivers 500 mg pure DHA cold-processed to preserve potency. Because the source is 100% plant-based, it is inherently halal and suitable for vegans.</span>
+            <span class="i18n-ar">الأسماك لا تصنع أوميغا-3 — تحصل عليه من أكل الطحالب الدقيقة. نحن نذهب مباشرةً إلى المصدر الأصلي. طحالب Schizochytrium تُزرع في مفاعلات حيوية مغلقة معزولة تماماً عن تلوث المحيطات، ما يعني: صفر زئبق، صفر مبيدات، صفر ملوثات. كل كبسولة تحتوي 500mg DHA خالص باردة المعالجة. ولأن المصدر نباتي بالكامل، فهو حلال ذاتياً ومناسب للنباتيين.</span>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span><span class="i18n-en">Where do you ship, and how long does delivery take?</span><span class="i18n-ar">إلى أين تشحنون وكم تستغرق الشحنة؟</span></span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-a-inner">
+            <span class="i18n-en">NOOR OMEGA ships to all six GCC countries: UAE, Saudi Arabia, Oman, Kuwait, Qatar, and Bahrain. Orders are dispatched from our Dubai warehouse typically within one business day. Delivery takes 2–4 working days to UAE and Oman, and 3–5 days to other GCC countries. Free shipping on orders over USD 50. A tracking link is sent via WhatsApp or email immediately after dispatch.</span>
+            <span class="i18n-ar">يشحن نور أوميغا لجميع دول الخليج الست: الإمارات، المملكة العربية السعودية، عُمان، الكويت، قطر، والبحرين. الطلبات تُرسَل من مستودع دبي خلال يوم عمل واحد عادةً. مدة التسليم: 2-4 أيام للإمارات وعُمان، 3-5 أيام لباقي دول الخليج. شحن مجاني على الطلبات فوق 50 دولاراً. رابط تتبع يُرسَل فور الشحن عبر واتساب أو البريد الإلكتروني.</span>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span><span class="i18n-en">Can I take multiple NOOR products together?</span><span class="i18n-ar">هل يمكنني تناول أكثر من منتج من نور معاً؟</span></span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-a-inner">
+            <span class="i18n-en">Yes — all five products are designed to stack as a complete daily routine. NOOR OMEGA supports cardiovascular and brain health. VITALITY D3 and NOOR K2 work in scientifically proven synergy for bone density and arterial health. B-ACTIVE provides neurological energy. CALM supports deep sleep. For most healthy adults, using all five at recommended doses is safe. Consult your physician if you take chronic medication or are pregnant.</span>
+            <span class="i18n-ar">نعم — المنتجات الخمسة مصممة للعمل معاً كروتين يومي متكامل. NOOR OMEGA يدعم القلب والدماغ. VITALITY D3 و NOOR K2 يعملان بتآزر علمي مثبت لصحة العظام والشرايين. B-ACTIVE يوفر طاقة الأعصاب. CALM يعزز النوم العميق. لمعظم البالغين الأصحاء بالجرعات الموصى بها هذا آمن. استشر طبيبك إذا كنت تتناول أدوية مزمنة أو كنتِ حاملاً.</span>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span><span class="i18n-en">What is your return and refund policy?</span><span class="i18n-ar">ما هي سياسة الإرجاع والاسترداد؟</span></span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-a-inner">
+            <span class="i18n-en">We stand behind every product with a full 30-day satisfaction guarantee from the date of delivery. If you are unsatisfied for any reason, contact us within 30 days and we will refund the full purchase price — no questions asked. Unopened sealed packages are accepted for return up to 60 days. Refunds are processed within 5–7 business days to the original payment method.</span>
+            <span class="i18n-ar">نؤمن بكل منتج نقدمه ونمنحك ضمان رضا كامل لمدة 30 يوماً من تاريخ الاستلام. إذا لم تكن راضياً لأي سبب، تواصل معنا خلال 30 يوماً وسنردّ ثمن المنتج كاملاً دون أسئلة. الطرود المغلقة تُقبل للإرجاع حتى 60 يوماً. يُعالَج الاسترداد خلال 5-7 أيام عمل على نفس وسيلة الدفع.</span>
+          </div>
+        </details>
       </div>
   </div>
 </section>
@@ -1344,7 +1370,7 @@ body.loaded { overflow: auto; }
           <svg class="logo-svg" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#C4A03C" stroke-width="1.5" opacity=".7"/><path d="M14 23.5 C16 18 20 16 24 20 C28 24 32 22 34 17" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="14" cy="19" r="2.2" fill="#C4A03C"/><circle cx="24" cy="14" r="2.2" fill="#C4A03C"/><circle cx="34" cy="19" r="2.2" fill="#C4A03C"/><circle cx="29" cy="29" r="2.2" fill="#1A9090"/><circle cx="19" cy="29" r="2.2" fill="#1A9090"/></svg>
           <span class="logo-text gold-text">NOOR OMEGA</span>
         </a>
-        <p data-i18n="footer-desc">Enlightened nutrition for the Gulf. Halal-certified, vegan, GCC-registered micronutrient supplements backed by science.</p>
+        <p><span class="i18n-en">Enlightened nutrition for the Gulf. Halal-certified, vegan, GCC-registered micronutrient supplements backed by science.</span><span class="i18n-ar">تغذية مستنيرة للخليج. مكملات غذائية حلال ونباتية مسجّلة خليجياً مدعومة بالعلم.</span></p>
         <div class="footer-social">
           <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
           <a href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TK</a>
@@ -1352,9 +1378,9 @@ body.loaded { overflow: auto; }
           <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
         </div>
       </div>
-      <div class="footer-col"><h4 data-i18n="footer-shop">Shop</h4><ul><li><a href="#products">NOOR OMEGA</a></li><li><a href="#products">NOOR VITALITY</a></li><li><a href="#products">NOOR B-ACTIVE</a></li><li><a href="#products">NOOR CALM</a></li><li><a href="#products">NOOR K2</a></li></ul></div>
-      <div class="footer-col"><h4 data-i18n="footer-company">Company</h4><ul><li><a href="#why-noor">About Us</a></li><li><a href="#science">Science</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#partnership">Partners</a></li><li><a href="#faq">FAQ</a></li></ul></div>
-      <div class="footer-col"><h4 data-i18n="footer-support">Support</h4><ul><li><a href="mailto:hello@nooromega.com">Contact Us</a></li><li><a href="#">Shipping Policy</a></li><li><a href="#">Returns</a></li><li><a href="#">Track Order</a></li></ul></div>
+      <div class="footer-col"><h4><span class="i18n-en">Shop</span><span class="i18n-ar">المتجر</span></h4><ul><li><a href="#products">NOOR OMEGA</a></li><li><a href="#products">NOOR VITALITY</a></li><li><a href="#products">NOOR B-ACTIVE</a></li><li><a href="#products">NOOR CALM</a></li><li><a href="#products">NOOR K2</a></li></ul></div>
+      <div class="footer-col"><h4><span class="i18n-en">Company</span><span class="i18n-ar">الشركة</span></h4><ul><li><a href="#why-noor">About Us</a></li><li><a href="#science">Science</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#partnership">Partners</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4><span class="i18n-en">Support</span><span class="i18n-ar">الدعم</span></h4><ul><li><a href="mailto:hello@nooromega.com">Contact Us</a></li><li><a href="#">Shipping Policy</a></li><li><a href="#">Returns</a></li><li><a href="#">Track Order</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 NOOR OMEGA. All rights reserved.</p>
@@ -1384,7 +1410,7 @@ body.loaded { overflow: auto; }
           <input type="checkbox" id="subToggle" onchange="toggleSubPrice()"/>
           <label for="subToggle">Subscribe &amp; Save 15% &mdash; Cancel Anytime</label>
         </div>
-        <div class="modal-benefits"><h4>Key Benefits</h4><div class="benefit-list" id="modal-benefit-list"></div></div>
+        <div class="modal-benefits"><h4><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en"><span class="i18n-en">Key Benefits</span><span class="i18n-ar">الفوائد الرئيسية</span></span><span class="i18n-ar">الفوائد الرئيسية</span></span><span class="i18n-ar">الفوائد الرئيسية</span></span><span class="i18n-ar">الفوائد الرئيسية</span></span><span class="i18n-ar">الفوائد الرئيسية</span></h4><div class="benefit-list" id="modal-benefit-list"></div></div>
         <div class="modal-ingredients" id="modal-ingredients"></div>
         <div class="modal-qty">
           <label>Quantity</label>
@@ -1852,13 +1878,22 @@ function toggleMobileNav() {
 })();
 
 // ── LOADER ────────────────────────────────────────────────
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const loader = document.getElementById('loader');
-    if (loader) loader.classList.add('hidden');
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-  }, 600);
-});
+// ── BULLETPROOF LOADER HIDE ─────────────────────────────────
+function hideLoader() {
+  var loader = document.getElementById('loader');
+  if (loader) {
+    loader.classList.add('hidden');
+    loader.style.display = 'none';
+  }
+  document.body.style.overflow = '';
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    if (typeof revealObs !== 'undefined') revealObs.observe(el);
+  });
+}
+// Three independent triggers — whichever fires first wins
+window.addEventListener('load', function() { setTimeout(hideLoader, 400); });
+document.addEventListener('DOMContentLoaded', function() { setTimeout(hideLoader, 900); });
+setTimeout(hideLoader, 2500); // hard kill-switch
 
 // ── KEYBOARD TRAP (modals) ────────────────────────────────
 document.addEventListener('keydown', e => {
@@ -1921,15 +1956,9 @@ document.getElementById('themeToggle').addEventListener('click', () => {
 function applyLang(lang) {
   document.documentElement.setAttribute('lang', lang);
   document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-  try { localStorage.setItem('noor-lang', lang); } catch(e) {}
-  const btn = document.getElementById('langToggle');
+  var btn = document.getElementById('langToggle');
   if (btn) btn.textContent = lang === 'ar' ? 'EN' : '\u0639\u0631\u0628\u064a';
-  const t = window.TRANSLATIONS;
-  if (!t || !t[lang]) { console.warn('TRANSLATIONS not ready for lang:', lang); return; }
-  document.querySelectorAll('[data-i18n]').forEach(function(el) {
-    const key = el.getAttribute('data-i18n');
-    if (t[lang][key] !== undefined) el.innerHTML = t[lang][key];
-  });
+  try { localStorage.setItem('noor-lang', lang); } catch(e) {}
 }
 
 
