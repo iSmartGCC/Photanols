@@ -318,8 +318,8 @@ nav.main-nav a:hover::after { right:0; }
 .faq-chevron { flex-shrink:0; color:var(--gold); transition:transform var(--trans); }
 .faq-item.open .faq-chevron { transform:rotate(180deg); }
 .faq-a { max-height:0; overflow:hidden; transition:max-height .4s ease; }
-.faq-item.open .faq-a { max-height:400px; }
-.faq-a-inner { padding:0 var(--space-6) var(--space-5); color:var(--text-m); font-size:var(--text-sm); line-height:1.7; }
+.faq-item.open .faq-a { max-height:2000px; }
+.faq-item.open .faq-a-inner { padding:0 var(--space-6) var(--space-5); color:var(--text-m); font-size:var(--text-sm); line-height:1.7; }
 [dir="rtl"] .faq-a-inner { text-align:right; }
 
 /* ============================================================
@@ -884,23 +884,23 @@ body.loaded { overflow: auto; }
     <div class="why-grid">
       <div class="why-card reveal">
         <div class="why-icon" style="background:rgba(26,144,144,.12)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--teal-l)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>100% Halal Certified</h3>
-        <p>Every ingredient and capsule shell carries a recognised GCC halal authority certificate. No gelatin, no ambiguous ingredients.</p>
+        <h3 data-i18n="why1-title">100% Halal Certified</h3>
+        <p data-i18n="why1-desc">Every ingredient and capsule shell carries a recognised GCC halal authority certificate. No gelatin, no ambiguous ingredients.</p>
       </div>
       <div class="why-card reveal">
         <div class="why-icon" style="background:rgba(196,160,60,.12)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-        <h3>Clinically Validated Doses</h3>
-        <p>Formulas are built on peer-reviewed dosing &mdash; not marketing minimums. Every milligram justifiable by published research.</p>
+        <h3 data-i18n="why2-title">Clinically Validated Doses</h3>
+        <p data-i18n="why2-desc">Formulas are built on peer-reviewed dosing &mdash; not marketing minimums. Every milligram justifiable by published research.</p>
       </div>
       <div class="why-card reveal">
         <div class="why-icon" style="background:rgba(80,224,144,.12)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#50E090" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <h3>GCC-First Strategy</h3>
-        <p>Registered warehousing in Dubai, Arabic labelling, and distribution on Amazon.ae, Noon, and iHerb MENA from day one.</p>
+        <h3 data-i18n="why3-title">GCC-First Strategy</h3>
+        <p data-i18n="why3-desc">Registered warehousing in Dubai, Arabic labelling, and distribution on Amazon.ae, Noon, and iHerb MENA from day one.</p>
       </div>
       <div class="why-card reveal">
         <div class="why-icon" style="background:rgba(192,96,255,.12)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C060FF" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-        <h3>Vegan &amp; Planet-Kind</h3>
-        <p>Zero animal derivatives. Algae DHA instead of fish oil. Lichen D3 instead of lanolin. Lower carbon, no ocean by-catch.</p>
+        <h3 data-i18n="why4-title">Vegan &amp; Planet-Kind</h3>
+        <p data-i18n="why4-desc">Zero animal derivatives. Algae DHA instead of fish oil. Lichen D3 instead of lanolin. Lower carbon, no ocean by-catch.</p>
       </div>
     </div>
   </div>
@@ -925,8 +925,8 @@ body.loaded { overflow: auto; }
         </svg>
       </div>
       <div class="reveal">
-        <span class="section-label">The Science</span>
-        <h2 class="section-title" id="sci-title">From Ocean to Cell &mdash; Without the Middlefish</h2>
+        <span class="section-label" data-i18n="sci-label">The Science</span>
+        <h2 class="section-title" id="sci-title" data-i18n="sci-title">From Ocean to Cell &mdash; Without the Middlefish</h2>
         <p class="section-desc">Microalgae <em>Schizochytrium sp.</em> produces DHA at concentrations 10&times; higher than fish. Fish don&rsquo;t make omega-3 &mdash; they eat algae. We cut the middlefish, eliminate mercury exposure, and deliver higher-purity cold-processed DHA your body absorbs faster.</p>
         <div class="divider"></div>
         <div class="science-stats">
@@ -943,12 +943,12 @@ body.loaded { overflow: auto; }
 <!-- CERTIFICATIONS -->
 <section id="certifications" aria-labelledby="cert-title" style="background:var(--bg2)">
   <div class="container">
-    <div class="reveal" style="text-align:center"><span class="section-label">Quality Assurance</span><h2 class="section-title" id="cert-title">Certified at Every Step</h2></div>
+    <div class="reveal" style="text-align:center"><span class="section-label" data-i18n="cert-label">Quality Assurance</span><h2 class="section-title" id="cert-title" data-i18n="cert-title">Certified at Every Step</h2></div>
     <div class="cert-grid">
-      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Halal Certified</h3><p>Certified by a GCC-recognised halal authority. Full ingredient traceability from raw material to finished product.</p></div>
-      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><h3>ISO-Certified GMP</h3><p>Manufactured in ISO 22000 / cGMP-certified facilities with independent third-party batch testing.</p></div>
-      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg></div><h3>GCC Registered</h3><p>Products comply with UAE, Saudi, Omani, and Kuwaiti supplement regulations. SFDA / MOHE filing documentation ready.</p></div>
-      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3>Vegan Society</h3><p>All five products certified vegan &mdash; no animal-derived ingredients, no animal testing anywhere in our supply chain.</p></div>
+      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n="cert1-title">Halal Certified</h3><p>Certified by a GCC-recognised halal authority. Full ingredient traceability from raw material to finished product.</p></div>
+      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><h3 data-i18n="cert2-title">ISO-Certified GMP</h3><p>Manufactured in ISO 22000 / cGMP-certified facilities with independent third-party batch testing.</p></div>
+      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg></div><h3 data-i18n="cert3-title">GCC Registered</h3><p>Products comply with UAE, Saudi, Omani, and Kuwaiti supplement regulations. SFDA / MOHE filing documentation ready.</p></div>
+      <div class="cert-card reveal"><div class="cert-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3 data-i18n="cert4-title">Vegan Society</h3><p>All five products certified vegan &mdash; no animal-derived ingredients, no animal testing anywhere in our supply chain.</p></div>
     </div>
   </div>
 </section>
@@ -959,12 +959,12 @@ body.loaded { overflow: auto; }
     <div class="partnership-inner">
       <div class="reveal">
         <span class="section-label">Become a Partner</span>
-        <h2 class="section-title" id="partner-title">Grow With NOOR OMEGA</h2>
+        <h2 class="section-title" id="partner-title" data-i18n="partner-title">Grow With NOOR OMEGA</h2>
         <p class="section-desc">Whether you run a pharmacy chain, a gym, a wellness clinic, or an e-commerce store &mdash; we offer exclusive regional distribution rights with full marketing support.</p>
         <div class="partner-features">
-          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="partner-feat-text"><h4>Co-Branded Retail Kits</h4><p>Custom shelf displays, Arabic POS materials, and digital assets included with every distribution agreement.</p></div></div>
-          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="partner-feat-text"><h4>Regulatory Support</h4><p>We handle GCC regulatory filings and provide full compliance documentation to accelerate your market entry.</p></div></div>
-          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="partner-feat-text"><h4>Real-Time Analytics</h4><p>Partner dashboard showing sell-through rates, inventory levels, and campaign performance across all channels.</p></div></div>
+          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="partner-feat-text"><h4 data-i18n="partner1-title">Co-Branded Retail Kits</h4><p>Custom shelf displays, Arabic POS materials, and digital assets included with every distribution agreement.</p></div></div>
+          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="partner-feat-text"><h4 data-i18n="partner2-title">Regulatory Support</h4><p>We handle GCC regulatory filings and provide full compliance documentation to accelerate your market entry.</p></div></div>
+          <div class="partner-feat"><div class="partner-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="partner-feat-text"><h4 data-i18n="partner3-title">Real-Time Analytics</h4><p>Partner dashboard showing sell-through rates, inventory levels, and campaign performance across all channels.</p></div></div>
         </div>
       </div>
       <div class="partner-form reveal" role="form" aria-label="Partnership inquiry form">
@@ -1076,7 +1076,7 @@ body.loaded { overflow: auto; }
           <svg class="logo-svg" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#C4A03C" stroke-width="1.5" opacity=".7"/><path d="M14 23.5 C16 18 20 16 24 20 C28 24 32 22 34 17" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="14" cy="19" r="2.2" fill="#C4A03C"/><circle cx="24" cy="14" r="2.2" fill="#C4A03C"/><circle cx="34" cy="19" r="2.2" fill="#C4A03C"/><circle cx="29" cy="29" r="2.2" fill="#1A9090"/><circle cx="19" cy="29" r="2.2" fill="#1A9090"/></svg>
           <span class="logo-text gold-text">NOOR OMEGA</span>
         </a>
-        <p>Enlightened nutrition for the Gulf. Halal-certified, vegan, GCC-registered micronutrient supplements backed by science.</p>
+        <p data-i18n="footer-desc">Enlightened nutrition for the Gulf. Halal-certified, vegan, GCC-registered micronutrient supplements backed by science.</p>
         <div class="footer-social">
           <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
           <a href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TK</a>
@@ -1084,9 +1084,9 @@ body.loaded { overflow: auto; }
           <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
         </div>
       </div>
-      <div class="footer-col"><h4>Shop</h4><ul><li><a href="#products">NOOR OMEGA</a></li><li><a href="#products">NOOR VITALITY</a></li><li><a href="#products">NOOR B-ACTIVE</a></li><li><a href="#products">NOOR CALM</a></li><li><a href="#products">NOOR K2</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="#why-noor">About Us</a></li><li><a href="#science">Science</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#partnership">Partners</a></li><li><a href="#faq">FAQ</a></li></ul></div>
-      <div class="footer-col"><h4>Support</h4><ul><li><a href="mailto:hello@nooromega.com">Contact Us</a></li><li><a href="#">Shipping Policy</a></li><li><a href="#">Returns</a></li><li><a href="#">Track Order</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer-shop">Shop</h4><ul><li><a href="#products">NOOR OMEGA</a></li><li><a href="#products">NOOR VITALITY</a></li><li><a href="#products">NOOR B-ACTIVE</a></li><li><a href="#products">NOOR CALM</a></li><li><a href="#products">NOOR K2</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer-company">Company</h4><ul><li><a href="#why-noor">About Us</a></li><li><a href="#science">Science</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#partnership">Partners</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer-support">Support</h4><ul><li><a href="mailto:hello@nooromega.com">Contact Us</a></li><li><a href="#">Shipping Policy</a></li><li><a href="#">Returns</a></li><li><a href="#">Track Order</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 NOOR OMEGA. All rights reserved.</p>
@@ -1284,6 +1284,115 @@ const PRODUCTS = {
 const TRANSLATIONS = {
   en:{
 
+    'brand':'NOOR OMEGA',
+    'logo-sub':'Enlightened Nutrition',
+    'add-cart':'Add',
+    'price-sub':'Subscribe & save 15%',
+    'omega-sub':'Pure Algae DHA 500mg · 60 Softgels',
+    'omega-desc':'The Gulf's first halal & vegan algae DHA. No fish, no mercury — pure ocean intelligence in every softgel.',
+    'vitality-sub':'Lichen Vitamin D3 1000 IU · 60 Tablets',
+    'vitality-desc':'80%+ of GCC residents are Vitamin D deficient. Our lichen-sourced D3 is the only halal & vegan option.',
+    'b12-sub':'Methylcobalamin B12 1000mcg · 60 Tablets',
+    'b12-desc':'Bioactive methylcobalamin — the form your body actually uses. Essential for GCC expats and plant-based consumers.',
+    'calm-sub':'Magnesium Glycinate 400mg · 60 Capsules',
+    'calm-desc':'Chelated magnesium glycinate for deep sleep, stress relief, and muscle relaxation. Superior absorption.',
+    'k2-sub':'MK-7 Menaquinone 100mcg · 60 Capsules',
+    'k2-desc':'The only halal MK-7 on GCC platforms. Directs calcium to bones — not arteries. The ideal D3 companion.',
+    'tag-brain':'Brain',
+    'tag-heart':'Heart Health',
+    'tag-eye':'Eye Health',
+    'tag-energy':'Energy',
+    'tag-immune':'Immunity',
+    'tag-bone':'Bone Strength',
+    'tag-bone2':'Bone Density',
+    'tag-artery':'Arterial Health',
+    'tag-sleep':'Deep Sleep',
+    'tag-stress':'Stress Relief',
+    'tag-mood':'Mood',
+    'tag-muscle':'Muscle Relax',
+    'tag-nerve':'Nerve Health',
+    'tag-mental':'Mental Clarity',
+    'bundle-label':'Best Value',
+    'bundle-title':'The Complete NOOR Stack',
+    'bundle-desc':'Save 15% when you take the full NOOR daily stack. Halal. Vegan. GCC-delivered.',
+    'bundle-cta':'Add Full Bundle',
+    'why-label':'WHY NOOR',
+    'why-title':'The Gulf deserves better supplements.',
+    'why-desc':'Every formula targets a validated deficiency in GCC populations — from non-animal, halal-certified raw materials.',
+    'why1-title':'100% Halal Certified',
+    'why1-desc':'Every ingredient and capsule shell carries a recognised GCC halal authority certificate. No gelatin.',
+    'why2-title':'Clinically Validated Doses',
+    'why2-desc':'Formulas built on peer-reviewed dosing — every milligram justifiable by published research.',
+    'why3-title':'GCC-First Strategy',
+    'why3-desc':'Registered warehousing in Dubai, Arabic labelling, and distribution on Amazon.ae, Noon, and iHerb MENA.',
+    'why4-title':'Vegan & Planet-Kind',
+    'why4-desc':'Zero animal derivatives. Algae DHA instead of fish oil. Lichen D3 instead of lanolin.',
+    'sci-label':'THE SCIENCE',
+    'sci-title':'From Ocean to Cell — Without the Middlefish.',
+    'sci-desc':'Microalgae produces DHA at concentrations 10× higher than fish. Fish eat algae for omega-3 — we go straight to the source.',
+    'cert-label':'QUALITY & TRUST',
+    'cert-title':'Certified at Every Step',
+    'cert-desc':'From halal certification and ISO 22000 to GCC compliance and Vegan Society standards.',
+    'cert1-title':'Halal Certified',
+    'cert1-desc':'Certified by a GCC-recognised authority. Full ingredient traceability from raw material to finished product.',
+    'cert2-title':'ISO / GMP',
+    'cert2-desc':'Manufactured in ISO 22000 / cGMP-certified facilities with independent third-party batch testing.',
+    'cert3-title':'GCC Registered',
+    'cert3-desc':'Formulas comply with UAE, Saudi, Omani, and Kuwaiti supplement regulations.',
+    'cert4-title':'Vegan Society',
+    'cert4-desc':'All five products certified vegan — no animal derivatives, no animal testing anywhere in our supply chain.',
+    'partner-label':'PARTNER WITH NOOR',
+    'partner-title':'Grow With NOOR OMEGA',
+    'partner-desc':'Pharmacy chain, gym, clinic, or e-commerce — exclusive regional distribution rights with full marketing support.',
+    'partner1-title':'Co-Branded Retail Kits',
+    'partner1-desc':'Custom shelf displays, Arabic POS materials, and digital assets with every distribution agreement.',
+    'partner2-title':'Regulatory Support',
+    'partner2-desc':'We handle GCC regulatory filings and provide full compliance documentation.',
+    'partner3-title':'Real-Time Analytics',
+    'partner3-desc':'Partner dashboard showing sell-through rates, inventory levels, and campaign performance.',
+    'cart-title':'Your Cart',
+    'cart-empty':'Your cart is empty',
+    'browse-products':'Browse Products',
+    'checkout':'Checkout',
+    'continue-shop':'Continue Shopping',
+    'subtotal':'Subtotal',
+    'discount':'Discount (15%)',
+    'total':'Total',
+    'add-to-cart':'Add to Cart',
+    'wishlist':'Add to Wishlist',
+    'sub-label':'Subscribe & save 15% — cancel anytime',
+    'benefits-title':'Key Benefits',
+    'qty-label':'Quantity',
+    'trust1':'Halal Certified',
+    'trust2':'100% Vegan',
+    'trust3':'GMP Certified',
+    'trust4':'GCC Shipping',
+    'trust5':'3rd-Party Tested',
+    'trust6':'Dubai Warehouse',
+    'products-label':'OUR PRODUCTS',
+    'products-title':'Five Formulations. One Gulf.',
+    'products-desc':'Each product solves a documented nutrient gap in GCC health data.',
+    'footer-desc':'Enlightened nutrition for the Gulf. Halal-certified, vegan, GCC-registered micronutrient supplements.',
+    'footer-shop':'Shop',
+    'footer-company':'Company',
+    'footer-support':'Support',
+    'footer-about':'About NOOR',
+    'footer-science':'Our Science',
+    'footer-certs':'Certifications',
+    'footer-partners':'Partners',
+    'footer-contact':'Contact Us',
+    'footer-shipping':'Shipping Policy',
+    'footer-returns':'Returns & Refunds',
+    'footer-privacy':'Privacy',
+    'footer-terms':'Terms',
+    'footer-rights':'All rights reserved.',
+    'form-name':'Full Name',
+    'form-email':'Email',
+    'form-company':'Company',
+    'form-country':'Country',
+    'form-type':'Business Type',
+    'form-msg':'Message',
+    'form-submit':'Submit Inquiry',
     'nav-products':'Products',
 
     'hero-badge':'GCC-First · Halal Certified · 100% Vegan',
@@ -1331,6 +1440,59 @@ const TRANSLATIONS = {
     'hero-badge':'100% حلال · نباتي من الطحالب · صُنع للخليج',
     'hero-title':'تغذية مستنيرة لمنطقة الخليج',
     'hero-sub':'أول DHA حلال ونباتي من الطحالب في الخليج. لا أسماك، لا زئبق — ذكاء المحيط في كل كبسولة.',
+
+    'brand':'نور أوميغا',
+    'logo-sub':'تغذية مستنيرة',
+    'add-cart':'أضف',
+    'price-sub':'اشترك ووفّر 15٪',
+    'omega-sub':'DHA نقي من الطحالب 500mg · 60 كبسولة ناعمة',
+    'omega-desc':'أول DHA حلال ونباتي من الطحالب في الخليج. لا أسماك، لا زئبق — ذكاء المحيط في كل كبسولة ناعمة.',
+    'vitality-sub':'فيتامين D3 من الحزاز 1000 IU · 60 قرص',
+    'vitality-desc':'أكثر من 80٪ من سكان الخليج يعانون من نقص فيتامين D. مصدرنا الحزاز — حلال ونباتي بالكامل.',
+    'b12-sub':'ميثيل كوبالامين B12 1000mcg · 60 قرص',
+    'b12-desc':'كوبالامين نشط بيولوجياً — الشكل الذي يستخدمه جسمك فعلاً. ضروري للمقيمين في الخليج والنباتيين.',
+    'calm-sub':'غليسينات المغنيسيوم 400mg · 60 كبسولة',
+    'calm-desc':'مغنيسيوم مخلّب لنوم عميق وراحة من التوتر وارتخاء العضلات — امتصاص متفوق بلا آثار هضمية.',
+    'k2-sub':'MK-7 مينا كينون 100mcg · 60 كبسولة',
+    'k2-desc':'الـ MK-7 الحلال الوحيد على منصات الخليج. يوجّه الكالسيوم للعظام لا الشرايين — مكمّل D3 المثالي.',
+    'tag-brain':'الدماغ',
+    'tag-heart':'القلب',
+    'tag-eye':'صحة العين',
+    'tag-energy':'الطاقة',
+    'tag-immune':'المناعة',
+    'tag-bone':'قوة العظام',
+    'tag-bone2':'كثافة العظام',
+    'tag-artery':'صحة الشرايين',
+    'tag-sleep':'نوم عميق',
+    'tag-stress':'تخفيف التوتر',
+    'tag-mood':'المزاج',
+    'tag-muscle':'ارتخاء العضلات',
+    'tag-nerve':'صحة الأعصاب',
+    'tag-mental':'الوضوح الذهني',
+    'bundle-label':'أفضل قيمة',
+    'bundle-desc':'وفّر 15٪ عند أخذ الروتين اليومي الكامل لنور. حلال. نباتي. يُسلَّم في الخليج.',
+    'why-desc':'كل تركيبة تعالج نقصاً موثقاً لدى سكان الخليج — من مواد خام نباتية معتمدة حلال بجرعات ذات مغزى سريري.',
+    'why1-desc':'كل مكوّن وكل كبسولة يحمل شهادة حلال من جهة معترف بها خليجياً. لا جيلاتين ولا مواد غامضة.',
+    'why2-desc':'نحن نجرع لتحقيق نتائج لا لادعاءات تسويقية — كل ملليغرام مستند إلى أبحاث محكّمة.',
+    'why3-desc':'مستودع مسجّل في دبي، بطاقات عربية، وتوزيع على أمازون الإمارات وNoon وiHerb MENA.',
+    'why4-desc':'صفر مشتقات حيوانية. DHA من الطحالب بدل زيت السمك. D3 من الحزاز بدل اللانولين. بصمة كربونية أقل.',
+    'sci-desc':'الطحالب الدقيقة تنتج DHA بتركيزات أعلى 10 أضعاف من زيت السمك. الأسماك لا تصنع أوميغا-3 — تأكله من الطحالب. نحن نذهب مباشرة إلى المصدر.',
+    'cert-desc':'من شهادة الحلال و ISO 22000 إلى متطلبات دول مجلس التعاون وتسجيل الجمعية النباتية — نور أوميغا مبني على الثقة.',
+    'cert1-title':'حلال معتمد',
+    'cert1-desc':'معتمد من هيئة حلال خليجية معترف بها. تتبع كامل للمكونات من المواد الخام حتى المنتج النهائي.',
+    'cert2-title':'ISO / GMP',
+    'cert2-desc':'مصنّع في منشآت معتمدة ISO 22000 / cGMP مع اختبار مستقل لكل دفعة.',
+    'cert3-title':'مسجّل خليجياً',
+    'cert3-desc':'التركيبات متوافقة مع لوائح المكملات في الإمارات والسعودية وعُمان والكويت.',
+    'cert4-title':'جمعية النباتيين',
+    'cert4-desc':'جميع منتجات نور نباتية 100٪ — لا مشتقات حيوانية، لا اختبار على الحيوانات.',
+    'partner-desc':'سواء كنت تدير سلسلة صيدليات أو صالة رياضية أو عيادة أو متجراً إلكترونياً — نقدم حقوق توزيع حصرية مع دعم تسويقي وتنظيمي كامل.',
+    'partner1-title':'مجموعات عرض مشتركة',
+    'partner1-desc':'شاشات عرض مخصصة ومواد POS عربية وأصول رقمية مدرجة مع كل اتفاقية توزيع.',
+    'partner2-title':'دعم تنظيمي',
+    'partner2-desc':'نتولى تسجيلات دول مجلس التعاون ونوفر وثائق الامتثال الكاملة لتسريع دخولك للسوق.',
+    'partner3-title':'تحليلات فورية',
+    'partner3-desc':'لوحة تحكم الشركاء تعرض معدلات البيع والمخزون وأداء الحملات عبر جميع القنوات.',
     'shop-now':'تسوق الآن','our-science':'علمنا','trust1':'حلال معتمد','trust2':'نباتي 100%','trust3':'معتمد GMP',
     'trust4':'شحن خليجي','trust5':'اختبار مستقل','trust6':'مستودع دبي','products-label':'منتجاتنا',
     'products-title':'خمسة تركيبات. خليج واحد.','products-desc':'كل منتج يعالج فجوة غذائية موثقة في دراسات صحة سكان الخليج.',
@@ -1761,8 +1923,7 @@ function applyTheme(theme) {
   }
 }
 
-const savedTheme = localStorage.getItem('noor-theme') ||
-  (window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark');
+const savedTheme = localStorage.getItem('noor-theme') || 'dark';
 applyTheme(savedTheme);
 
 document.getElementById('themeToggle').addEventListener('click', () => {
