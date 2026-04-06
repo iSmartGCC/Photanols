@@ -575,7 +575,7 @@ body.loaded { overflow: auto; }
   <a href="#products" data-i18n="nav-products">Products</a>
   <a href="#why-noor" data-i18n="nav-why">Why NOOR?</a>
   <a href="#science" data-i18n="nav-science">Science</a>
-  <a href="#certifications" data-i18n="nav-cert">Certifications</a>
+  <a href="#certifications" data-i18n="nav-certs">Certifications</a>
   <a href="#partnership" data-i18n="nav-partners">Partners</a>
   <a href="#faq" data-i18n="nav-faq">FAQ</a>
 </div>
@@ -997,11 +997,72 @@ body.loaded { overflow: auto; }
   <div class="container">
     <div class="reveal" style="text-align:center"><span class="section-label">Frequently Asked</span><h2 class="section-title" id="faq-title">Common Questions</h2></div>
     <div class="faq-list">
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span>Are all NOOR OMEGA products truly halal?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-a"><div class="faq-a-inner">Yes. All five products carry official halal certification from a GCC-recognised authority. No gelatin, no animal rennet, no ambiguous excipients. Certificate copies available on request.</div></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span>Why use algae instead of fish oil for omega-3?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-a"><div class="faq-a-inner">Fish don&rsquo;t synthesise omega-3 &mdash; they get it by eating algae. By going direct to the algae source we eliminate mercury bioaccumulation, produce a halal and vegan product, and deliver higher-purity DHA in smaller softgels.</div></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span>Where do you ship, and how fast?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-a"><div class="faq-a-inner">We ship to all GCC countries (UAE, Saudi Arabia, Oman, Kuwait, Bahrain, Qatar) with 2&ndash;5 business day delivery from our Dubai 3PL warehouse. Free shipping on orders over USD 50.</div></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span>Can I take multiple NOOR products together?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-a"><div class="faq-a-inner">Yes &mdash; our five products are designed to work synergistically. NOOR VITALITY (D3) and NOOR K2 (MK-7) are particularly effective together. Consult your physician if on prescription medication.</div></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false"><span>What is your return and refund policy?</span><svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button><div class="faq-a"><div class="faq-a-inner">We offer a 30-day satisfaction guarantee. If you&rsquo;re not satisfied for any reason, contact us within 30 days of receipt for a full refund &mdash; no questions asked. Sealed, unopened products can be returned within 60 days.</div></div></div>
+
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" data-i18n-q="faq1-q">
+          <span data-i18n="faq1-q">Are all NOOR OMEGA products truly halal?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq1-a">
+            Yes — and we mean genuinely halal, not just "halal-friendly" labelling. Every NOOR OMEGA product carries a formal halal certificate issued by a recognised GCC halal authority. This covers every ingredient, every capsule shell, every processing aid, and every carrier oil in the formula. We do not use bovine or porcine gelatin, animal-derived glycerin, or any excipient whose halal status is ambiguous. Our manufacturing facilities can provide full ingredient traceability from raw material sourcing to finished-product batch testing. Certificate copies are available on request.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span data-i18n="faq2-q">Why use algae instead of fish oil for omega-3?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq2-a">
+            Fish do not produce omega-3 — they obtain DHA and EPA by consuming microalgae. We go directly to that original source. The advantages are significant: algae oil is produced in closed, controlled bioreactors with zero mercury, zero microplastics, and zero ocean pollutants — something fish oil cannot guarantee. Because algae cultivation requires no animal slaughter and no fish processing, the product is inherently halal and vegan. Algae DHA is also cold-processed and highly concentrated, delivering 500 mg DHA per softgel in a smaller capsule than most fish-oil equivalents. You get the same cardiovascular, brain, and eye-health benefits without the fishy aftertaste, the sustainability concerns, or the heavy-metal risk.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span data-i18n="faq3-q">Where do you ship, and how fast?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq3-a">
+            NOOR OMEGA ships to all six GCC countries: UAE, Saudi Arabia, Oman, Kuwait, Qatar, and Bahrain. Orders are dispatched from our registered fulfilment centre in Dubai, typically within one business day of payment confirmation. Delivery to most GCC addresses takes 2–5 business days depending on the destination city and local courier performance. Orders exceeding USD 50 qualify for free GCC shipping. Once your order leaves the warehouse, you will receive a tracking link by email and WhatsApp so you can follow it in real time.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span data-i18n="faq4-q">Can I take multiple NOOR products together?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq4-a">
+            Yes. The five NOOR products are specifically designed to be stacked as a complete daily routine, not to compete with each other. NOOR OMEGA covers essential fatty acids for brain, heart, and eye health. NOOR VITALITY D3 and NOOR K2 MK-7 work together — vitamin D3 improves calcium absorption while K2 directs that calcium to bones rather than arteries. NOOR B-ACTIVE (methylcobalamin B12) supports energy metabolism and neurological function. NOOR CALM (magnesium bisglycinate) promotes deep sleep, stress resilience, and muscle recovery. For most healthy adults, combining all five at the recommended daily doses is safe. If you are pregnant, have a chronic medical condition, or take prescription medication — especially blood thinners or diabetes medication — please consult your physician before starting any new supplement routine.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span data-i18n="faq5-q">What is your return and refund policy?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq5-a">
+            We stand behind every NOOR product with a 30-day satisfaction guarantee from the date of delivery. If you are unsatisfied for any reason, contact our customer support team within 30 days and we will process a full refund to your original payment method — no lengthy forms, no arguments. Sealed and unopened products may be returned within 60 days for a full product credit. For opened products, we handle returns case by case in accordance with applicable GCC consumer-protection regulations. Refunds are typically processed within 5–7 business days of receiving the returned item or verifying the issue with our support team.
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1219,8 +1280,57 @@ const PRODUCTS = {
 };
 
 // ── I18N ──────────────────────────────────────────────────
+
 const TRANSLATIONS = {
+  en:{
+
+    'nav-products':'Products',
+
+    'hero-badge':'GCC-First · Halal Certified · 100% Vegan',
+    'hero-title1':'NOOR',
+    'hero-title2':'OMEGA',
+    'hero-subtitle':'Enlightened Nutrition for the Gulf',
+    'hero-subtitle-ar':'تغذية مستنيرة لمنطقة الخليج',
+    'hero-cta1':'Shop Now',
+    'hero-cta2':'Our Science',
+    'nav-why':'Why NOOR',
+    'nav-science':'Science',
+    'nav-certs':'Certifications',
+    'nav-partners':'Partners',
+    'nav-faq':'FAQ',
+    'hero-badge':'100% Halal · Vegan Algae · Made for GCC',
+    'hero-title':'Enlightened Nutrition for the Gulf',
+    'hero-sub':'The Gulf\'s first halal & vegan algae DHA. No fish, no mercury — pure ocean intelligence in every softgel.',
+    'faq1-q':'Are all NOOR OMEGA products truly halal?',
+    'faq1-a':'Yes — and we mean genuinely halal, not just marketing language. Every NOOR OMEGA product carries a formal halal certificate from a recognised GCC authority covering every ingredient, capsule shell, processing aid, and carrier oil. We use no bovine or porcine gelatin, no animal-derived glycerin, and no excipient of ambiguous halal status. Certificate copies are available on request.',
+    'faq2-q':'Why use algae instead of fish oil for omega-3?',
+    'faq2-a':'Fish do not produce omega-3 — they get DHA and EPA by eating microalgae. We go directly to that source. Algae oil is grown in closed, controlled bioreactors with zero mercury, zero microplastics, and zero ocean pollutants. Because no animals are slaughtered and no fish are processed, the product is inherently halal and vegan. Cold-processed algae DHA delivers 500 mg per softgel — same cardiovascular, brain, and eye-health benefits as fish oil, without the fishy taste or heavy-metal risk.',
+    'faq3-q':'Where do you ship, and how fast?',
+    'faq3-a':'We ship to all six GCC countries: UAE, Saudi Arabia, Oman, Kuwait, Qatar, and Bahrain. Orders dispatch from our Dubai fulfilment centre within one business day of payment. Most GCC addresses receive delivery in 2–5 business days. Orders over USD 50 ship free. A tracking link is sent by email and WhatsApp as soon as your order leaves the warehouse.',
+    'faq4-q':'Can I take multiple NOOR products together?',
+    'faq4-a':'Yes — all five products are designed to stack as a complete daily routine. NOOR OMEGA covers omega-3 fatty acids. NOOR VITALITY D3 and NOOR K2 work together for bone and cardiovascular health. NOOR B-ACTIVE supports energy and neurological function. NOOR CALM promotes deep sleep, stress resilience, and muscle recovery. For most healthy adults, using all five at recommended doses is safe. Consult your physician if pregnant or on prescription medication.',
+    'faq5-q':'What is your return and refund policy?',
+    'faq5-a':'We offer a 30-day satisfaction guarantee from the date of delivery. If unhappy for any reason, contact support within 30 days for a full refund to your original payment method. Sealed, unopened products may be returned within 60 days for full product credit. Opened products are handled case by case per GCC consumer-protection regulations. Refunds are typically processed within 5–7 business days.',
+  },
   ar:{
+
+    'nav-products':'المنتجات',
+
+    'hero-badge':'الخليج أولاً · حلال معتمد · 100٪ نباتي',
+    'hero-title1':'نور',
+    'hero-title2':'أوميغا',
+    'hero-subtitle':'تغذية مستنيرة لمنطقة الخليج',
+    'hero-subtitle-ar':'Enlightened Nutrition for the Gulf',
+    'hero-cta1':'تسوق الآن',
+    'hero-cta2':'علمنا',
+    'nav-why':'لماذا نور',
+    'nav-science':'العلم',
+    'nav-certs':'الشهادات',
+    'nav-partners':'الشركاء',
+    'nav-faq':'الأسئلة الشائعة',
+    'hero-badge':'100% حلال · نباتي من الطحالب · صُنع للخليج',
+    'hero-title':'تغذية مستنيرة لمنطقة الخليج',
+    'hero-sub':'أول DHA حلال ونباتي من الطحالب في الخليج. لا أسماك، لا زئبق — ذكاء المحيط في كل كبسولة.',
     'shop-now':'تسوق الآن','our-science':'علمنا','trust1':'حلال معتمد','trust2':'نباتي 100%','trust3':'معتمد GMP',
     'trust4':'شحن خليجي','trust5':'اختبار مستقل','trust6':'مستودع دبي','products-label':'منتجاتنا',
     'products-title':'خمسة تركيبات. خليج واحد.','products-desc':'كل منتج يعالج فجوة غذائية موثقة في دراسات صحة سكان الخليج.',
@@ -1244,26 +1354,32 @@ const TRANSLATIONS = {
     'sub-label':'اشترك ووفر 15% — إلغاء في أي وقت','benefits-title':'الفوائد الرئيسية','qty-label':'الكمية',
     'bundle-title':'الباقة الكاملة NOOR','bundle-cta':'أضف الباقة الكاملة',
     'faq1-q':'هل جميع منتجات نور أوميغا حلال فعلاً؟',
-    'faq1-a':'نعم. تحمل جميع المنتجات الخمسة شهادة حلال رسمية من هيئة معتمدة في دول مجلس التعاون. لا جيلاتين، لا مواد غامضة.',
     'faq2-q':'لماذا تستخدمون الطحالب بدلاً من زيت السمك؟',
-    'faq2-a':'الأسماك لا تصنع أوميغا-3 بل تحصل عليه من الطحالب. نحن نتجاوز الوسيط ونحذف تراكم الزئبق.',
-    'faq3-q':'إلى أين تشحنون وما سرعة التوصيل؟',
-    'faq3-a':'نشحن لجميع دول الخليج خلال 2-5 أيام عمل من مستودعنا في دبي. شحن مجاني فوق 50 دولاراً.',
+        'faq3-q':'إلى أين تشحنون وما سرعة التوصيل؟',
+        'faq4-q':'هل يمكنني تناول عدة منتجات نور معاً؟',
+        'faq5-q':'ما سياسة الإرجاع والاسترداد؟',
+    
+    'faq1-q':'هل جميع منتجات نور أوميغا حلال فعلاً؟',
+    'faq1-a':'نعم — ونقصد حلالاً حقيقياً وليس مجرد تسمية تسويقية. كل منتج من منتجات نور أوميغا يحمل شهادة حلال رسمية صادرة عن جهة حلال معترف بها في دول مجلس التعاون. تشمل هذه الشهادة كل مكوّن، وكل قشرة كبسولة، وكل مادة مساعدة، وكل زيت حامل في التركيبة. لا نستخدم الجيلاتين الحيواني أو الجليسرين المشتق من مصادر حيوانية، ولا أي مادة مضافة غامضة الحلال. يمكننا تقديم نسخ من الشهادات عند الطلب.',
+    'faq2-q':'لماذا نستخدم الطحالب بدلاً من زيت السمك للأوميغا 3؟',
+    'faq2-a':'الأسماك لا تنتج أوميغا 3 بنفسها، بل تحصل على DHA وEPA من تناول الطحالب الدقيقة. نحن نذهب مباشرة إلى هذا المصدر الأصلي. المزايا كبيرة: يُنتَج زيت الطحالب في مفاعلات حيوية مغلقة ومضبوطة، خالية تماماً من الزئبق والبلاستيك الدقيق والملوثات البحرية — وهو ما لا يمكن لزيت السمك ضمانه. ولأن زراعة الطحالب لا تتطلب ذبح حيوانات أو معالجة أسماك، فالمنتج حلال ونباتي بطبيعته. يُعالَج DHA من الطحالب على البارد وبتركيز عالٍ، مما يوفر 500 ملغ من DHA في كل كبسولة ناعمة. تحصل على نفس فوائد صحة القلب والدماغ والعينين دون طعم السمك أو مخاطر المعادن الثقيلة.',
+    'faq3-q':'إلى أين تشحنون وما هي سرعة التوصيل؟',
+    'faq3-a':'تشحن نور أوميغا إلى جميع دول مجلس التعاون الست: الإمارات، المملكة العربية السعودية، عُمان، الكويت، قطر، والبحرين. تُرسَل الطلبات من مركز تنفيذ الطلبات المسجّل لدينا في دبي، عادةً خلال يوم عمل واحد من تأكيد الدفع. يستغرق التوصيل إلى معظم عناوين دول الخليج من 2 إلى 5 أيام عمل. الطلبات التي تتجاوز 50 دولاراً أمريكياً تستفيد من الشحن المجاني. بمجرد مغادرة طلبك للمستودع، ستتلقى رابط التتبع عبر البريد الإلكتروني والواتساب.',
     'faq4-q':'هل يمكنني تناول عدة منتجات نور معاً؟',
-    'faq4-a':'نعم — منتجاتنا الخمسة مصممة للعمل بشكل تآزري. استشر طبيبك إذا كنت تتناول أدوية موصوفة.',
-    'faq5-q':'ما سياسة الإرجاع والاسترداد؟',
-    'faq5-a':'نقدم ضماناً لمدة 30 يوماً. إذا لم تكن راضياً لأي سبب، تواصل معنا خلال 30 يوماً من الاستلام للحصول على استرداد كامل.',
+    'faq4-a':'نعم. المنتجات الخمسة من نور أوميغا مصممة خصيصاً لتُستخدَم معاً كروتين يومي متكامل. نور أوميغا يغطي الأحماض الدهنية الأساسية لصحة الدماغ والقلب والعينين. نور فيتاليتي D3 ونور K2 يعملان معاً: فيتامين D3 يحسّن امتصاص الكالسيوم، بينما يوجّه K2 ذلك الكالسيوم نحو العظام بدلاً من الشرايين. نور بي أكتيف (B12 ميثيل كوبالامين) يدعم إنتاج الطاقة والوظائف العصبية. نور كالم (مغنيسيوم بيسجليسينات) يعزز جودة النوم ومقاومة التوتر واسترخاء العضلات. لمعظم البالغين الأصحاء، الجمع بين المنتجات الخمسة بالجرعات الموصى بها آمن. إذا كنت حاملاً أو تعاني من حالة طبية مزمنة أو تتناول أدوية موصوفة، استشر طبيبك.',
+    'faq5-q':'ما هي سياسة الإرجاع والاسترداد لديكم؟',
+    'faq5-a':'نؤمن بكل منتج نقدمه ونمنحك ضمان رضا لمدة 30 يوماً من تاريخ الاستلام. إذا لم تكن راضياً لأي سبب، تواصل مع فريق دعم العملاء خلال 30 يوماً وسنعالج استرداداً كاملاً إلى وسيلة الدفع الأصلية. العبوات المختومة وغير المفتوحة يمكن إعادتها خلال 60 يوماً مقابل رصيد منتج كامل. للمنتجات المفتوحة نتعامل مع كل حالة على حدة وفقاً لأنظمة حماية المستهلك المعمول بها في دول الخليج. تُعالَج عمليات الاسترداد عادةً خلال 5 إلى 7 أيام عمل.',
   }
 };
 let currentLang = 'en';
 
-function toggleLang() {
+function _toggleLangOld() {
   currentLang = currentLang === 'en' ? 'ar' : 'en';
   const html = document.documentElement;
   if (currentLang === 'ar') {
     html.setAttribute('lang','ar');
     html.setAttribute('dir','rtl');
-    document.getElementById('langBtn').textContent = 'EN';
+    document.getElementById('langToggle').textContent = 'EN';
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (TRANSLATIONS.ar[key]) el.textContent = TRANSLATIONS.ar[key];
@@ -1271,7 +1387,7 @@ function toggleLang() {
   } else {
     html.setAttribute('lang','en');
     html.setAttribute('dir','ltr');
-    document.getElementById('langBtn').textContent = 'عربي';
+    document.getElementById('langToggle').textContent = 'عربي';
     location.reload();
   }
 }
@@ -1605,19 +1721,78 @@ document.addEventListener('keydown', e => {
 
 </script>
 <script>
-// Consolidated loader — waits for full page load, then fades out cleanly
+// Loader fix - faster fade, block interactions during load
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.body.classList.add('loaded');
+    document.getElementById('loader').style.opacity = '0';
+    setTimeout(() => {
+      document.getElementById('loader').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }, 600);
+  }, 1000); // 1s minimum load time for polish
+});
+</script><script>
+// ── LOADER ───────────────────────────────────────────────
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
   setTimeout(() => {
     loader.style.transition = 'opacity 0.6s ease';
     loader.style.opacity = '0';
-    loader.setAttribute('aria-busy', 'false');
+    loader.setAttribute('aria-busy','false');
     setTimeout(() => {
       loader.style.display = 'none';
       document.body.classList.add('loaded');
       document.body.style.overflow = 'auto';
-    }, 600);
-  }, 1000);
+    }, 620);
+  }, 900);
 });
-</script></body>
+
+// ── THEME TOGGLE ─────────────────────────────────────────
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('noor-theme', theme);
+  const icon = document.getElementById('theme-icon');
+  if (!icon) return;
+  if (theme === 'light') {
+    icon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+  } else {
+    icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+  }
+}
+
+const savedTheme = localStorage.getItem('noor-theme') ||
+  (window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark');
+applyTheme(savedTheme);
+
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme') || 'dark';
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+// ── LANGUAGE TOGGLE ───────────────────────────────────────
+function applyLang(lang) {
+  const html = document.documentElement;
+  html.setAttribute('lang', lang);
+  html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  localStorage.setItem('noor-lang', lang);
+  const btn = document.getElementById('langToggle');
+  if (btn) btn.textContent = lang === 'ar' ? 'EN' : 'عربي';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (window.TRANSLATIONS && TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) {
+      el.textContent = TRANSLATIONS[lang][key];
+    }
+  });
+}
+
+const savedLang = localStorage.getItem('noor-lang') || 'en';
+if (savedLang !== 'en') applyLang(savedLang);
+
+document.getElementById('langToggle').addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('lang') || 'en';
+  applyLang(current === 'en' ? 'ar' : 'en');
+});
+</script>
+</body>
 </html>
