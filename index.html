@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tehran-Muscat Education Corridor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,500,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root, [data-theme="light"]{
+  --color-bg:#f7f6f2; --color-surface:#f9f8f5; --color-surface-2:#fbfbf9;
+  --color-surface-offset:#f3f0ec; --color-surface-offset-2:#edeae5; --color-surface-dynamic:#e6e4df;
+  --color-divider:#dcd9d5; --color-border:#d4d1ca;
+  --color-text:#28251d; --color-text-muted:#5c5a54; --color-text-faint:#a8a6a0; --color-text-inverse:#f9f8f4;
+  --color-primary:#01696f; --color-primary-hover:#0c4e54; --color-primary-active:#0f3638; --color-primary-highlight:#cedcd8;
+  --color-gold:#d19900; --color-gold-highlight:#e9e0c6;
+  --color-success:#437a22; --color-success-highlight:#d4dfcc;
+  --color-warning:#964219; --color-warning-highlight:#ddcfc6;
+  --radius-sm:.375rem; --radius-md:.5rem; --radius-lg:.75rem; --radius-xl:1rem; --radius-full:9999px;
+  --transition-interactive:180ms cubic-bezier(.16,1,.3,1);
+  --shadow-sm:0 1px 2px oklch(.2 .01 80/.06); --shadow-md:0 4px 12px oklch(.2 .01 80/.08); --shadow-lg:0 12px 32px oklch(.2 .01 80/.12);
+  --content-narrow:640px; --content-default:960px; --content-wide:1200px;
+  --font-display:'Cabinet Grotesk','Georgia',serif; --font-body:'Work Sans','Helvetica Neue',sans-serif;
+}
+[data-theme="dark"]{
+  --color-bg:#171614; --color-surface:#1c1b19; --color-surface-2:#201f1d;
+  --color-surface-offset:#1d1c1a; --color-surface-offset-2:#22211f; --color-surface-dynamic:#2d2c2a;
+  --color-divider:#262523; --color-border:#393836;
+  --color-text:#cdccca; --color-text-muted:#9a9894; --color-text-faint:#5a5957; --color-text-inverse:#2b2a28;
+  --color-primary:#4f98a3; --color-primary-hover:#227f8b; --color-primary-active:#1a626b; --color-primary-highlight:#313b3b;
+  --color-gold:#e8af34; --color-gold-highlight:#4d4332;
+  --color-success:#6daa45; --color-success-highlight:#3a4435;
+  --color-warning:#bb653b; --color-warning-highlight:#564942;
+  --shadow-sm:0 1px 2px oklch(0 0 0/.2); --shadow-md:0 4px 12px oklch(0 0 0/.3); --shadow-lg:0 12px 32px oklch(0 0 0/.4);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{min-height:100dvh;line-height:1.6;font-family:var(--font-body);font-size:16px;color:var(--color-text);background:var(--color-bg);transition:background var(--transition-interactive),color var(--transition-interactive)}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-family:var(--font-display);line-height:1.1;text-wrap:balance;color:var(--color-text)}
+p{text-wrap:pretty}
+a{color:var(--color-primary)}
+::selection{background:oklch(from var(--color-primary) l c h/.25)}
+:focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:4px}
+
+.container{max-width:var(--content-wide);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.narrow{max-width:var(--content-default)}
+
+header.site{position:sticky;top:0;z-index:50;background:color-mix(in oklab, var(--color-bg) 85%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--color-divider)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding-block:.9rem}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:1.05rem;font-family:var(--font-display)}
+.brand img{width:32px;height:32px}
+.navlinks{display:flex;gap:1.6rem;align-items:center}
+.navlinks a{font-size:.9rem;color:var(--color-text-muted);text-decoration:none;font-weight:500}
+.navlinks a:hover{color:var(--color-primary)}
+.theme-toggle{background:var(--color-surface-offset);border:1px solid var(--color-border);border-radius:var(--radius-full);width:38px;height:38px;display:flex;align-items:center;justify-content:center;color:var(--color-text)}
+.navmobile{display:none}
+@media (max-width:820px){.navlinks{display:none}}
+
+.hero{position:relative;padding-block:clamp(3rem,8vw,6.5rem) clamp(2.5rem,6vw,4rem);overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-1;opacity:.16}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.eyebrow{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-primary);background:var(--color-primary-highlight);padding:.35rem .8rem;border-radius:var(--radius-full);margin-bottom:1.2rem}
+.hero h1{font-size:clamp(2.3rem,5.2vw,4rem);font-weight:700;margin-bottom:1.1rem}
+.hero h1 em{font-style:normal;color:var(--color-primary)}
+.hero p.lead{font-size:clamp(1rem,1.3vw,1.2rem);color:var(--color-text-muted);max-width:52ch;margin-bottom:1.8rem}
+.cta-row{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.5rem;border-radius:var(--radius-md);font-weight:600;font-size:.92rem;text-decoration:none;transition:all var(--transition-interactive)}
+.btn-primary{background:var(--color-primary);color:#fff}
+.btn-primary:hover{background:var(--color-primary-hover);transform:translateY(-1px)}
+.btn-ghost{border:1px solid var(--color-border);color:var(--color-text)}
+.btn-ghost:hover{border-color:var(--color-primary);color:var(--color-primary)}
+.hero-visual{position:relative;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/5}
+.hero-visual img{width:100%;height:100%;object-fit:cover}
+.hero-stats{display:flex;gap:1.5rem;margin-top:2.2rem;flex-wrap:wrap}
+.stat b{display:block;font-family:var(--font-display);font-size:1.7rem;color:var(--color-primary)}
+.stat span{font-size:.8rem;color:var(--color-text-muted)}
+
+section{padding-block:clamp(3rem,6vw,5.5rem)}
+.section-head{max-width:640px;margin-bottom:clamp(2rem,4vw,3rem)}
+.section-tag{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-primary);margin-bottom:.6rem;display:block}
+.section-head h2{font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:.7rem}
+.section-head p{color:var(--color-text-muted);max-width:60ch}
+
+.alt{background:var(--color-surface)}
+
+/* How it works timeline */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+@media (max-width:900px){.flow{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.flow{grid-template-columns:1fr}}
+.flow-card{background:var(--color-surface-2);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.4rem;position:relative}
+.flow-num{font-family:var(--font-display);font-size:1.8rem;color:var(--color-primary-highlight);-webkit-text-stroke:1.5px var(--color-primary);color:transparent;margin-bottom:.6rem;display:block}
+.flow-card h3{font-size:1.02rem;margin-bottom:.4rem;font-family:var(--font-body);font-weight:700}
+.flow-card p{font-size:.86rem;color:var(--color-text-muted)}
+
+/* value props bento */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:820px){.bento{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.bento{grid-template-columns:1fr}}
+.bento .card{grid-column:span 1}
+.bento .card.wide{grid-column:span 2}
+@media (max-width:560px){.bento .card.wide{grid-column:span 1}}
+.card{background:var(--color-surface-2);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm)}
+.card h3{font-size:1.05rem;margin-bottom:.5rem;font-family:var(--font-body);font-weight:700}
+.card p{font-size:.9rem;color:var(--color-text-muted)}
+.pill{display:inline-block;font-size:.72rem;font-weight:600;background:var(--color-primary-highlight);color:var(--color-primary);padding:.2rem .6rem;border-radius:var(--radius-full);margin-bottom:.7rem}
+
+/* course catalogue */
+.filter-bar{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.filter-btn{border:1px solid var(--color-border);background:var(--color-surface-2);padding:.5rem 1rem;border-radius:var(--radius-full);font-size:.82rem;font-weight:600;color:var(--color-text-muted);transition:all var(--transition-interactive)}
+.filter-btn.active,.filter-btn:hover{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:900px){.course-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.course-grid{grid-template-columns:1fr}}
+.course-card{background:var(--color-surface-2);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.3rem;display:flex;flex-direction:column;gap:.6rem;transition:transform var(--transition-interactive),box-shadow var(--transition-interactive)}
+.course-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.course-top{display:flex;justify-content:space-between;align-items:flex-start;gap:.6rem}
+.course-card h4{font-size:1rem;font-family:var(--font-body);font-weight:700}
+.badge{font-size:.68rem;font-weight:700;padding:.18rem .55rem;border-radius:var(--radius-full);white-space:nowrap}
+.badge.high{background:var(--color-success-highlight);color:var(--color-success)}
+.badge.med{background:var(--color-gold-highlight);color:var(--color-gold)}
+.badge.low{background:var(--color-surface-offset-2);color:var(--color-text-muted)}
+.course-meta{display:flex;flex-wrap:wrap;gap:.4rem;font-size:.78rem;color:var(--color-text-muted)}
+.course-meta span{background:var(--color-surface-offset);padding:.15rem .5rem;border-radius:var(--radius-sm)}
+.course-price{font-weight:700;color:var(--color-primary);font-size:.95rem;margin-top:auto}
+.course-card p.why{font-size:.83rem;color:var(--color-text-muted)}
+
+/* institutes */
+.inst-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+@media (max-width:700px){.inst-grid{grid-template-columns:1fr}}
+.inst-card{display:flex;gap:1rem;background:var(--color-surface-2);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.1rem}
+.inst-icon{flex-shrink:0;width:44px;height:44px;border-radius:var(--radius-md);background:var(--color-primary-highlight);color:var(--color-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display)}
+.inst-card h4{font-size:.95rem;margin-bottom:.2rem}
+.inst-card p{font-size:.82rem;color:var(--color-text-muted)}
+.inst-cat{font-size:.7rem;color:var(--color-primary);font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+
+/* team */
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:760px}
+@media (max-width:600px){.team-grid{grid-template-columns:1fr}}
+.team-card{background:var(--color-surface-2);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.6rem;text-align:left}
+.team-avatar{width:56px;height:56px;border-radius:var(--radius-full);background:var(--color-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.3rem;font-weight:700;margin-bottom:1rem}
+.team-card h4{font-size:1.1rem;margin-bottom:.15rem}
+.team-role{font-size:.8rem;color:var(--color-primary);font-weight:700;margin-bottom:.6rem}
+.team-card p{font-size:.87rem;color:var(--color-text-muted)}
+
+/* pockets diagram */
+.pocket-wrap{display:flex;align-items:center;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:2rem}
+.pocket{background:var(--color-surface-2);border:2px solid var(--color-primary);border-radius:var(--radius-lg);padding:1.4rem 1.8rem;text-align:center;min-width:190px}
+.pocket b{display:block;font-family:var(--font-display);font-size:1.3rem;color:var(--color-primary)}
+.pocket span{font-size:.8rem;color:var(--color-text-muted)}
+.pocket-arrow{font-size:1.6rem;color:var(--color-text-faint)}
+
+/* session timeline */
+.timeline{position:relative;padding-left:2rem;border-left:2px solid var(--color-divider);display:flex;flex-direction:column;gap:1.7rem}
+.tl-item{position:relative}
+.tl-item::before{content:'';position:absolute;left:-2.45rem;top:.2rem;width:14px;height:14px;border-radius:50%;background:var(--color-primary);border:3px solid var(--color-bg)}
+.tl-tag{font-size:.72rem;font-weight:700;color:var(--color-primary);text-transform:uppercase;letter-spacing:.04em}
+.tl-item h4{font-size:1.05rem;margin:.2rem 0 .4rem}
+.tl-item p{font-size:.87rem;color:var(--color-text-muted)}
+.tl-owner{display:inline-block;margin-top:.5rem;font-size:.75rem;font-weight:600;background:var(--color-surface-offset);padding:.2rem .6rem;border-radius:var(--radius-full);color:var(--color-text-muted)}
+
+/* footer */
+footer{border-top:1px solid var(--color-divider);padding-block:2.5rem;background:var(--color-surface)}
+.footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-grid p{font-size:.82rem;color:var(--color-text-muted)}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container nav">
+    <div class="brand"><img src="./assets/logo.png" alt="Corridor logo"><span>Tehran–Muscat Corridor</span></div>
+    <nav class="navlinks">
+      <a href="#how">How It Works</a>
+      <a href="#courses">Courses</a>
+      <a href="#institutes">Institutes</a>
+      <a href="#plan">Session Plan</a>
+      <a href="#pockets">Payments</a>
+      <a href="#team">Team</a>
+    </nav>
+    <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"><img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/7f11de45f569cf95ef41e869185c4b3997c8a8e3.jpg" alt="" loading="lazy"></div>
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Iran → Oman Certification Travel</span>
+      <h1>Globally certified.<br><em>Locally impossible.</em><br>We close the gap.</h1>
+      <p class="lead">A full-service corridor taking Iranian students and professionals to Muscat for short, internationally certified courses — PMP, NEBOSH, CCNA, IWCF and more — with flights, hotel, transfer, and certification booked in one package.</p>
+      <div class="cta-row">
+        <a href="#courses" class="btn btn-primary">Browse Certifications</a>
+        <a href="#how" class="btn btn-ghost">How It Works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>40+</b><span>certifications catalogued</span></div>
+        <div class="stat"><b>28</b><span>Muscat institutes vetted</span></div>
+        <div class="stat"><b>0%</b><span>currency conversion fees</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/d4f07d9a0b67cee445888cc3b3b3d96c1704d06c.jpg" alt="Sultan Qaboos Grand Mosque, Muscat" loading="lazy" width="750" height="1000">
+    </div>
+  </div>
+</section>
+
+<section id="how" class="alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">How It Works</span>
+      <h2>One booking, everything handled</h2>
+      <p>From the first inquiry in Tehran to the certificate in hand, the corridor manages the entire journey end to end.</p>
+    </div>
+    <div class="flow">
+      <div class="flow-card reveal"><span class="flow-num">01</span><h3>Register in Tehran</h3><p>Students apply through Javad's Darrus centre; Mehdi screens eligibility and collects documents.</p></div>
+      <div class="flow-card reveal"><span class="flow-num">02</span><h3>Book & Sponsor</h3><p>Morteza secures the institute seat, arranges training/tourist visa sponsorship, books flights and hotel.</p></div>
+      <div class="flow-card reveal"><span class="flow-num">03</span><h3>Travel & Train</h3><p>Airport pickup, orientation, the certified course itself, plus a Muscat city tour on rest days.</p></div>
+      <div class="flow-card reveal"><span class="flow-num">04</span><h3>Certify & Verify</h3><p>Students return home with an internationally verifiable certificate — MOHERI/PMI/NEBOSH lookup included.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Why This Corridor</span>
+      <h2>Built around one real gap</h2>
+      <p>Pearson VUE, Prometric, and PMI do not operate exam centres inside Iran. Oman does — and it's a short flight away.</p>
+    </div>
+    <div class="bento">
+      <div class="card wide reveal"><span class="pill">Core Insight</span><h3>Sanctioned exam networks skip Iran entirely</h3><p>PMP, CCNA, CompTIA, Microsoft, CFA, and CMA all run on Pearson VUE or Prometric — neither operates in Iran. Muscat is the nearest accessible test network, making the corridor a necessity, not a convenience.</p></div>
+      <div class="card reveal"><span class="pill">Not IELTS</span><h3>Skip what's already local</h3><p>IELTS is already widely available in Tehran. We focus marketing on certifications students genuinely cannot get at home.</p></div>
+      <div class="card reveal"><span class="pill">Full Bundle</span><h3>Flights + hotel + transfer + tour</h3><p>One price, one itinerary — course, travel, and a Muscat city tour, so students never coordinate logistics themselves.</p></div>
+      <div class="card reveal"><span class="pill">Trusted Verification</span><h3>Certificates employers can check</h3><p>MOHERI, PMI, and NEBOSH-issued certificates carry an online verification number — a stronger trust signal than local-only credentials.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="courses" class="alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Course Catalogue</span>
+      <h2>Certifications worth the trip</h2>
+      <p>Curated by priority for Iranian students — filter by category. Full 40-course dataset and 28-institute directory available in the companion spreadsheet.</p>
+    </div>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="HSE">Health &amp; Safety</button>
+      <button class="filter-btn" data-filter="PM">Project Mgmt</button>
+      <button class="filter-btn" data-filter="IT">IT</button>
+      <button class="filter-btn" data-filter="Finance">Finance</button>
+      <button class="filter-btn" data-filter="O&G">Oil &amp; Gas</button>
+    </div>
+    <div class="course-grid" id="courseGrid"></div>
+  </div>
+</section>
+
+<section id="institutes">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Partner Network</span>
+      <h2>Muscat institutes we work with</h2>
+      <p>A sample of the vetted network — confirm hosting approval and pricing directly before each cohort.</p>
+    </div>
+    <div class="inst-grid" id="instGrid"></div>
+  </div>
+</section>
+
+<section id="pockets" class="alt">
+  <div class="container narrow">
+    <div class="section-head">
+      <span class="section-tag">Payment Model</span>
+      <h2>Two pockets, zero conversion</h2>
+      <p>Toman is collected in Iran. OMR is paid out in Oman. No transfer, no FX exchange — just clean reconciliation.</p>
+    </div>
+    <div class="pocket-wrap">
+      <div class="pocket reveal"><b>Toman Pocket</b><span>Collected by Mehdi in Tehran from students</span></div>
+      <div class="pocket-arrow">⇄</div>
+      <div class="pocket reveal"><b>OMR Pocket</b><span>Paid out by Morteza to institutes &amp; vendors in Muscat</span></div>
+    </div>
+    <p style="text-align:center;margin-top:1.5rem;font-size:.85rem;color:var(--color-text-muted)">A notional exchange rate is used only internally to reconcile Mehdi and Morteza's profit split — no real currency ever crosses the border.</p>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="container narrow">
+    <div class="section-head">
+      <span class="section-tag">Execution Plan</span>
+      <h2>Eight sessions to launch</h2>
+      <p>From legal setup to the first Year-2 reverse-flow pilot.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal"><span class="tl-tag">Session 1 · Weeks 1-2</span><h4>Legal &amp; Partner Foundations</h4><p>Register Oman entity, contact OHI and 4 more institutes to confirm hosting approval and pricing.</p><span class="tl-owner">Morteza + Mehdi</span></div>
+      <div class="tl-item reveal"><span class="tl-tag">Session 2 · Weeks 3-4</span><h4>Certification &amp; Pricing Finalization</h4><p>Lock flagship courses (NEBOSH IGC, PMP, CCNA, IWCF), build dual-pocket package pricing.</p><span class="tl-owner">Morteza + Mehdi</span></div>
+      <div class="tl-item reveal"><span class="tl-tag">Session 3 · Weeks 5-6</span><h4>Marketing Launch in Tehran</h4><p>Brochure distributed via Javad's Darrus centre, open registration for Pilot Cohort 1.</p><span class="tl-owner">Mehdi</span></div>
+      <div class="tl-item reveal"><span class="tl-tag">Session 4 · Weeks 7-8</span><h4>Visa &amp; Logistics Setup</h4><p>Process visas, book flights/hotel block, confirm institute enrollment dates.</p><span class="tl-owner">Morteza + Mehdi</span></div>
+      <div class="tl-item reveal"><span class="tl-tag">Session 5 · Week 9</span><h4>Pilot Cohort 1 Departure</h4><p>Travel, orientation, course delivery, and Muscat city tour.</p><span class="tl-owner">Morteza</span></div>
+      <div class="tl-item reveal"><span class="tl-tag">Session 6 · Weeks 10-11</span><h4>Certification &amp; Feedback Loop</h4><p>Verify certificates, collect feedback, reconcile dual-pocket accounts.</p><span class="tl-owner">Mehdi + Morteza</span></div>
+      <div class="tl-item reveal"><span class="tl-tag">Session 7 · Weeks 12-16</span><h4>Scale to Second Vertical</h4><p>Launch Cohort 2 in a new track, begin B2B corporate outreach.</p><span class="tl-owner">Mehdi</span></div>
+      <div class="tl-item reveal"><span class="tl-tag">Session 8 · Year 2</span><h4>Reverse-Flow Pilot</h4><p>Bring Omani students to Iran to balance the Toman pocket — evaluated as a feasibility pilot.</p><span class="tl-owner">Morteza + Mehdi</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Leadership</span>
+      <h2>Who runs the corridor</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal"><div class="team-avatar">M</div><h4>Mehdi</h4><div class="team-role">Iran-Side Manager · Tehran</div><p>Runs recruitment, screening, document prep, and pre-departure orientation from Javad Rezaei's education centre in Darrus.</p></div>
+      <div class="team-card reveal"><div class="team-avatar">M</div><h4>Morteza</h4><div class="team-role">Oman-Side Manager · Muscat</div><p>Handles institute liaison, visa sponsorship, accommodation, transfers, and the Muscat city tour for every cohort.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="brand"><img src="./assets/logo.png" alt="Corridor logo" width="28" height="28"><span>Tehran–Muscat Corridor</span></div>
+    <p>Data pack, pricing, and full institute directory available in the companion Excel workbook. Verify all fees and hosting approvals directly with institutes before booking.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const t=document.querySelector('[data-theme-toggle]'), r=document.documentElement;
+  let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+  r.setAttribute('data-theme', d);
+  t.addEventListener('click', ()=>{
+    d = d==='dark' ? 'light' : 'dark';
+    r.setAttribute('data-theme', d);
+    t.setAttribute('aria-label', 'Switch to ' + (d==='dark'?'light':'dark') + ' mode');
+  });
+})();
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const courses = [
+ {name:"NEBOSH IGC",cat:"HSE",dur:"10-12 days",fee:"OMR 224-499",prio:"high",why:"Not delivered inside Iran; mandatory HSE credential for O&G/construction roles."},
+ {name:"NEBOSH International Diploma",cat:"HSE",dur:"Modular, months",fee:"USD 1,500-3,000",prio:"high",why:"Advanced HSE management track, no NEBOSH delivery in Iran."},
+ {name:"IOSH Managing Safely",cat:"HSE",dur:"3-4 days",fee:"OMR 150-300 (est.)",prio:"med",why:"Entry-level HSE cert, fast turnaround, ideal for corporate bulk bookings."},
+ {name:"OSHA 30-Hour",cat:"HSE",dur:"3-4 days",fee:"OMR 80-200 (est.)",prio:"med",why:"US-aligned safety credential requested by many contractors."},
+ {name:"IWCF Well Control L2-4",cat:"O&G",dur:"2-5 days/level",fee:"OMR 300-800+",prio:"high",why:"Mandatory for drilling/well engineers, no IWCF centre in Iran, high sponsor budgets."},
+ {name:"NDT Level I/II",cat:"O&G",dur:"5-10 days/level",fee:"USD 500-1,200 (est.)",prio:"med",why:"Welding inspection credential for oil & gas technical staff."},
+ {name:"PMP Certification",cat:"PM",dur:"4-8 days + exam",fee:"USD 705-2,080 total",prio:"high",why:"Pearson VUE does not operate in Iran — travel is the only path to this credential."},
+ {name:"CAPM Certification",cat:"PM",dur:"2-3 days + exam",fee:"USD 600-900 total",prio:"med",why:"Entry point for junior PMs before pursuing PMP."},
+ {name:"PRINCE2 Foundation/Practitioner",cat:"PM",dur:"2-5 days",fee:"USD 400-900",prio:"med",why:"European-oriented alternative/complement to PMP."},
+ {name:"CCNA (200-301)",cat:"IT",dur:"5-10 days prep",fee:"Exam USD 300 + course",prio:"high",why:"Pearson VUE exam seat is unavailable in Iran — core IT travel demand."},
+ {name:"CompTIA A+/Network+/Security+",cat:"IT",dur:"5-7 days prep",fee:"USD 250-370/exam",prio:"med",why:"High-demand entry IT certs requiring Pearson VUE travel."},
+ {name:"Microsoft Azure Fundamentals",cat:"IT",dur:"2-3 days prep",fee:"USD 99 exam",prio:"med",why:"Fast-growing cloud credential, short exam-only trip possible."},
+ {name:"CFA Level I/II/III",cat:"Finance",dur:"Exam only",fee:"USD 900-1,200/level",prio:"high",why:"Prometric does not operate in Iran; high-value finance credential."},
+ {name:"CMA (Certified Mgmt Accountant)",cat:"Finance",dur:"Exam only",fee:"USD 415-800/part",prio:"med",why:"Prometric-proctored, same travel-necessity logic as CFA."},
+ {name:"ACCA (per paper)",cat:"Finance",dur:"Modular",fee:"GBP 100-190/exam",prio:"med",why:"No active ACCA exam centre in Iran currently."},
+ {name:"IELTS Academic/General",cat:"Other",dur:"1 day",fee:"Already in Iran",prio:"low",why:"Widely available domestically — bundle only, not a flagship product."},
+];
+const grid = document.getElementById('courseGrid');
+function render(filter){
+  grid.innerHTML='';
+  courses.filter(c=>filter==='all'||c.cat===filter).forEach(c=>{
+    const badgeClass = c.prio==='high'?'high':c.prio==='med'?'med':'low';
+    const badgeLabel = c.prio==='high'?'High Priority':c.prio==='med'?'Medium':'Low Priority';
+    const el = document.createElement('div');
+    el.className='course-card reveal';
+    el.innerHTML = `<div class="course-top"><h4>${c.name}</h4><span class="badge ${badgeClass}">${badgeLabel}</span></div>
+      <div class="course-meta"><span>${c.dur}</span></div>
+      <p class="why">${c.why}</p>
+      <div class="course-price">${c.fee}</div>`;
+    grid.appendChild(el);
+    observer.observe(el);
+  });
+}
+render('all');
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.filter);
+  });
+});
+
+const institutes = [
+ {name:"AITS Oman", cat:"Health & Safety", desc:"IOSH, First Aid, Fire Safety short courses; OPAL Recognised Training Evaluation Centre."},
+ {name:"Wise Global Training Ltd", cat:"Health & Safety", desc:"NEBOSH IGC delivery, Muscat."},
+ {name:"OPAL-Graded Centres (multiple)", cat:"HSE / Oil & Gas", desc:"Gold/Silver/Bronze graded HSE, lifting ops, defensive driving, QA/QC."},
+ {name:"Takatuf Petrofac Oman", cat:"Oil & Gas Technical", desc:"O&G vocational and technical apprenticeship training."},
+ {name:"TÜV Middle East / SIT Centre", cat:"Oil & Gas Technical", desc:"NDT and welding inspection certification."},
+ {name:"Unichrone (Muscat delivery)", cat:"Project Management", desc:"PMP, CAPM, PRINCE2 training at Shangri-La/Crowne Plaza venues."},
+ {name:"Invensis Learning", cat:"Project Management", desc:"PMP and PM certification delivery in Muscat."},
+ {name:"Prometric Test Center, Muscat", cat:"Finance", desc:"Official CFA, CMA exam proctoring."},
+ {name:"Polyglot Institute", cat:"Finance / Language", desc:"ACCA, CAT, Edexcel, ILM, CELTA/DELTA."},
+ {name:"OHI Telecommunications Co. LLC", cat:"Telecom", desc:"Named anchor partner — confirm hosting approval directly."},
+ {name:"Pearson VUE Authorized Centers", cat:"IT", desc:"CCNA, CompTIA, Microsoft exam proctoring network."},
+ {name:"Talent Oasis", cat:"HR / Procurement", desc:"CIPD/CIPS-aligned training centre."},
+];
+const instGrid = document.getElementById('instGrid');
+institutes.forEach(i=>{
+  const el = document.createElement('div');
+  el.className='inst-card reveal';
+  el.innerHTML = `<div class="inst-icon">${i.name.charAt(0)}</div><div><span class="inst-cat">${i.cat}</span><h4>${i.name}</h4><p>${i.desc}</p></div>`;
+  instGrid.appendChild(el);
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
